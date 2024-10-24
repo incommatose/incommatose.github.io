@@ -1,7 +1,7 @@
 title: H4ck3r P0rtf0li0
 description: A hacker-themed Jekyll portfolio theme
-baseurl: ""
-url: "https://iamwilliamhames.github.io/H4ck3r-Th3m3/"
+baseurl: "/H4ck3r-Th3m3/"
+url: ""
 
 # Build settings
 markdown: kramdown
