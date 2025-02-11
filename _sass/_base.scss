@@ -8,10 +8,15 @@ body {
     overflow-x: hidden;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1{
     color: #0f0;  // Keep headers bright green
     text-shadow: 2px 2px #00f;
 }
+
+h2, h3, h4, h5, h6 {
+    color: #0f0;  // Keep headers bright green
+    text-shadow: 2px 2px #00f;
+  }
 
 a {
     color: #0f0;  // Keep links bright green

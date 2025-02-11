@@ -9,9 +9,23 @@ layout: default
     {% if site.posts.size > 0 %}
         {% for post in site.posts %}
         <div class="blog-post">
-            <h3 class="glitch" data-text="{{ post.title }}">{{ post.title }}</h3>
-            <p>{{ post.excerpt | strip_html | truncatewords: 30 }}</p>
-            <a href="{{ post.url | relative_url }}" class="glitch-link">Read More</a>
+          <h3 class="glitch" data-text="{{ post.title }}">{{ post.title }}</h3>
+            <h4 class="glitch" style="display: inline;">OS: </h4>
+
+            <p class="post-meta" style="display: inline;" data-text="{{ post.os }}">{{ post.os }}</p>
+            <br>
+
+            <h4 class="glitch" style="display: inline;">Dificultad: </h4>
+            <p class="post-meta" style="display: inline;" data-text="{{ post.dificulty }}">{{ post.dificulty }}</p>
+            <br>
+
+            <h4 class="glitch" style="display: inline;">Skills: </h4>
+            <code class="post-meta" data-text="{{ post.skills }}">{{ post.skills | truncatewords: 15}}</code>
+
+            <br>
+            <br>
+            <a href="{{ post.url | relative_url }}" class="glitch-link">Read More</a>  
+
         </div>
         {% endfor %}
     {% else %}

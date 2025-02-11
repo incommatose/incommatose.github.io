@@ -2,7 +2,34 @@
 layout: default
 ---
 <article id="blog-post">
-    <h2 class="glitch" data-text="{{ page.title }}">{{ page.title }}</h2>
-    <p class="post-meta">Posted on: <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%B %d, %Y" }}</time></p>
-    {{ content }}
+    <div class="digital-frontier-box">
+      <h1 class="glitch" data-text="{{ page.title }}">{{ page.title }}</h1>
+
+      <h4 class="glitch" style="display: inline;">OS: </h4> 
+      <p class="post-meta" style="display: inline;" data-text="{{ page.os }}">{{ page.os }}</p>
+
+      <br>
+
+      <h4 class="glitch" style="display: inline;">Dificultad: </h4> 
+      <p class="post-meta" style="display: inline;" data-text="{{ page.dificulty }}">{{ page.dificulty }}</p>
+
+      <br>
+
+      <h4 class="glitch" style="display: inline;">Skills: </h4>
+      <code class="post-meta" data-text="{{ page.skills }}">{{ page.skills }}</code>
+
+      <br>
+
+      <h4 class="glitch" style="display: inline;">Date: </h4>
+      <p class="post-meta" style="display: inline;"><time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%B %d, %Y" }}</time></p>
+
+    </div>
+        
+
+        <br>
+        <br>
+        {{ content }}
+
+    
+    
 </article>

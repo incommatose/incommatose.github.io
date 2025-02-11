@@ -1,6 +1,6 @@
 .glitch-container {
     padding: 20px;
-    max-width: 800px;
+    max-width: 1200px;
     margin: 0 auto;
 }
 
@@ -38,7 +38,6 @@ footer {
     font-size: 0.8em;
 }
 
-// ... (rest of the layout styles)
 
 .skills-list {
     list-style-type: none;
@@ -105,9 +104,9 @@ footer {
     border: 1px solid #0f0;
     padding: 15px;
     transition: all 0.3s ease;
-    display: flex;
+    display: flow-root;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: center;
 }
 
 .project:hover,
@@ -166,7 +165,7 @@ footer {
             position: relative;
 
             &::before {
-                content: '>';
+                content: '$';
                 position: absolute;
                 left: 0;
                 color: #0f0;
@@ -181,5 +180,67 @@ footer {
     .glitch-link {
         display: inline-block;
         margin-top: 10px;
-    }
+    } 
+}
+
+/* Custom CSS for commands */
+    pre.highlight {
+    white-space: pre-wrap; 
+      word-wrap: break-word;
+      overflow-x: auto;
+
+
+   .copy-btn.glitch-link {
+    position: relative;
+    top: 42.5px;
+    left: 1120px;
+    border: 1px solid #0f0;
+    padding: 6px 12px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 12px;
+    transition: all 0.3s ease;
+    z-index: 10;
+    width: 70px;
+    white-space: pre-wrap;
+  word-wrap: break-word;
+
+}
+
+/* Hover para el botón */
+.copy-btn.glitch-link:hover {
+    box-shadow: 0 5px 15px rgba(0, 255, 0, 0.2);
+    transform: translateY(-5px);
+} 
+
+  }
+    /* Custom highlighting */
+  .hljs {
+    background:#01010101 !important;  
+    color: #dcdcdc;        
+    border-radius: 10px;
+    font-size: 16px;
+    line-height: 1.2;
+    overflow-x: auto;
+
+    background-color: rgba(0, 0, 0, 0.5);
+    border: 1px solid #0f0;
+    padding: 24px;
+    margin-bottom: 20px;
+    transition: all 0.3s ease;
+
+ 
+}
+
+.highlighter-rouge{
+  color: #0f0;
+}
+
+blockquote {
+  color: #0f0;
+  font-size: 16px;
+
+  ::hover{
+    transition: all 0.3s ease;
+  }
 }
