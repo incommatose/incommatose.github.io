@@ -93,7 +93,7 @@ document.addEventListener("DOMContentLoaded", function () {
 // Función para resaltar texto
   function highlightText(text, query) {
 	const regex = new RegExp(`(${query.split(/\s+/).join("|")})`, 'gi');
-    return text.replace(regex, '<span class="highlight glitch">$1</span>');
+    return text.replace(regex, '<span class="highlight-search glitch">$1</span>');
   }
 
   function highlightArray(arr, query) {
