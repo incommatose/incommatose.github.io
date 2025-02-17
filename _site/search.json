@@ -1,0 +1,35 @@
+[
+
+    {
+      "title": "EscapeTwo - Writeup (Hackthebox)",
+      "url": "/write-up/EscapeTwo-Writeup/",
+      "difficulty": "Easy",
+      "os": "Windows",
+      "skills": ["RPC Enumeration, Information Leakage, SQLi - Abusing xp_cmdshell to RCE, BloodHound Analysis, Abusing WriteOwner Privilege, Shadow Credentials, Abusing Certificate Templates (certipy)" ]
+    }, 
+  
+    {
+      "title": "UI C0mp0n3nts",
+      "url": "/ui-components/",
+      "difficulty": "",
+      "os": "",
+      "skills": []
+    }, 
+  
+    {
+      "title": "L4y0ut and Gr1d Syst3m",
+      "url": "/layout-and-grid-system/",
+      "difficulty": "",
+      "os": "",
+      "skills": []
+    }, 
+  
+    {
+      "title": "Typ0gr4phy and T3xt Styl3s",
+      "url": "/typography-and-text-styles/",
+      "difficulty": "",
+      "os": "",
+      "skills": []
+    }
+  
+]

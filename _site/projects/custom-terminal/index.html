@@ -2,14 +2,15 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cust0m T3rm1nal - H4ck3r P0rtf0li0</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <title>Cust0m T3rm1nal - Andr3's Blog</title>
     <link rel="stylesheet" href="/assets/css/main.css">
 </head>
 <body>
     <div class="glitch-container">
         <header>
-            <h1 class="glitch" data-text="H4ck3r P0rtf0li0">H4ck3r P0rtf0li0</h1>
+            <h1 class="glitch" data-text="Andr3's Blog">Andr3's Blog</h1>
         </header>
         <nav>
     <ul>
@@ -20,7 +21,7 @@
         <li><a href="/contact/">C0nt4ct</a></li>
     </ul>
 </nav>
-
+</q>
         <main>
             <article class="project">
     <h1 class="glitch" data-text="Cust0m T3rm1nal">Cust0m T3rm1nal</h1>
@@ -41,41 +42,18 @@
 
         </main>
         <footer>
-    <p>&copy; 2025 H4ck3r P0rtf0li0. All rights reserved.</p>
+    <p>&copy; 2025 Andr3's Blog. All rights reserved.</p>
 </footer>
 
     </div>
     <script src="/assets/js/script.js"></script>
     <!-- Highlight.js CSS -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/atom-one-dark.min.css">
+    <link rel="stylesheet" href="/assets/css/monokai-sublime.css">
 
     <!-- Highlight.js JS -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+    <script src="/assets/js/highlight.min.js"></script>
     <script>hljs.highlightAll();</script>
    
-   <script>
-document.addEventListener('DOMContentLoaded', () => {
-    document.querySelectorAll('pre').forEach((pre) => {
-        // Crear el botón de copiar
-        const button = document.createElement('button');
-        button.innerText = 'copy';
-        button.className = 'copy-btn glitch-link';
-
-        // Insertar el botón directamente dentro del <pre>
-        pre.insertBefore(button, pre.firstChild);
-
-        // Funcionalidad del botón de copiar
-        button.addEventListener('click', () => {
-            const code = pre.querySelector('code').innerText;
-            navigator.clipboard.writeText(code).then(() => {
-                button.innerText = 'copied';
-                setTimeout(() => button.innerText = 'copy', 2000);
-            });
-        });
-    });
-});
-</script>
- 
 
 </body>
 </html>

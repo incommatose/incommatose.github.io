@@ -1,0 +1,13 @@
+---
+layout: page
+title: "Categorías"
+permalink: /categories/
+---
+
+<h1>Cat3gorí4s</h1>
+<ul>
+  {% for category in site.categories %}
+    <li><a href="{{ relative url }}/categories/{{ category[0] }}">{{ category[0] }}</a></li>
+  {% endfor %}
+</ul>
+

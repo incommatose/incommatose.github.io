@@ -1,38 +1,82 @@
 ---
 layout: default
 ---
-<h1 class="glitch" data-text="Bl0g">Bl0g</h1>
+<h1 class="glitch" data-text="Write Ups">Write Ups</h1>
 
 {{ content }}
 
-<div class="blog-container">
-    {% if site.posts.size > 0 %}
-        {% for post in site.posts %}
-        <div class="blog-post">
-          <h3 class="glitch" data-text="{{ post.title }}">{{ post.title }}</h3>
-            <h4 class="glitch" style="display: inline;">OS: </h4>
-
-            <p class="post-meta" style="display: inline;" data-text="{{ post.os }}">{{ post.os }}</p>
-            <br>
-
-            <h4 class="glitch" style="display: inline;">Dificultad: </h4>
-            <p class="post-meta" style="display: inline;" data-text="{{ post.dificulty }}">{{ post.dificulty }}</p>
-            <br>
-
-            <h4 class="glitch" style="display: inline;">Skills: </h4>
-            <code class="post-meta" data-text="{{ post.skills }}">{{ post.skills | truncatewords: 15}}</code>
-
-            <br>
-            <br>
-            <a href="{{ post.url | relative_url }}" class="glitch-link">Read More</a>  
-
+<div class="terminal">
+        <div class="command-line">
+            <span class="prompt">hacker@localhost:~$</span>
+            <div class="input-container">
+                <input type="search" id="search-box">
+                <div class="placeholder-container">
+                    <span id="animated-placeholder"></span>
+                </div>
+            </div>
         </div>
-        {% endfor %}
-    {% else %}
-        <p>No blog posts found. Make sure you have post files in the _posts directory.</p>
-    {% endif %}
-</div>
+    </div>
+<div id="search-results"></div>
+
 
 {% if site.posts.size > 5 %}
     {% include pagination.html %}
 {% endif %}
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  const searchBox = document.getElementById("search-box");
+  const resultsContainer = document.getElementById("search-results");
+
+  fetch("{{ '/search.json' | relative_url }}")
+    .then(response => response.json())
+    .then(posts => {
+      searchBox.addEventListener("input", function () {
+        const query = this.value.toLowerCase();
+        resultsContainer.innerHTML = "";
+
+        if (query.trim() === "") {
+          return;
+        }
+
+        const filteredPosts = posts.filter(post =>
+          post.title.toLowerCase().includes(query) ||
+          post.difficulty.toLowerCase().includes(query) ||
+          post.os.toLowerCase().includes(query) ||
+          (post.skills && post.skills.some(skill => skill.toLowerCase().includes(query)))
+        );
+
+        if (filteredPosts.length > 0) {
+          filteredPosts.forEach(post => {
+            const listItem = document.createElement("div");
+            listItem.innerHTML = `
+			 <div class="blog-post">
+          		<h3 class="glitch">${post.title}</h3>
+            	<h4 class="glitch" style="display: inline;">OS: </h4>
+
+            	<p class="post-meta" style="display: inline;">${post.os}</p>
+            <br>
+
+	            <h4 class="glitch" style="display: inline;">Dificultad: </h4>
+    	        <p class="post-meta" style="display: inline;">${post.difficulty}</p>
+            <br>
+
+        	    <h4 class="glitch" style="display: inline;">Skills: </h4>
+            	<code class="post-meta">${post.skills}</code>
+
+            <br>
+            <br>
+            	<a href="${post.url}" class="glitch-link">Read More</a>  
+
+        </div>
+            ` 
+            resultsContainer.appendChild(listItem);
+          });
+        } else {
+          resultsContainer.innerHTML = "<span>No se encontraron máquinas.</span>";
+        }
+      });
+    });
+});
+
+</script>

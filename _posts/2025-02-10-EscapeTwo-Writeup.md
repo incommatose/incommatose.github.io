@@ -3,8 +3,9 @@ layout: post
 title: "EscapeTwo - Writeup (Hackthebox)"
 os: "Windows"
 date: 2025-02-10
-dificulty: "Easy"
+difficulty: "Easy"
 skills: "RPC Enumeration, Information Leakage, SQLi - Abusing xp_cmdshell to RCE, BloodHound Analysis, Abusing WriteOwner Privilege, Shadow Credentials, Abusing Certificate Templates (certipy)"
+categories: [write-up]
 ---
 
 # Reconocimiento
@@ -53,7 +54,7 @@ PORT      STATE SERVICE
 
 Haremos un segundo escaneo con el propósito de obtener detalles de la versión y el servicio que se ejecuta en cada uno de los puertos que descubrimos
 
-~~~ bash
+~~~bash
 nmap -sVC -p 53,88,135,139,389,445,464,593,636,1433,3268,3269,5985,9389,47001,49664,49665,49666,49667,49689,49690,49691,49706,49722,49743,49818 10.10.11.51 -oN services
 
 PORT      STATE SERVICE       VERSION

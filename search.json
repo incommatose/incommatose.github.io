@@ -1,0 +1,15 @@
+---
+layout: null
+---
+
+[
+{% for post in site.posts %}
+    {
+      "title": "{{ post.title | escape }}",
+      "url": "{{ post.url | relative_url }}",
+      "difficulty": "{{ post.difficulty | escape }}",
+      "os": "{{ post.os | escape }}",
+      "skills": [{% for skill in post.skills %}"{{ skill }}" {% unless forloop.last %}, {% endunless %}{% endfor %}]
+    }{% unless forloop.last %}, {% endunless %}
+  {% endfor %}
+]

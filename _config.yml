@@ -1,5 +1,5 @@
-title: H4ck3r P0rtf0li0
-description: A hacker-themed Jekyll portfolio theme
+title: Andr3's Blog
+description: A cybersecurity blog!
 baseurl: "/"
 url: ""
 
@@ -32,3 +32,4 @@ collections:
     permalink: /projects/:name/
 
 permalink: /blog/:year/:month/:day/:title/
+permalink: /:categories/:title/
