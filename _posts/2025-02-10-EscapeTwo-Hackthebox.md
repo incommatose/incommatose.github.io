@@ -6,6 +6,7 @@ date: 2025-02-10
 difficulty: "Easy"
 skills: "RPC Enumeration, Information Leakage, SQLi - Abusing xp_cmdshell to RCE, BloodHound Analysis, Abusing WriteOwner Privilege, Shadow Credentials, Abusing Certificate Templates (certipy)"
 categories: [write-up]
+tags: ["Active Directory", "Windows", "Hackthebox"]
 ---
 
 # Reconocimiento

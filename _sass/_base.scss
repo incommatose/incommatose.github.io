@@ -6,6 +6,7 @@ body {
     margin: 0;
     padding: 0;
     overflow-x: hidden;
+    font-size: 18px;
 }
 
 h1{
@@ -40,7 +41,7 @@ nav ul li a {
     color: #0f0;
 }
 
-// Keep the glitch effect text bright green
+// Kweep the glitch effect text bright green
 .glitch::before,
 .glitch::after {
     color: #0f0;

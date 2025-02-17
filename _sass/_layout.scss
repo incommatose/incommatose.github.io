@@ -202,7 +202,7 @@ div.highlight {
     background:#01010101 !important;  
     color: #dcdcdc;        
     border-radius: 10px;
-    font-size: 16px;
+    font-size: 18px;
     line-height: 1.2;
     overflow-x: auto;
 
@@ -245,14 +245,14 @@ blockquote {
 
 .copy-btn.glitch-link {
     position: absolute;  
-    top: 25px;
+    top: 30px;
     right: 10px;
     background: rgba(0, 0, 0, 0.9);
     border: 1px solid #0f0;
     padding: 6px 12px;
     border-radius: 6px;
     cursor: pointer;
-    font-size: 12px;
+    font-size: 14px;
     transition: all 0.3s ease;
     z-index: 10;
     width: 70px;
@@ -268,7 +268,6 @@ blockquote {
 
 img {
     cursor: zoom-in;
-    max-width: 1000px;
     width: 100%;
     height: auto; 
     display: block;
@@ -283,7 +282,7 @@ img {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%) scale(0.9);
-    max-width: 80vw;
+    max-width: 80px;
     max-height: 80vh;
     z-index: 1000;
     border-radius: 6px; 
@@ -343,11 +342,12 @@ img {
 }
 
 .terminal {
+			justify-content: center;
             background-color: #1e1e1e;
-            padding: 20px;
             border-radius: 5px;
-            width: 80%;
-            max-width: 600px;
+			padding: 20px;
+            width: 100%;
+            max-width: 1150px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
         }
 
@@ -398,4 +398,14 @@ img {
 
         #animated-placeholder::after {
 			display: none;
+}
+
+.highlight {
+  position: relative;
+  display: inline-block;
+  background-color: #00ff00;  /* Fondo amarillo */
+  color: #000;  /* Texto negro */
+  font-weight: bold;
+  border-radius: 2px;
+  padding: 0 3px;
 }
