@@ -4,7 +4,7 @@ title: "Ghost - Hackthebox"
 os: "Windows"
 date: 2025-02-16
 difficulty: "Insane"
-skills: "LDAP Wildcard Search, LDAP Brute Forcing, Kerberos User Validation, Local File Inclusion (GhostCMS), Abusing Ghost CMS Api (Command Injection), Pivoting - SSH Multiplexing, Active Directory Integrated (ADIDNS) Poisoning - `bloodyAD.py`, NTLM Relay - Getting hashes with `responder.py`, NTLMv2 Hash Cracking, DC Enumeration (SharpHound.exe), Dumping gMSA Password, PassTheHash (Evil-WinRM), Golden SAML Attack using `ADFSpoof.py`, Abusing SQL Server `xp_cmdshell` to RCE, Powershell Reverse Shell Obfuscation (PowerJoker), Abusing SeImpersonatePrivilege (EfsPotato.exe) [Local Privilege Escalation], Golden Ticket Attack - Requesting TGS using `ticketer.py`, Cross Forest DCSync Attack (`secretsdump.py` + `proxychains`) [Privilege Escalation]"
+skills: "LDAP Injection, LDAP Brute Forcing, Kerberos User Validation, Local File Inclusion (GhostCMS), Abusing Ghost CMS Api (Command Injection), Pivoting - SSH Multiplexing, Active Directory Integrated (ADIDNS) Poisoning - `bloodyAD.py`, NTLM Relay - Getting hashes with `responder.py`, NTLMv2 Hash Cracking, DC Enumeration (SharpHound.exe), Dumping gMSA Password, PassTheHash (Evil-WinRM), Golden SAML Attack using `ADFSpoof.py`, Abusing SQL Server `xp_cmdshell` to RCE, Powershell Reverse Shell Obfuscation (PowerJoker), Abusing SeImpersonatePrivilege (EfsPotato.exe) [Local Privilege Escalation], Golden Ticket Attack - Requesting TGS using `ticketer.py`, Cross Forest DCSync Attack (`secretsdump.py` + `proxychains`) [Privilege Escalation]"
 categories: [write-up]
 tags: ["active directory", "windows", Hackthebox]
 ---
