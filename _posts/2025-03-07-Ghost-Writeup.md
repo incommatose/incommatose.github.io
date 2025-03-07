@@ -190,7 +190,7 @@ echo '10.10.11.24 ghost.htb dc01.ghost.htb' >> /etc/hosts
 Una de las validaciones más comunes en entornos de Active Directory es validar si las sesiones nulas son posibles, esto debemos comprobarlo tanto en `smb` como en otros protocolos como `rpc`
 
 ~~~ bash
-pcclient -U "" -N 10.10.11.24 -c "querydominfo"
+rpcclient -U "" -N 10.10.11.24 -c "querydominfo"
 
 result was NT_STATUS_ACCESS_DENIED
 ~~~

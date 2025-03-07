@@ -4,12 +4,6 @@ header:
   video:
     id: -PVofD2A9t8
     provider: youtube
-categories:
-  - Layout
-  - Uncategorized
-tags:
-  - video
-  - layout
 ---
 
 This post should display a **header with a responsive video**, if the theme supports it.
