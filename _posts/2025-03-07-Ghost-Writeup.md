@@ -1190,7 +1190,7 @@ cat DKMKey.txt | tr -d '-' | xxd -r -p > DKMKey.bin
 ~~~
 
 
-## Crafting SAML Token
+### Crafting SAML Token
 
 Procederemos a crear el token haciendo uso de la `TKS Key` para firmar el token, y la `DKM Key` para cifrarlo
 
