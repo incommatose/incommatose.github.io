@@ -125,7 +125,7 @@ Como el puerto `80` se encuentra expuesto, podemos dirigirnos a la IP o el nombr
 La página corresponde a un `Zoo` de capybaras, muy tiernos por cierto. Además se nos da la bienvenida como el usuario `capybara`, esto ya nos da una pista sobre un usuario válido dentro de un servicio
 
 
-# Intrusión / Explotación
+# Intrusión /Explotaci�n
 ---
 ## MySQL Credentials Bruteforcing
 
@@ -200,6 +200,8 @@ MariaDB [beta]> select * from registraton;
 MariaDB [beta]> 
 ~~~
 
+Y dentro de la tabla `registraton` en la base de datos `beta` existe un registro de un usuario `balulero` y un hash
+
 
 ## Hash Cracking
 
@@ -265,7 +267,7 @@ En este ejemplo cambiamos la variable de entorno `TERM` para que su valor sea `x
 
 # Escalada de Privilegios
 ---
-Si listamos los archivos en el directorio actual, veremos un directorio `server`
+Si listamos los archivos en el directorio actual, veremos un directorio `server`, y dentro de �ste se encuentra un archivo `backup.pdf`
 
 ~~~ bash
 balulero@d681f83f90f6:~$ ls -la 
