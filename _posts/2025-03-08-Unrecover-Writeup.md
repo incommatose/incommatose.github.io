@@ -8,10 +8,10 @@ toc_label: "Topics"
 toc_sticky: true
 ---
 
+![image-center](/assets/images/posts/unrecover-dockerlabs.png){: .align-center}
 
->[!NOTE] Habilidades
->MySQL Credentials Bruteforcing - `hydra`, Hash Cracking, Text Extraction from PDF File
-
+**Habilidades:** MySQL Credentials Bruteforcing - `hydra`, Hash Cracking, Text Extraction from PDF File
+{: .notice--primary}
 
 
 # Reconocimiento
@@ -120,7 +120,7 @@ Podemos ver varios servicios como `ftp`, `http` y `mysql`, procederemos a intent
 
 Como el puerto `80` se encuentra expuesto, podemos dirigirnos a la IP o el nombre de dominio en el navegador
 
-![[Pasted image 20250308113417.png]]
+![image-center](/assets/images/posts/unrecover-web.png){: .align-center}
 
 La página corresponde a un `Zoo` de capybaras, muy tiernos por cierto. Además se nos da la bienvenida como el usuario `capybara`, esto ya nos da una pista sobre un usuario válido dentro de un servicio
 
@@ -325,8 +325,7 @@ Otra cosa que podemos hacer es ver el `pdf` (lógicamente). Si somos demasiado f
 open .
 ~~~
 
-![[Pasted image 20250308122154.png]]
-
+![image-center](/assets/images/posts/unrecover-view-file.png){: .align-center}
 
 ## Text Extraction
 

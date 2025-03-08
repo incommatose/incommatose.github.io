@@ -5,9 +5,10 @@ tags: ["Windows", "Insane", "Active Directory", "Hackthebox"]
 categories: ["writeup", "hacking"]
 toc: true 
 toc_label: "Topics"
-toc_icon: "cog"
 toc_sticky: true
 ---
+
+![image-center](/assets/images/posts/ghost-hackthebox.png){: .align-center}
 
 **Habilidades:** Virtual Hosting, LDAP Injection, Blind LDAP Injection - Credential Brute Forcing (Python Scripting), Local File Inclusion (GhostCMS), Abusing Ghost CMS Api (Command Injection), Abusing SSH Multiplexing, ADIDNS Poisoning - `dnstool.py`, Stealing NetNTLMv2 Hashes With `Responder.py`, Hash Cracking (NetNTLMv2), DC Enumeration (SharpHound.exe), Dumping gMSA Password, PassTheHash (Evil-WinRM), Golden SAML Attack using `ADFSpoof.py`, Abusing SQL Server `xp_cmdshell` to RCE, Powershell Reverse Shell Obfuscation (PowerJoker), Abusing SeImpersonatePrivilege (EfsPotato.exe) [Local Privilege Escalation], DCSync Using Mimikatz, Golden Ticket Attack - Requesting TGT using `ticketer.py`, Pivoting with Chisel + PassTheTicket (`proxychains` + `secretsdump.py`) [Privilege Escalation], Golden Ticket Attack using Bash Scripting
 {: .notice--primary}
