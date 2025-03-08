@@ -10,10 +10,6 @@ toc_sticky: true
 
 ![image-center](/assets/images/posts/unrecover-dockerlabs.png){: .align-center}
 
-**Habilidades:** MySQL Credentials Bruteforcing - `hydra`, Hash Cracking, Text Extraction from PDF File
-{: .notice--primary}
-
-
 # Reconocimiento
 ---
 En este caso podemos identificar la IP de la máquina víctima con un nombre de dominio y agregarlo al archivo `/etc/hosts`
@@ -125,7 +121,7 @@ Como el puerto `80` se encuentra expuesto, podemos dirigirnos a la IP o el nombr
 La página corresponde a un `Zoo` de capybaras, muy tiernos por cierto. Además se nos da la bienvenida como el usuario `capybara`, esto ya nos da una pista sobre un usuario válido dentro de un servicio
 
 
-# Intrusión /Explotaci�n
+# Intrusión / Explotación
 ---
 ## MySQL Credentials Bruteforcing
 
@@ -200,8 +196,6 @@ MariaDB [beta]> select * from registraton;
 MariaDB [beta]> 
 ~~~
 
-Y dentro de la tabla `registraton` en la base de datos `beta` existe un registro de un usuario `balulero` y un hash
-
 
 ## Hash Cracking
 
@@ -267,7 +261,7 @@ En este ejemplo cambiamos la variable de entorno `TERM` para que su valor sea `x
 
 # Escalada de Privilegios
 ---
-Si listamos los archivos en el directorio actual, veremos un directorio `server`, y dentro de �ste se encuentra un archivo `backup.pdf`
+Si listamos los archivos en el directorio actual, veremos un directorio `server`
 
 ~~~ bash
 balulero@d681f83f90f6:~$ ls -la 
@@ -288,7 +282,7 @@ drwx------ 1 balulero balulero    66 Feb  2 10:53 ..
 ~~~
 
 
-## HTTP Server
+### HTTP Server
 
 Una forma de transferirnos este archivo a nuestra máquina atacante es haciendo uso de `python3` para iniciar un servidor HTTP por un puerto que no sea el `80` (porque está siendo utilizado por apache)
 
@@ -333,7 +327,7 @@ open .
 
 Vemos que se nos está dando la contraseña del usuario `root` supuestamente, pero la contraseña aparece en un formato `borroso`. Lo que podemos hacer si somos tan ciegos como para no poder leer la contraseña es hacer un tratamiento para convertir el `pdf` a una imagen `png` e intentar extraer el texto con alguna herramienta en línea como la siguiente
 
-https://www.prepostseo.com/es/image-to-text
+- https://www.prepostseo.com/es/image-to-text
 
 Primero convertiremos el `pdf` en una imagen `png`
 
@@ -362,4 +356,3 @@ Password:
 root@d681f83f90f6:/home/balulero/server\# id
 uid=0(root) gid=0(root) groups=0(root)
 ~~~
-
