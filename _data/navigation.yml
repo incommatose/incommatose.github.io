@@ -3,3 +3,16 @@ main:
     url: /blog/
   - title: "About"
     url: /about/
+  - title: "Categories"
+    url: /categories/
+
+
+sidebar:
+  - title: Categorías
+    children:
+      - title: "Hacking"
+        url: /categories/hacking/
+      - title: "Writeups"
+        url: /categories/writeup/
+      - title: "Turoriales"
+        url: /docs/tutorials/
