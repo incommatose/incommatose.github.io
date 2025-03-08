@@ -10,6 +10,9 @@ toc_sticky: true
 
 ![image-center](/assets/images/posts/unrecover-dockerlabs.png){: .align-center}
 
+**Habilidades:** MySQL Credentials Bruteforcing - `hydra`, Hash Cracking, Text Extraction from PDF File
+{: .notice--primary}
+
 # Reconocimiento
 ---
 En este caso podemos identificar la IP de la máquina víctima con un nombre de dominio y agregarlo al archivo `/etc/hosts`
