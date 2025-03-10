@@ -1,5 +1,4 @@
 ---
-layout: none
 title: "Ghost - Writeup (HackTheBox)"
 permalink: "/Ghost-Writeup/"
 tags: ["Windows", "Insane", "Active Directory", "Hackthebox"]
@@ -7,6 +6,8 @@ categories: ["writeup", "hacking"]
 toc: true 
 toc_label: "Topics"
 toc_sticky: true
+hidden: true
+sitemap: false
 ---
 
 ![image-center](/assets/images/posts/ghost-hackthebox.png){: .align-center}

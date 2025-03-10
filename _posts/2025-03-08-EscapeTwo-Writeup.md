@@ -1,5 +1,4 @@
 ---
-layout: none
 title: "EscapeTwo - Writeup (HackTheBox)"
 permalink: "/EscapeTwo-Writeup/"
 tags: ["Windows", "Esay", "Active Directory", "Hackthebox"]
@@ -7,6 +6,8 @@ categories: ["writeup", "hacking"]
 toc: true 
 toc_label: "Topics"
 toc_sticky: true
+hidden: true
+sitemap: false
 ---
 
 ![image-center](/assets/images/posts/escapeTwo-hackthebox.png){: .align-center}
