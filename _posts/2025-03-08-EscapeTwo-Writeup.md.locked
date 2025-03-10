@@ -6,6 +6,7 @@ categories: ["writeup", "hacking"]
 toc: true 
 toc_label: "Topics"
 toc_sticky: true
+search: false
 ---
 
 ![image-center](/assets/images/posts/escapeTwo-hackthebox.png){: .align-center}
