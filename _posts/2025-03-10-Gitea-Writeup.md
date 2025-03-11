@@ -78,7 +78,7 @@ nmap -p 22,80,3000 -sVC gitea.dl -oN services
 Starting Nmap 7.94SVN ( https://nmap.org ) at 2025-03-09 22:09 EDT
 Nmap scan report for gitea.dl (172.17.0.2)
 Host is up (0.000042s latency).
-rDNS record for 172.17.0.2: force.dl
+rDNS record for 172.17.0.2: gitea.dl
 
 PORT     STATE SERVICE VERSION
 22/tcp   open  ssh     OpenSSH 9.6p1 Ubuntu 3ubuntu13.8 (Ubuntu Linux; protocol 2.0)
@@ -182,8 +182,8 @@ En el `placeholder` de los campos a rellenar podemos ver ciertos textos que no s
 Si analizamos el servicio HTTP que se ejecuta en el puerto `3000`, podemos ver que se trata de `gitea`
 
 ~~~ bash
-whatweb http://force.dl:3000                                                                                                                   
-http://force.dl:3000 [200 OK] Cookies[_csrf,i_like_gitea], Country[RESERVED][ZZ], HTML5, HttpOnly[_csrf,i_like_gitea], IP[172.17.0.2], Meta-Author[Gitea - Git with a cup of tea], Open-Graph-Protocol[website], PoweredBy[Gitea], Script, Title[Gitea: Git with a cup of tea], X-Frame-Options[SAMEORIGIN]
+whatweb http://gitea.dl:3000                                                                                                                   
+http://gitea.dl:3000 [200 OK] Cookies[_csrf,i_like_gitea], Country[RESERVED][ZZ], HTML5, HttpOnly[_csrf,i_like_gitea], IP[172.17.0.2], Meta-Author[Gitea - Git with a cup of tea], Open-Graph-Protocol[website], PoweredBy[Gitea], Script, Title[Gitea: Git with a cup of tea], X-Frame-Options[SAMEORIGIN]
 ~~~
 
 ![image-center](/assets/images/posts/gitea-gitea.png){: .align-center}
