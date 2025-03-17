@@ -1,5 +1,5 @@
 ---
-title: "Lifeordead - Dockerlabs (Writeup)"
+title: "Lifeordead - Writeup (Dockerlabs)"
 permalink: "/Lifeordead-Writeup/"
 tags: ["Linux", "Dockerlabs", "Sudoers Abuse", "IP Aliasing", "Sudo Privileges Abuse"]
 categories: ["writeup", "hacking", "dockerlabs", "linux"]
@@ -235,7 +235,7 @@ Cuando nos quedamos sin intentos, se inicia un `timeout` de 30 segundos
 
 Luego de una investigación acerca de las respuestas del servidor frente a diferentes tipos de solicitudes. El servidor no es capaz de validar la cantidad de intentos cuando manipulamos la `cookie` de sesión 
 
-![image-center](/assets/images/posts/lifeordead-abusing-session-validation){: .align-center}
+![image-center](/assets/images/posts/lifeordead-abusing-session-validation.mp4){: .align-center}
 
 Aprovechando esto, no necesitamos contemplar la `cookie` de `PHPSESSID`, lo que facilitaría intentar fuerza bruta para adivinar el código. Construiremos un script en python que facilite esta tarea
 
