@@ -23,12 +23,12 @@ subtitle                 : # site tagline that appears below site title in masth
 name                     : "Andrew's Blog"
 description              : ""
 url                      : "https://incommatose.github.io"
-baseurl                  : # "/blog"
+baseurl                  : # "/"
 repository               : # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
 teaser                   : # path of fallback teaser image, e.g. "/assets/images/500x300.png"
 logo                     : # path of logo image to display in the masthead, e.g. "/assets/images/88x88.png"
 masthead_title           : # overrides the website title displayed in the masthead, use " " for no title
-breadcrumbs              : # true, false (default)
+breadcrumbs              : true
 words_per_minute         : 200
 enable_copy_code_button  : true
 copyright                : # "copyright" name, defaults to site.title
@@ -68,9 +68,9 @@ reCaptcha:
 atom_feed:
   path                   : # blank (default) uses feed.xml
   hide                   : # true, false (default)
-search                   : true
+search                   : #true
 search_full_content      : true
-search_provider          : lunr
+search_provider          : #lunr
 lunr:
   search_within_pages    : # true
 algolia:
@@ -108,7 +108,7 @@ analytics:
   provider               : # false (default), "google", "google-universal", "google-gtag", "custom"
   google:
     tracking_id          :
-    anonymize_ip         : # true, false (default)
+    anonymize_ip         : true
 
 
 # Site Author
@@ -143,13 +143,13 @@ footer:
   links:
     - label: "Twitter"
       icon: "fab fa-fw fa-twitter-square"
-      # url:
+      url: "https://twitter.com/incommatose"
     - label: "Facebook"
       icon: "fab fa-fw fa-facebook-square"
       # url:
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
-      # url:
+      url: "https://github.com/incommatose"
     - label: "GitLab"
       icon: "fab fa-fw fa-gitlab"
       # url:
@@ -319,9 +319,14 @@ defaults:
       path: ""
       type: posts
     values:
+      sidebar:
+        nav:
+          - main
+          - docs
       layout: single
       author_profile: true
       read_time: true
       comments: # true
       share: true
       related: true
+

@@ -1,18 +1,19 @@
 main:
-  - title: "Blog"
+  - title: "Buscar"  
     url: /blog/
-  - title: "About"
-    url: /about/
-  - title: "Categories"
+  - title: "Sobre mí"
+    url: /whoami/
+  - title: "Categorías"
     url: /categories/
+  - title: "Etiquetas"
+    url: /tags/
 
-
-sidebar:
-  - title: Categorías
-    children:
-      - title: "Hacking"
-        url: /categories/hacking/
-      - title: "Writeups"
-        url: /categories/writeup/
-      - title: "Turoriales"
-        url: /docs/tutorials/
+docs:
+  - title: "Hacking Web"
+    url: "/tags/#hacking-web"
+  - title: "Active Directory"
+    url: "/categories/#active-directory"
+  - title: "HackTheBox"
+    url: "/categories/#hackthebox"
+  - title: "Dockerlabs"
+    url: "/categories/#dockerlabs"

@@ -1,11 +1,14 @@
 ---
 title: "Unrecover - Writeup (Dockerlabs)"
 permalink: "/Unrecover-Writeup/"
-tags: ["Linux", "Medium", "Dockerlabs"]
-categories: ["writeup", "hacking"]
+tags: ["Linux", "Medium", "Nmap Scanning", "Dockerlabs", "Hash Cracking", "MySQL"]
+categories: ["writeup", "hacking", "dockerlabs"]
 toc: true
 toc_label: "Topics"
 toc_sticky: true
+sidebar:
+    - main
+    - docs
 ---
 
 ![image-center](/assets/images/posts/unrecover-dockerlabs.png){: .align-center}

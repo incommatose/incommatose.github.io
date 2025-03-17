@@ -1,11 +1,14 @@
 ---
 title: "Certified - Writeup (Hackthebox)"
 permalink: "/Certified-Writeup/"
-tags: ["Windows", "Medium", "Active Directory", "Hackthebox", "DACL Abuse", "AD CS Abuse", "Shadow Credentials", "BloodHound", "PassTheHash", "PassTheCertificate", "ESC9"]
-categories: ["writeup", "hacking", "active-directory", "windows"]
+tags: ["Windows", "Medium", "Active Directory", "Hackthebox", "Nmap Scanning", "BloodHound", "WriteOwner Permission", "GenericAll Privilege", "GenericWrite Permissions", "DACL Abuse", "AD CS Abuse", "Shadow Credentials", "BloodHound", "PassTheHash", "PassTheCertificate", "ESC9"]
+categories: ["writeup", "hacking", "active-directory", "windows", "hackthebox"]
 toc: true
 toc_label: "Topics"
 toc_sticky: true
+sidebar:
+    - main
+    - docs
 ---
 
 ![image-center](/assets/images/posts/certified-hackthebox.png){: .align-center}

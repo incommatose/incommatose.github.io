@@ -1,11 +1,14 @@
 ---
 title: "Gitea - Writeup (Dockerlabs)"
 permalink: "/Gitea-Writeup/"
-tags: ["Linux", "Medium", "Hacking Web", "Dockerlabs"]
-categories: ["writeup", "hacking"]
+tags: ["Linux", "Medium", "Hacking Web", "Dockerlabs", "Fuzzing", "Subdomain Fuzzing", "Virtual Hosting", "SSH Brute Force", "Hydra", "User Defined Functions (UDF)"]
+categories: ["writeup", "hacking", "dockerlabs", "hacking-web"]
 toc: true
 toc_label: "Topics"
 toc_sticky: true
+sidebar:
+    - main
+    - docs
 ---
 
 ![image-center](/assets/images/posts/gitea-dockerlabs.png){: .align-center}
