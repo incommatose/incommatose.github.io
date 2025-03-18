@@ -238,7 +238,7 @@ Luego de una investigación acerca de las respuestas del servidor frente a difer
 
 <div class="video-center">
   <video controls>
-    <source src="{{ '/assets/videos/lifeordead-abusing-session-validation.mp4' | relative_url }}" type="video/mp4">
+    <source src="{{ '/assets/images/posts/lifeordead-abusing-session-validation_1.mp4' | relative_url }}" type="video/mp4">
     Tu navegador no soporta la reproducción de videos.
   </video>
 </div>
