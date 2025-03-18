@@ -1,4 +1,4 @@
-w---
+---
 title: "Lifeordead - Writeup (Dockerlabs)"
 permalink: "/Lifeordead-Writeup/"
 tags: ["Linux", "Dockerlabs", "Sudoers Abuse", "IP Aliasing", "Sudo Privileges Abuse"]
