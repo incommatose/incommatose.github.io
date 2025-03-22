@@ -14,7 +14,7 @@ sidebar:
 ![image-center](/assets/images/posts/cap-hackthebox.png){: .align-center}
 
 **Habilidades:** IDOR (Insecure Direct Object Reference), Network Traffic Analysis via `pcap` File, Information Leakage, Abusing `cap_setuid` Capabilites - `python3` [Privilege Escalalation]
-{: notice--primary}
+{: .notice--primary}
 
 # Introducción
 
