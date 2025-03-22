@@ -16,7 +16,11 @@ sidebar:
 **Habilidades:** Login Page Brute Forcing (`wfuzz`), Abusing Sudoers Privileges (Script), Virtual IP Aliasing, Abusing Sudo Privileges (Privileged Script Hijacking) [Privilege Escalation]
 {: .notice--primary}
 
+# Introducción
 
+Lifeordead es una máquina de la plataforma Dockerlabs de dificultad `Difícil`. En esta máquina se pondrán a prueba nuestras habilidades de hacking web. Aprenderemos diversos conceptos como fuzzing o fuerza bruta a inicios de sesión. Es una máquina ideal para avanzar dentro de la explotación a servicios web y configuración en entornos de contenedores con Docker.
+
+<br>
 
 # Reconocimiento
 ---

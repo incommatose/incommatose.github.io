@@ -16,6 +16,12 @@ sidebar:
 **Habilidades:** MySQL Credentials Bruteforcing - `hydra`, Hash Cracking, Text Extraction from PDF File
 {: .notice--primary}
 
+# Introduccipón
+
+Unrecover es una máquina de la plataforma Dockerlabs de dificultad `Media` donde aprenderemos conceptos de explotación en bases de datos MySQL. Esta máquina enfatiza en el uso de técnicas de fuerza bruta a servicios y contraseñas. Cuando logremos adentrarnos en el sistema operativo, se nos presentará un gran desafío que a tu capacidad de visión.
+
+<br>
+
 # Reconocimiento
 ---
 En este caso podemos identificar la IP de la máquina víctima con un nombre de dominio y agregarlo al archivo `/etc/hosts`

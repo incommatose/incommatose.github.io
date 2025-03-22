@@ -19,7 +19,7 @@ sidebar:
 
 # Introducción
 
-Chemistry es una máquina de dificultad fácil en HackTheBox en la cual aprenderás cómo explotar vulnerabilidades en aplicaciones web que procesan archivos CIF. Una vez hayamos ganado acceso aprenderemos metodologías de enumeración de sistemas Linux y explotación de vulnerabilidades conocidas relacionadas a servicios internos mal configurados
+Chemistry es una máquina de dificultad fácil en HackTheBox en la cual aprenderás cómo explotar vulnerabilidades en aplicaciones web que procesan archivos CIF. Una vez hayamos ganado acceso aprenderemos metodologías de enumeración de sistemas Linux y explotación de vulnerabilidades conocidas relacionadas a servicios internos mal configurados.
 
 <br>
 
