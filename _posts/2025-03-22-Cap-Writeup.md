@@ -13,6 +13,8 @@ sidebar:
 
 ![image-center](/assets/images/posts/cap-hackthebox.png){: .align-center}
 
+**Habilidades:** IDOR (Insecure Direct Object Reference), Network Traffic Analysis via `pcap` File, Information Leakage, Abusing `cap_setuid` Capabilites - `python3` [Privilege Escalalation]
+
 # Introducción
 
 Cap es una máquina de dificultad fácil en HackTheBox enfocada en la enumeración y análisis de tráfico de red. A través de la inspección cuidadosa de los servicios expuestos, como atacantes podremos identificar información clave que permite el acceso inicial al sistema. La máquina también ofrece la oportunidad de aplicar técnicas básicas de escalada de privilegios para obtener el control total. Ideal para quienes buscan fortalecer sus habilidades en análisis de red y post-explotación.
