@@ -16,7 +16,11 @@ sidebar:
 **Habilidades:** RPC Enumeration, DC Enumeration - BloodHound (`bloodhound-python`), Abusing `WriteOwner` Permission (AD-DACL), Shadow Credentials - Abusing `GenericWrite` Permissions (AD-DACL), PassTheHash, Abusing `GenericAll` Privileges (AD-DACL), Abusing AD CS (Active Directory Certificates Services) - Using the `ESC9` Technique to Issue a Privileged Certificate [Privilege Escalation], Pass the Certificate
 {: .notice--primary}
 
+# Introducción
 
+Certified es una máquina de HackTheBox de dificultad `Medium` que simula un entorno corporativo implementado en Active Directory donde pondremos a prueba nuestras habilidades de análisis y movimiento lateral dentro de un entorno Windows. Aprenderemos acerca de abuso de permisos mal configurados en las ACLs además del abuso de vulnerabilidades relacionadas con AD CS (Active Directory Certificate Services) para otorgarnos privilegios elevados dentro del entorno de Directorio Activo.
+
+<br>
 
 # Reconocimiento
 ---
