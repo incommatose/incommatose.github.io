@@ -1,6 +1,6 @@
 ---
-title: "Certified - Writeup (Hackthebox)"
-permalink: "/Certified-Writeup/"
+title: "Chemistry - Writeup (Hackthebox)"
+permalink: "/Chemistry-Writeup/"
 tags: ["Linux", "Easy", "Hackthebox", "CVE-2024-23346", "CVE-2024-23344", "SSH Local Port Forwarding", "Malicious CIF File", "Hash Cracking", "Path Traversal", "Enumeration", "SQLite", "pymatgem RCE", "aiohttp"]
 categories: ["writeup", "hacking", "linux", "hackthebox"]
 toc: true

@@ -1,6 +1,6 @@
 ---
-title: "Certified - Writeup (Hackthebox)"
-permalink: "/Certified-Writeup/"
+title: "Cap - Writeup (Hackthebox)"
+permalink: "/Cap-Writeup/"
 tags: ["Linux", "Hackthebox", "Easy", "IDOR", "Capabilities"]
 categories: ["linux", "hackthebox", "hacking", "writeup"]
 toc: true
