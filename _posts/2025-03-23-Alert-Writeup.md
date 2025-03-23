@@ -172,8 +172,10 @@ Starting gobuster in directory enumeration mode
 /messages.php         (Status: 200) [Size: 1]
 ~~~
 
->[!tip] Existe un archivo `messages.php`, que podría ser donde se muestren los mensajes que enviamos a través del formulario `Contact Us`
+Existe un archivo `messages.php`, que podría ser donde se muestren los mensajes que enviamos a través del formulario `Contact Us`
+{: .primary--warning}
 
+<br>
 
 ## Subdomain Fuzzing
 
