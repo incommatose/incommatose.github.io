@@ -24,9 +24,22 @@ Alert es una máquina perteneciente a la plataforma de HackTheBox de dificultad 
 
 # Reconocimiento
 ---
-## Nmap 
+Lanzaremos una traza ICMP para verificar que la máquina se encuentra activa y responda nuestras conexiones
 
-Empezaremos la fase de reconocimiento realizando un escaneo con `nmap` para identificar los puertos y así los servicios que tenga expuestos
+~~~ bash
+ping -c 1 10.10.11.44
+PING 10.10.11.44 (10.10.11.44) 56(84) bytes of data.
+64 bytes from 10.10.11.44: icmp_seq=1 ttl=63 time=140 ms
+
+--- 10.10.11.44 ping statistics ---
+1 packets transmitted, 1 received, 0% packet loss, time 0ms
+rtt min/avg/max/mdev = 139.794/139.794/139.794/0.000 ms
+~~~
+
+
+## Nmap Scanning 
+
+Empezaremos la fase de reconocimiento realizando un escaneo con `nmap` para identificar los puertos y así los servicios quela m�quina v�ctima tenga expuesto
 
 ~~~ bash
 nmap -p- --open -sS --min-rate 5000 -n -Pn 10.10.11.44 -oG allPorts
