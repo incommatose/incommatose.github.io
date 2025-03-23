@@ -21,6 +21,7 @@ sidebar:
 Alert es una máquina perteneciente a la plataforma de HackTheBox de dificultad `Easy` que se enfoca en explotación de vulnerabilidades web comunes y técnicas básicas de escalada de privilegios en sistemas Linux. Esta máquina se centra en el aprendizaje para principiantes, aprenderemos a abusar de configuraciones inseguras en formularios de contacto para ganar acceso al sistema y posteriormente hacernos con el control de la máquina enfrentándonos a servicios internos
 <br>
 
+
 # Reconocimiento
 ---
 ## Nmap 
@@ -354,7 +355,7 @@ Use the "--show" option to display all of the cracked passwords reliably
 Session completed.
 ~~~
 
-Y la contraseña encontrada es `manchesterunited`. Podemos usar estas credenciales para conectarnos a la web de `statistics.alert.htb`. Además intentaremos verificar si se reutilizan estas credenciales y nos permite conectarnos como el usuario `albert` proporcionando las mismas credenciales por `ssh`
+Y la credencial encontrada es `manchesterunited`. Podemos usar esta contrase�a para conectarnos a la web de `statistics.alert.htb`. Además intentaremos vrificar si se reutilizan estas credenciales y nos permite conectarnos como el usuario `albert` por `ssh`
 
 ~~~ bash
 ssh albert@10.10.11.44 
