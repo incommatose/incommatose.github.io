@@ -1,7 +1,7 @@
 ---
 title: "Bruteshock - Writeup (Dockerlabs)"
 permalink: "/Bruteshock-Writeup/"
-tags: ["Linux", "Medium", "Dockerlabs",]
+tags: ["Linux", "Medium", "Dockerlabs", "Login Page Brute Force", "Hash Cracking", "Bash eqCode Execution", "Sudoers Abuse", "Exim Abuse", "Dos2Unix Abuse"]
 categories: ["writeup", "hacking", "linux", "dockerlabs"]
 toc: true
 toc_label: "Topics"
