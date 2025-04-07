@@ -15,6 +15,11 @@ sidebar:
 **Habilidades:** Virtual Hosting, LDAP Injection, Blind LDAP Injection - Credential Brute Forcing (Python Scripting), Local File Inclusion (GhostCMS), Abusing Ghost CMS Api (Command Injection), Abusing SSH Multiplexing, ADIDNS Poisoning - `dnstool.py`, Stealing NetNTLMv2 Hashes With `Responder.py`, Hash Cracking (NetNTLMv2), DC Enumeration (SharpHound.exe), Dumping gMSA Password, PassTheHash (Evil-WinRM), Golden SAML Attack using `ADFSpoof.py`, Abusing SQL Server `xp_cmdshell` to RCE, Powershell Reverse Shell Obfuscation (PowerJoker), Abusing SeImpersonatePrivilege (EfsPotato.exe) [Local Privilege Escalation], DCSync Using Mimikatz, Golden Ticket Attack - Requesting TGT using `ticketer.py`, Pivoting with Chisel + PassTheTicket (`proxychains` + `secretsdump.py`) [Privilege Escalation], Golden Ticket Attack using Bash Scripting
 {: .notice--primary}
 
+# Introducción
+
+Ghost es una máquina de dificultad `Insane` perteneciente a la plataforma de Hackthebox. En esta ocasi�n aprenderemos diversas t�cnicas de explotaci�n dentro de un entorno simulado de Active Directory en un sistema opeativo Windows. Esta máquina posee múltiples servicios vulnerables los cuales debemos enumerar con diversas ténicas y herramientas para poder hacer una intrusión al sistema, desde ahí se nos presentan ciertos desafíos para ir escalando nuestros privilegios dentro de este entorno hasta hacernos con el control total del dominio.
+
+<br>
 
 # Reconocimiento
 ---
@@ -1654,7 +1659,8 @@ Supplemental Credentials:
 
 Solicitaremos un `TGT` para autenticarnos como `Administrator` y así poder extraer los hashes `NT` de todas las cuentas del dominio
 
->[!IMPORTANT] Probaremos ejecutar estos cuatro comandos sin el usuario `root` primeramente, (con `root` me dió algunos problemas)
+Probaremos ejecutar estos cuatro comandos sin el usuario `root` primeramente, (con `root` me dió algunos problemas)
+{. notice--warning}
 
 Como es común en ataques a `kerberos`, debemos sincronizar el reloj con el Controlador de Dominio porque `kerberos` es un poco especialito y usa el `timestamp` para validar los tickets y así evitar otros ataques, si no ejecutamos el siguiente comando veremos el siguiente error
 
@@ -1681,7 +1687,8 @@ export KRB5CCNAME=Administrator.ccache
 
 Ya con el ticket inyectado y con el culo cuadrado por tanto rato sentado, usaremos el ticket para obtener los hashes `NT` de todos los usuarios del dominio
 
-> [!Danger] Por un posible problema de sincronización de zona horaria, si este ataque no funciona al primer intento, debemos reintentar o automatizar estos cuatro comandos con bash
+Por un posible problema de sincronización de zona horaria, si este ataque no funciona al primer intento, debemos reintentar o automatizar estos cuatro comandos con bash
+{: .notice--danger}
 
 ~~~ bash
 proxychains -q secretsdump.py -k -no-pass -just-dc dc01.ghost.htb
