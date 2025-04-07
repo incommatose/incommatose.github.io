@@ -16,7 +16,6 @@ sidebar:
 **Habilidades:** Wordpress Plugins Fuzzing, Time Based SQL Injection - (CVE-2023-6063), Credentials Leakage,  Abusing Wordpress Theme File Editor to RCE, Command Injection, Python Capability - `cap_setuid` [Privilege Escalation]
 {: .notice--primary}
 
-
 # Introducción
 
 Norc es una máquina de dificultad `Difícil` de la plataforma Dockerlabs. Revisaremos diversos conceptos relacionados con la explotación de vulnerabilidades web dentro de Wordpress. Combinaremos diversas técnicas para lograr colarnos dentro del sistema y poder escalar entre usuarios hasta tener el control total del sistema. 
@@ -25,6 +24,7 @@ Norc es una máquina de dificultad `Difícil` de la plataforma Dockerlabs. Revis
 
 # Reconocimiento
 ---
+
 ## Nmap Scanning
 
 Empezaremos haciendo un escaneo de puertos abiertos por TCP
