@@ -1,13 +1,13 @@
 ---
 title: "Ghost - Writeup (HackTheBox)"
 permalink: "/Ghost-Writeup/"
-tags: ["Windows", "Insane", "Active Directory", "Hackthebox"]
-categories: ["writeup", "hacking"]
+tags: ["Windows", "Insane", "Active Directory", "Hackthebox", "LDAP Injection", "Python Scripting", "API Abusing", "ADIDNS Poisoning", "Staling Net-NTLMv2 Hash","Golden SAML", "Golden Ticket Attack", "Dumping gMSA Password","Abusing SeImpersonatePrivilege"]
+categories: ["writeup", "hacking", "windows", "active-directory"]
 toc: true 
 toc_label: "Topics"
 toc_sticky: true
-hidden: true
-sitemap: false
+sidebar:
+    - main
 ---
 
 ![image-center](/assets/images/posts/ghost-hackthebox.png){: .align-center}
