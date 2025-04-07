@@ -17,7 +17,7 @@ sidebar:
 
 # Introducción
 
-Ghost es una máquina de dificultad `Insane` perteneciente a la plataforma de Hackthebox. En esta ocasi�n aprenderemos diversas t�cnicas de explotaci�n dentro de un entorno simulado de Active Directory en un sistema opeativo Windows. Esta máquina posee múltiples servicios vulnerables los cuales debemos enumerar con diversas ténicas y herramientas para poder hacer una intrusión al sistema, desde ahí se nos presentan ciertos desafíos para ir escalando nuestros privilegios dentro de este entorno hasta hacernos con el control total del dominio.
+Ghost es una máquina Windows de dificultad `Insane` perteneciente a la plataforma de Hackthebox. Esta máquina simula un entorno de Active Directory donde debemos emplear técnicas avanzadas de enumeración y explotación para comprometer el sistema. Existen diversos servicios configurados y sitios web dentro de este entorno, los cuales debemos aprovechar para hacer una intrusión a la máquina. En la escalada aprenderemos técnicas avanzadas donde debemos abusar de servicios de Active Directory mal configurados, los que nos permitirán hacernos con el control del dominio.
 
 <br>
 
