@@ -1,7 +1,7 @@
 ---
 title: "Ghost - Writeup (HackTheBox)"
 permalink: "/Ghost-Writeup/"
-tags: ["Windows", "Insane", "Active Directory", "Hackthebox", "LDAP Injection", "Python Scripting", "API Abusing", "ADIDNS Poisoning", "Staling Net-NTLMv2 Hash","Golden SAML", "Golden Ticket Attack", "Dumping gMSA Password","Abusing SeImpersonatePrivilege"]
+tags: ["Windows", "Insane", "Active Directory", "Hackthebox", "LDAP Injection", "Python Scripting", "API Abusing", "Abusing SSH Multiplexing", "ADIDNS Poisoning", "Stealing Net-NTLMv2 Hash", "Bloodhound", "Golden SAML Attack", "Golden Ticket Attack", "DCSync", "Hash Cracking", "PassTheHash", "Abusing SQL Server", "Abusing xp_cmdshell", "Powershell Reverse Shell Obfusctation", "Mimikatz", "Proxychains", "Dumping gMSA Password","Abusing SeImpersonatePrivilege"]
 categories: ["writeup", "hacking", "windows", "active-directory"]
 toc: true 
 toc_label: "Topics"
