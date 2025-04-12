@@ -9,6 +9,9 @@ toc_sticky: true
 sidebar:
     - main
     - docs
+seo-title: "NorC - Writeup (Dockerlabs)"
+seo-description: "NorC es una máquina Linux de la plataforma Dockelabs donde aprenderemos écnicas de enumeracón y eplotaci�n del gestor de contenido Wordpress."
+excerpt: "Norc es una máquina de dificultad `Difícil` de la plataforma Dockerlabs. Revisaremos diversos conceptos relacionados con la explotación de vulnerabilidades web dentro de Wordpress. Combinaremos diversas técnicas para lograr cornos dentro del sistema y poder escalar entre usuarios hasta tener el control total del sistema."
 ---
 
 ![image-center](/assets/images/posts/norc-dockerlabs.png){: .align-center}
@@ -18,7 +21,7 @@ sidebar:
 
 # Introducción
 
-Norc es una máquina de dificultad `Difícil` de la plataforma Dockerlabs. Revisaremos diversos conceptos relacionados con la explotación de vulnerabilidades web dentro de Wordpress. Combinaremos diversas técnicas para lograr colarnos dentro del sistema y poder escalar entre usuarios hasta tener el control total del sistema. 
+Norc es una máquina de dificultad `Difícil` de la plataforma Dockerlabs. Revisaremos diversos conceptos relacionados con la explotación de vulnerabilidades web dentro de Wordpress. Combinaremos diversas técnicas para lograr colarnos ntro del sistema y poder escalar entre usuarios hasta tener el control total del sistema. 
 
 <br>
 

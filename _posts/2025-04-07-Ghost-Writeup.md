@@ -8,11 +8,9 @@ toc_label: "Topics"
 toc_sticky: true
 sidebar:
     - main
-excerpt: "Ghost es una máquina Windows de dificultad `Insane` perteneciente a la plataforma de Hackthebox. Esta máquina simula uu n entorno de Active Directory donde debemos emplear técnicas avanzadas de enumeración y explotación para comprometer    el sistema. Existen diversos servicios configurados y sitios web dentro de este entorno, los cuales debemos aprovechar para hacer una intrusión a la máquina. En la escalada aprenderemos técnicas avanzadas donde debemos abusar de servicioo
-s de Active Directory mal configurados, los que nos permitirán hacernos con el control del dominio.
-"
-seo_tittle: "Ghost - Writeup (HackTheBox)"
 
+seo_tittle: "Ghost - Writeup (HackTheBox)"
+seo_description: "Ghost es una m�quina Windows de dificultad Insane de la plataforma de HackTheBox. Esta m�quina simula un entorno de Active Directory donde debemos emplear t�cnicas avanzadas de enumeraci�n y explotaci�n para comprometer el sistema"
 ---
 
 ![image-center](/assets/images/posts/ghost-hackthebox.png){: .align-center}
@@ -22,7 +20,7 @@ seo_tittle: "Ghost - Writeup (HackTheBox)"
 
 # Introducción
 
-Ghost es una máquina Windows de dificultad `Insane` perteneciente a la plataforma de Hackthebox. Esta máquina simula un entorno de Active Directory donde debemos emplear técnicas avanzadas de enumeración y explotación para comprometer el sistema. Existen diversos servicios configurados y sitios web dentro de este entorno, los cuales debemos aprovechar para hacer una intrusión a la máquina. En la escalada aprenderemos técnicas avanzadas donde debemos abusar de servicios de Active Directory mal configurados, los que nos permitirán hacernos con el control del dominio.
+Ghost es una máquina Windows de dificultad `Insane` perteneciente a la plataforma de Hackthebox. Esta máquina simulan entorno de Active Directory donde debemos emplear técnicas avanzadas de enumeración y explotación para comprometer sistema. Existen diversos servicios configurados y sitios web dentro de este entorno, los cuales debemos aprovechar para hacer una intrusión a la máquina. En la escaladabusaremos de servicios de Active Directory mal configurados, los que nos permitirán hacernos con el control del dominio.
 
 <br>
 
