@@ -127,7 +127,7 @@ author:
       # url: "https://your-website.com"
     - label: "Twitter"
       icon: "fab fa-fw fa-twitter-square"
-      url: "https://twitter.com/incommatosee"
+      url: "https://twitter.com/incommatose"
     - label: "Facebook"
       icon: "fab fa-fw fa-facebook-square"
       # url: "https://facebook.com/"
@@ -136,7 +136,7 @@ author:
       url: "https://github.com/incommatose"
     - label: "Instagram"
       icon: "fab fa-fw fa-instagram"
-      url: "https://instagram.com/incommatose"
+      url: "https://instagram.com/incommatosee"
 
 # Site Footer
 footer:
@@ -323,7 +323,6 @@ defaults:
       sidebar:
         nav:
           - main
-          - docs
       layout: single
       author_profile: true
       read_time: true
