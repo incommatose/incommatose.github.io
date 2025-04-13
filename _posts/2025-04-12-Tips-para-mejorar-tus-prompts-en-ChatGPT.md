@@ -20,7 +20,6 @@ header:
     overlay_image: /assets/images/headers/usa-chatgpt-como-pro.jpg
     overlay_filter: 0.2
     og_image: /assets/images/headers/usa-chatgpt-como-pro.jpg
-
 toc_sticky: true
 
 ---
@@ -106,5 +105,6 @@ Uno de los peores errores a la hora de utilizar este tipo de herramientas es sol
 
 Si haz llegado hasta aquí, significa que estás buscando mejorar y te preocupas por tu aprendizaje, ¡enhorabuena!, vas por buen camino, muchas gracias por leer. Por último te dejo la cita del día (totalmente random).
 
-> [!quote] Many of life's failures are people who did not realize how close they were to success when they gave up.
+> Many of life's failures are people who did not realize how close they were to success when they gave up.
 > — Thomas Edison
+{: .text-center}
