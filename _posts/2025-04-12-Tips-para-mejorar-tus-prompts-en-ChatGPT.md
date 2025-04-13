@@ -16,7 +16,6 @@ categories:
   - learning
 seo_tittle: "Cómo sacarle el 100% a ChatGPT: Tips para hacer mejores prompts"
 seo_description: Entiende el potencial que tiene esta herramienta de inteligencia artificial para llevar tu aprendizaje en ciberseguridad u otros temas al siguiente nivel (gratis). 
-layout: single
 header:
     image: /assets/images/posts/headers/usa-chatgpt-como-pro.png
 ---
