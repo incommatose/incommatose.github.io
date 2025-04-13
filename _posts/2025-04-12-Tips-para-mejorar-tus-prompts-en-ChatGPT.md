@@ -3,7 +3,7 @@ title: "Cómo sacarle el 100% a ChatGPT: Tips para hacer mejores prompts"
 permalink: /tips-para-mejorar-tus-prompts-en-chatgpt/
 toc: true
 toc_label: Topics
-excerpt: Entiende el potencial que tiene esta herramienta de inteligencia artificial para llevar tu aprendizaje en ciberseguridad u otros temas al siguiente nivel (gratis).
+excerpt: Comprende el potencial que tiene esta herramienta de **inteligencia artificial** para llevar tu **aprendizaje** en ciberseguridad u otros temas al **siguiente nivel**.
 sidebar: main
 tags:
   - ChatGPT

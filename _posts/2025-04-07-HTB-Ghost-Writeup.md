@@ -59,7 +59,7 @@ toc_label: Topics
 toc_sticky: true
 sidebar:
   - main
-seo_tittle: Ghost - Writeup (HTB)
+seo_tittle: Ghost - Insane (HTB)
 seo_description: Ghost es una máquina Windows de dificultad Insane de la plataforma de HackTheBox donde se simula un entorno de Active Directory. Emplearemos diversas técnicas avanzadas de enumeración y explotación para comprometer completamente el sistema.
 excerpt: Ghost es una máquina Windows de dificultad `Insane` perteneciente a la plataforma de Hackthebox. Esta máquina simulan entorno de Active Directory donde debemos emplear técnicas avanzadas de enumeración y explotación para comprometer sistema. Existen diversos servicios configurados y sitios web dentro de este entorno, los cuales debemos aprovechar para hacer una intrusión a la máquina. En la escalada, abusaremos de servicios de Active Directory mal configurados, los que nos permitirán hacernos con el control del dominio.
 ---
@@ -598,11 +598,11 @@ Full password for gitea_temp_principal: szrr8kpc3z6onlqf
 
 Volveremos a `gitea` e iniciaremos sesión como `gitea_temp_principal`, veremos dos repositorios, `blog` e `intranet`
 
-![image-center](/assets/images/posts/gitea-repos.png){: .align-center}
+![image-center](/assets/images/posts/ghost-gitea-repos.png){: .align-center}
 
 Si exploramos el repositorio `intranet`, en el archivo `README.md` vemos el siguiente mensaje
 
-![image-center](/assets/images/posts/gitea-repo-intranet.png){: .align-center}
+![image-center](/assets/images/posts/ghost-gitea-repo-intranet.png){: .align-center}
 
 Se nos dice que se encuentra una API expuesta bajo el subdominio `intranet.ghost.htb/api-dev`. Además vemos que se nos deja una `API Key` en el repositorio `blog`
 
@@ -1130,7 +1130,7 @@ evil-winrm -i 10.10.11.24 -u 'adfs_gmsa$' -H '0bef7...'
 
 Intentaremos autenticarnos como el usuario `justin.bradley` en el servicio federado de este dominio, capturaremos las solicitudes y respuestas SAML con Burpsuite
 
-![image-center](/assets/images/posts/adfs-analysis-1.png){: .align-center}
+![image-center](/assets/images/posts/ghost-adfs-analysis-1.png){: .align-center}
 
 El servidor nos redirige a `core.ghost.htb`, lo contemplaremos en el archivo `/etc/hosts`, en este punto ya debería verse de la siguiente manera
 
