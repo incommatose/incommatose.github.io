@@ -1,14 +1,35 @@
 ---
-title: "Alert - Writeup (Hackthebox)"
-permalink: "/Alert-Writeup/"
-tags: ["Linux", "Hackthebox", "Easy", "XSS", "Path Traversal", "Hash Cracking", "SSH Local Port Forwarding"]
-categories: ["linux", "hackthebox", "hacking", "hacking-web", "writeup"]
+title: Alert - Writeup (HTB)
+permalink: /Alert-HTB-Writeup/
+tags:
+  - Linux
+  - Easy
+  - XSS
+  - Path
+  - Traversal
+  - Hash
+  - Cracking
+  - SSH
+  - Local
+  - Port
+  - Forwarding
+  - HTB
+categories:
+  - linux
+  - hackthebox
+  - hacking
+  - hacking-web
+  - writeup
+  - htb
 toc: true
-toc_label: "Topics"
+toc_label: Topics
 toc_sticky: true
 sidebar:
-    - main
-    - docs
+  - main
+  - docs
+seo_tittle: Alert - Writeup (HTB)
+seo_description: Alert es una máquina de dificultad Easy en HackTheBox donde explotamos vulnerabilidades web de forma básica, obtendremos acceso privilegiado mediante el abuso de servicios mal configurados.
+excerpt: Alert es una máquina perteneciente a la plataforma de HackTheBox de dificultad `Easy` que se enfoca en explotación de vulnerabilidades web comunes y técnicas básicas de escalada de privilegios en sistemas Linux. Esta máquina se centra en el aprendizaje para principiantes, aprenderemos a abusar de configuraciones inseguras en formularios de contacto para ganar acceso al sistema y posteriormente hacernos con el control de la máquina enfrentándonos a servicios internos.
 ---
 
 ![image-center](/assets/images/posts/alert-hackthebox.png){: .align-center}
@@ -19,7 +40,8 @@ sidebar:
 
 # Introducción
 
-Alert es una máquina perteneciente a la plataforma de HackTheBox de dificultad `Easy` que se enfoca en explotación de vulnerabilidades web comunes y técnicas básicas de escalada de privilegios en sistemas Linux. Esta máquina se centra en el aprendizaje para principiantes, aprenderemos a abusar de configuraciones inseguras en formularios de contacto para ganar acceso al sistema y posteriormente hacernos con el control de la máquina enfrentándonos a servicios internos
+Alert es una máquina perteneciente a la plataforma de HackTheBox de dificultad `Easy` que se enfoca en explotación de vulnerabilidades web comunes y técnicas básicas de escalada de privilegios en sistemas Linux. Esta máquina se centra en el aprendizaje para principiantes, aprenderemos a abusar de configuraciones inseguras en formularios de contacto para ganar acceso al sistema y posteriormente hacernos con el control de la máquina enfrentándonos a servicios internos.
+
 <br>
 
 # Reconocimiento

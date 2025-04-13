@@ -1,16 +1,67 @@
 ---
-title: "Ghost - Writeup (HackTheBox)"
-permalink: "/Ghost-Writeup/"
-tags: ["Windows", "Insane", "Active Directory", "Hackthebox", "LDAP Injection", "Python Scripting", "API Abusing", "Abusing SSH Multiplexing", "ADIDNS Poisoning", "Stealing Net-NTLMv2 Hash", "Bloodhound", "Golden SAML Attack", "Golden Ticket Attack", "DCSync", "Hash Cracking", "PassTheHash", "Abusing SQL Server", "Abusing xp_cmdshell", "Powershell Reverse Shell Obfusctation", "Mimikatz", "Proxychains", "Dumping gMSA Password","Abusing SeImpersonatePrivilege"]
-categories: ["writeup", "hacking", "windows", "active-directory"]
-toc: true 
-toc_label: "Topics"
+title: Ghost - Writeup (HTB)
+permalink: /Ghost-HTB-Writeup/
+tags:
+  - Windows
+  - Insane
+  - Active
+  - Directory
+  - LDAP
+  - Injection
+  - Python
+  - Scripting
+  - API
+  - Abusing
+  - Abusing
+  - SSH
+  - Multiplexing
+  - ADIDNS
+  - Poisoning
+  - Stealing
+  - Net-NTLMv2
+  - Hash
+  - Bloodhound
+  - Golden
+  - SAML
+  - Attack
+  - Golden
+  - Ticket
+  - Attack
+  - DCSync
+  - Hash
+  - Cracking
+  - PassTheHash
+  - Abusing
+  - SQL
+  - Server
+  - Abusing
+  - xp_cmdshell
+  - Powershell
+  - Reverse
+  - Shell
+  - Obfusctation
+  - Mimikatz
+  - Proxychains
+  - Dumping
+  - gMSA
+  - Password
+  - Abusing
+  - SeImpersonatePrivilege
+  - HTB
+categories:
+  - writeup
+  - hacking
+  - windows
+  - active-directory
+  - htb
+toc: true
+toc_label: Topics
 toc_sticky: true
 sidebar:
-    - main
-
-seo_tittle: "Ghost - Writeup (HackTheBox)"
-seo_description: "Ghost es una m�quina Windows de dificultad Insane de la plataforma de HackTheBox. Esta m�quina simula un entorno de Active Directory donde debemos emplear t�cnicas avanzadas de enumeraci�n y explotaci�n para comprometer el sistema"
+  - main
+seo_tittle: Ghost - Writeup (HTB)
+seo_description: Ghost es una máquina Windows de dificultad Insane de la plataforma de HackTheBox donde se simula un entorno de Active Directory. Emplearemos diversas técnicas avanzadas de enumeración y explotación para comprometer completamente el sistema.
+excerpt: Ghost es una máquina Windows de dificultad `Insane` perteneciente a la plataforma de Hackthebox. Esta máquina simulan entorno de Active Directory donde debemos emplear técnicas avanzadas de enumeración y explotación para comprometer sistema. Existen diversos servicios configurados y sitios web dentro de este entorno, los cuales debemos aprovechar para hacer una intrusión a la máquina. En la escalada, abusaremos de servicios de Active Directory mal configurados, los que nos permitirán hacernos con el control del dominio.
 ---
 
 ![image-center](/assets/images/posts/ghost-hackthebox.png){: .align-center}
@@ -217,7 +268,7 @@ whatweb http://10.10.11.24:8008
 http://10.10.11.24:8008 [200 OK] Country[RESERVED][ZZ], HTML5, HTTPServer[Ubuntu Linux][nginx/1.18.0 (Ubuntu)], IP[10.10.11.24], MetaGenerator[Ghost 5.78], Open-Graph-Protocol[website], Script[application/ld+json], Title[Ghost], X-Powered-By[Express], nginx[1.18.0]
 ~~~
 
-![image-center](/assets/images/posts/ghost-cms-port_8008.png){: .align-center}
+![image-center](/assets/images/posts/ghost-ghost-cms-port_8008.png){: .align-center}
 
 Parece ser que `Ghost` es el gestor de contenido que se utiliza para esta web (`GhostCMS`), el cual es de código abierto, podemos encontrarlo en un repositorio de `Github`
 
@@ -233,7 +284,7 @@ https://ghost.htb:8443 [302 Found] Cookies[connect.sid], Country[RESERVED][ZZ], 
 https://ghost.htb:8443/login [200 OK] Cookies[connect.sid], Country[RESERVED][ZZ], HTML5, HTTPServer[Ubuntu Linux][nginx/1.18.0 (Ubuntu)], HttpOnly[connect.sid], IP[10.10.11.24], Title[Ghost Core], X-Powered-By[Express], nginx[1.18.0]
 ~~~
 
-![image-center](/assets/images/posts/ghost-cms-port_8443.png){: .align-center}
+![image-center](/assets/images/posts/ghost-ghost-cms-port_8443.png){: .align-center}
 
 Esta página resulta interesante para una posterior investigación debido a la pista que se nos brinda acerca de un inicio de sesión usando Servicios Federados de Active Directory (`ADFS`), que básicamente consiste en iniciar sesión en varios servicios mediante un solo conjunto de credenciales
 
@@ -261,14 +312,14 @@ cat /etc/hosts | grep ghost.htb
 
 Si ahora volvemos a acceder al enlace nuevo, tendremos acceso a lo que aparenta ser un login de `ADFS` (`Active Directory Federation Services`)
 
-![image-center](/assets/images/posts/ghost-adfs-signin.png){: .align-center}
+![image-center](/assets/images/posts/ghost-ghost-adfs-signin.png){: .align-center}
 
 
 ## Ghost CMS Admin Panel
 
 No necesitamos hacer fuzzing dado que el proyecto es de código abierto. Investigando un poco el repositorio oficial de `Ghost CMS`, vemos que cuenta con una carpeta `ghost`, si exploramos desde el navegador nos redirige a lo siguiente
 
-![image-center](/assets/images/posts/ghost-cms-admin-panel.png){: .align-center}
+![image-center](/assets/images/posts/ghost-ghost-cms-admin-panel.png){: .align-center}
 
 ## Subdomain Fuzzing
 
@@ -318,7 +369,7 @@ Descubrimos un subdominio `intranet`, lo agregaremos al archivo `/etc/hosts` par
 
 Navegaremos hasta `intranet.ghost.htb:8008`, se nos mostrará la siguiente página
 
-![image-center](/assets/images/posts/ghost-intranet-login.png){: .align-center}
+![image-center](/assets/images/posts/ghost-ghost-intranet-login.png){: .align-center}
 
 Nos redirige a `/login` y se nos muestra un panel de inicio de sesión, podemos probar diversos tipos de detecciones, no sin antes hacer un análisis de la solicitud HTTP con `Burpsuite`
 
@@ -327,7 +378,7 @@ Nos redirige a `/login` y se nos muestra un panel de inicio de sesión, podemos 
 
 Interceptamos la solicitud y la enviamos al `Repeater`, podremos ver la respuesta del servidor ante un intento de iniciar sesión
 
-![image-center](/assets/images/posts/burpsuite-analysis.png){: .align-center}
+![image-center](/assets/images/posts/ghost-burpsuite-analysis.png){: .align-center}
 
 Como nombre de usuario y contraseña se usa el nombre `1_ldap-username` y `1_ldap-secret`, esto nos da información de que quizá la autenticación se realiza mediante el protocolo LDAP
 
@@ -348,11 +399,11 @@ Es por esto que podemos usar una `wildcard` utilizando el caracter `*` (que repr
 
 Una vez entendido este concepto, procedemos a hacer la inyección a LDAP iniciando sesión como el usuario `*` con la contraseña `*` (sarcasmo)
 
-![image-center](/assets/images/posts/ldap-injection-wildcard.png){: .align-center}
+![image-center](/assets/images/posts/ghost-ldap-injection-wildcard.png){: .align-center}
 
 Entramos como el usuario `kathryn.holland`, y se nos muestran secciones de noticias, usuarios y un foro
 
-![image-center](/assets/images/posts/login-as-kathryn.png){: .align-center}
+![image-center](/assets/images/posts/ghost-login-as-kathryn.png){: .align-center}
 
 ## Kerberos User Validation
 
@@ -407,7 +458,7 @@ Version: dev (n/a) - 02/18/25 - Ronnie Flathers @ropnop
 
 Podremos notar una publicación que hace alusión a una migración desde `gitea` a `bitbucket`. Además se menciona que al servicio de `gitea` solo podremos acceder con la cuenta `gitea_temp_principal`
 
-![image-center](/assets/images/posts/forum-gitea.png){: .align-center}
+![image-center](/assets/images/posts/ghost-forum-gitea.png){: .align-center}
 
 Si hacemos una solicitud usando un subdominio `gitea` a `ghost.htb:8008`, vemos que el subdominio existe porque vemos la siguiente respuesta
 
@@ -449,11 +500,11 @@ Debemos agregar al archivo `/etc/hosts` el subdominio `gitea.ghost.htb` para que
 
 Ahora podremos visitar `gitea.ghost.htb:8008`, veremos la página principal de `Gitea`
 
-![image-center](/assets/images/posts/gitea-index.png){: .align-center}
+![image-center](/assets/images/posts/ghost-gitea-index.png){: .align-center}
 
 Podemos iniciar sesión, pero como por el momento no contamos con credenciales, no podremos acceder a este servicio
 
-![image-center](/assets/images/posts/gitea-signin.png){: .align-center}
+![image-center](/assets/images/posts/ghost-gitea-signin.png){: .align-center}
 
 
 ## Blind LDAP Injection - Credential Brute Forcing (Python Scripting)
@@ -555,7 +606,7 @@ Si exploramos el repositorio `intranet`, en el archivo `README.md` vemos el sigu
 
 Se nos dice que se encuentra una API expuesta bajo el subdominio `intranet.ghost.htb/api-dev`. Además vemos que se nos deja una `API Key` en el repositorio `blog`
 
-![image-center](/assets/images/posts/gitea-repo-blog.png){: .align-center}
+![image-center](/assets/images/posts/ghost-gitea-repo-blog.png){: .align-center}
 
 Además se nos menciona que la corporación está planeando implementar una nueva funcionalidad en el blog. Una conexión con la intranet, como está en desarrollo se usa una clave API como variable de entorno definida en la máquina con el nombre `DEV_INTRANET_KEY`
 
@@ -566,7 +617,7 @@ En Ghost CMS existe una api de contenido destinada a la consulta de la informaci
 
 - https://ghost.org/docs/content-api/
 
-![image-center](/assets/images/posts/ghost-cms-apidoc.png){: .align-center}
+![image-center](/assets/images/posts/ghost-ghost-cms-apidoc.png){: .align-center}
 
 Una vez comprendimos como se tramita la autorización de cualquier usuario que contenga la clave API, la usaremos en nuestra consulta mediante `curl`. En mi caso usaré `jq`
  para ver el formato `json` de forma más clara
@@ -613,7 +664,7 @@ curl -sLX GET 'http://ghost.htb:8008/ghost/api/content/authors/?key=a5af62882895
 
 Investigando el repositorio `ghost`, existe un archivo `public-posts.js`, dentro de éste se encuentra la siguiente línea de código que luce un tanto interesante
 
-![image-center](/assets/images/posts/lfi.png){: .align-center}
+![image-center](/assets/images/posts/ghost-lfi.png){: .align-center}
 
 El parámetro `extra` hace referencia a la lectura de un archivo cuando consultamos el endpoint `posts` en la API, como no está sanitizado podemos intentar abusar de este parámetro
 
@@ -669,7 +720,7 @@ Recordemos que se encuentra una API con el nombre `api-dev` bajo el subdominio d
 
 - Tenemos acceso al código desde el repositorio intranet, si eres curioso, notarás que existe un archivo `dev.rs` en el directorio `/intranet/backend/src/api`
 
-![image-center](/assets/images/posts/command-injection-1.png){: .align-center}
+![image-center](/assets/images/posts/ghost-command-injection-1.png){: .align-center}
 
 Gracias a esta línea de código podemos deducir lo siguiente:
 
@@ -679,7 +730,7 @@ Gracias a esta línea de código podemos deducir lo siguiente:
 
 Aprovecharemos la información que acabamos de descubrir para obtener acceso a la API. Si inspeccionamos el archivo `scan.rs`, veremos lo siguiente
 
-![image-center](/assets/images/posts/command-injection-2.png){: .align-center}
+![image-center](/assets/images/posts/ghost-command-injection-2.png){: .align-center}
 
 En este archivo se define un `endpoint` llamado `/scan`, el cual recibe un `JSON`, el cual debemos enviar un atributo `url`
 
@@ -900,13 +951,13 @@ bloodhound &>/dev/null & disown
 
 Si vemos el mapa de confianza de dominios, podemos ver que existe un dominio `corp.ghost.htb`, esta información nos servirá mas adelante
 
-![image-center](/assets/images/posts/bloodhound-domain-map.png){: .align-center}
+![image-center](/assets/images/posts/ghost-bloodhound-domain-map.png){: .align-center}
 
 ## ADIDNS Poisoning
 
 Recordemos que en el foro un usuario menciona que el dominio `bitbucket` no funciona, podemos aprovechar esto para envenenar la red e inyectar un `DNS Record`
  
-![image-center](/assets/images/posts/adidns-poisoning.png){: .align-center}
+![image-center](/assets/images/posts/ghost-adidns-poisoning.png){: .align-center}
 
 Agregaremos el registro DNS con el nombre `bitbucket` al dominio
 
@@ -1039,7 +1090,7 @@ type ..\Desktop\user.txt
 
 Hemos comprometido al usuario `justin.bradley`, analizando BloodHound, podemos ver que tenemos permisos directos sobre la cuenta `adfs_gmsa`
 
-![image-center](/assets/images/posts/bloodhound-dc-enumeration.png){: .align-center}
+![image-center](/assets/images/posts/ghost-bloodhound-dc-enumeration.png){: .align-center}
 
 ## Dumping GMSA Password - `gMSADumper.py`
 
@@ -1091,7 +1142,7 @@ cat /etc/hosts | grep ghost.htb
 
 Recargaremos y vemos la siguiente página, al parecer, solo el usuario `Administrator` tiene acceso a este servicio
 
-![image-center](/assets/images/posts/adfs-analysis-2.png){: .align-center}
+![image-center](/assets/images/posts/ghost-adfs-analysis-2.png){: .align-center}
 
 ## Golden SAML Attack
 
@@ -1252,7 +1303,7 @@ Si decodificamos un Token SAML en la siguiente página: https://www.scottbrady.i
 
 El último paso sería con Burpsuite realizar la siguiente solicitud POST a `/adfs/saml/postResponse` utilizando el token SAML malicioso que hemos creado
 
-![image-center](/assets/images/posts/golden-saml.png){: .align-center}
+![image-center](/assets/images/posts/ghost-golden-saml.png){: .align-center}
 
 En este caso capturamos la respuesta SAML que nos autentica como `justin.bradley` desde el `HTTP History` de Burpsuite, que podemos hacerlo si deshabilitamos la opción `Intercept` en la pestaña de `Proxy`
 
@@ -1283,7 +1334,7 @@ SAMLResponse= # ADFSpoof.py output
 
 Enviamos la solicitud ingresando la salida del comando `ADFSpoof.py`, que correspondería al Token SAML malicioso firmado y cifrado
 
-![image-center](/assets/images/posts/adfs-spoofing.png){: .align-center}
+![image-center](/assets/images/posts/ghost-adfs-spoofing.png){: .align-center}
 
 Replicaremos la respuesta en el navegador haciendo `Click Derecho > Request in browser > In original session`, copiamos el link e ingresamos con el proxy seleccionado en `FoxyProxy`, más no con `Intercept` habilitado, si ya eres experimentado con este paso, tal vez te asusten las mujeres (como a mi)
 
@@ -1292,7 +1343,7 @@ Replicaremos la respuesta en el navegador haciendo `Click Derecho > Request in b
 
 Conseguimos suplantar al usuario `GHOST\Administrator` e ingresar al siguiente servicio bajo el dominio `core.ghost.htb`
 
-![image-center](/assets/images/posts/mssql-injection.png){: .align-center}
+![image-center](/assets/images/posts/ghost-mssql-injection.png){: .align-center}
 
 Tenemos potestad para ejecutar consultas SQL dado el servicio al que logramos acceder. Ejecutaremos la siguiente consulta para listar todos servidores vinculados a SQL Server
 
@@ -1403,7 +1454,7 @@ Procedemos a lanzar la herramienta especificando nuestro puerto en escucha y nue
 python3 PowerJoker.py -l 10.10.x.x -p 443
 ~~~
 
-![image-center](/assets/images/posts/powershell-obfuscation.png){: .align-center}
+![image-center](/assets/images/posts/ghost-powershell-obfuscation.png){: .align-center}
 
 - Como ya teníamos el puerto `443` en escucha, el script terminará con un error, esto se debe a que el puerto ya está "ocupado" por `netcat`, si no tenías un puerto a la escucha, el script **iniciará automáticamente una sesión para recibir la conexión**
 - Si ejecutamos el script sin permisos administrativos, no se iniciará una sesión interactiva con un puerto a la escucha, esto es irrelevante si hacemos esto de forma manual

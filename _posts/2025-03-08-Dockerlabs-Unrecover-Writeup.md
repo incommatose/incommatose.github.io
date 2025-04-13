@@ -1,14 +1,27 @@
 ---
-title: "Unrecover - Writeup (Dockerlabs)"
-permalink: "/Unrecover-Writeup/"
-tags: ["Linux", "Medium", "Nmap Scanning", "Dockerlabs", "Hash Cracking", "MySQL"]
-categories: ["writeup", "hacking", "dockerlabs"]
+title: Unrecover - Writeup (Dockerlabs)
+permalink: /Unrecover-Dockerlabs-Writeup/
+tags:
+  - Linux
+  - Medium
+  - Nmap
+  - Scanning
+  - Dockerlabs
+  - Hash
+  - Cracking
+  - MySQL
+categories:
+  - writeup
+  - hacking
+  - dockerlabs
 toc: true
-toc_label: "Topics"
+toc_label: Topics
 toc_sticky: true
 sidebar:
-    - main
-    - docs
+  - main
+seo_tittle: Unrecover - Writeup (Dockerlabs)
+seo_description: Unrecover es una máquina de dificultad media en Dockerlabs donde debemos hacer uso de fuerza bruta y análisis de archivos para comprometer el sistema.
+excerpt: Unrecover es una máquina de la plataforma Dockerlabs de dificultad `Media` donde aprenderemos conceptos de explotación en bases de datos MySQL. Esta máquina enfatiza en el uso de técnicas de fuerza bruta a servicios y contraseñas. Cuando logremos adentrarnos en el sistema operativo, se nos presentará un gran desafío que a tu capacidad de visión.
 ---
 
 ![image-center](/assets/images/posts/unrecover-dockerlabs.png){: .align-center}

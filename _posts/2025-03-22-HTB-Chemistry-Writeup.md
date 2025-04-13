@@ -1,16 +1,44 @@
 ---
-title: "Chemistry - Writeup (Hackthebox)"
-permalink: "/Chemistry-Writeup/"
-tags: ["Linux", "Easy", "Hackthebox", "CVE-2024-23346", "CVE-2024-23344", "SSH Local Port Forwarding", "Malicious CIF File", "Hash Cracking", "Path Traversal", "Enumeration", "SQLite", "pymatgem RCE", "aiohttp"]
-categories: ["writeup", "hacking", "linux", "hackthebox"]
+title: Chemistry - Writeup (HTB)
+permalink: /Chemistry-HTB-Writeup/
+tags:
+  - Linux
+  - Easy
+  - CVE-2024-23346
+  - CVE-2024-23344
+  - SSH
+  - Local
+  - Port
+  - Forwarding
+  - Malicious
+  - CIF
+  - File
+  - Hash
+  - Cracking
+  - Path
+  - Traversal
+  - Enumeration
+  - SQLite
+  - pymatgem
+  - RCE
+  - aiohttp
+  - HTB
+categories:
+  - writeup
+  - hacking
+  - linux
+  - hackthebox
+  - htb
 toc: true
-toc_label: "Topics"
+toc_label: Topics
 toc_sticky: true
 sidebar:
-    - main
-    - docs
+  - main
+seo_tittle: Chemistry - Writeup (HTB)
+seo_description: Chemistry es una máquina Linux de dificultad Easy de la plataforma de HackTheBox. En esta oportunidad explotaremos vulnerabilidades conocidas en librerías de python para acceder al sistema mediante archivos CIF maliciosos además de lectura de archivos privilegiados.
+excerpt: Chemistry es una máquina de dificultad fácil en HackTheBox en la cual aprenderás cómo explotar vulnerabilidades en aplicaciones web que procesan archivos CIF. Una vez hayamos ganado acceso aprenderemos metodologías de enumeración de sistemas Linux y explotación de vulnerabilidades conocidas relacionadas a servicios internos mal configurados.
 ---
-
+ 
 ![image-center](/assets/images/posts/chemistry-hackthebox.png){: .align-center}
 
 **Habilidades:** `pymatgem` (Python Library) Remote Code Execution (CVE-2024-23346) - Making a Malicious CIF File, Hash Cracking, Linux System Enumeration, SQLite Database Analysis, SSH Local Port Forwarding, Python `aiohttp` Path Traversal (CVE-2024-23344)

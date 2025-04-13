@@ -1,14 +1,38 @@
 ---
-title: "Gitea - Writeup (Dockerlabs)"
-permalink: "/Gitea-Writeup/"
-tags: ["Linux", "Medium", "Hacking Web", "Dockerlabs", "Fuzzing", "Subdomain Fuzzing", "Virtual Hosting", "SSH Brute Force", "Hydra", "User Defined Functions (UDF)"]
-categories: ["writeup", "hacking", "dockerlabs", "hacking-web"]
+title: Gitea - Writeup (Dockerlabs)
+permalink: /Gitea-Dockerlabs-Writeup/
+tags:
+  - Linux
+  - Medium
+  - Hacking
+  - Web
+  - Dockerlabs
+  - Fuzzing
+  - Subdomain
+  - Fuzzing
+  - Virtual
+  - Hosting
+  - SSH
+  - Brute
+  - Force
+  - Hydra
+  - User
+  - Defined
+  - Functions
+  - (UDF)
+categories:
+  - writeup
+  - hacking
+  - dockerlabs
+  - hacking-web
 toc: true
-toc_label: "Topics"
+toc_label: Topics
 toc_sticky: true
 sidebar:
-    - main
-    - docs
+  - main
+seo_tittle: Gitea - Writeup (Dockerlabs)
+seo_description: Máquina Linux de dificultad media en Dockerlabs que requiere analizar repositorios en Gitea, explotar vulnerabilidades web y usar funciones UDF en MySQL para obtener acceso privilegiado.
+excerpt: Gitea es una máquina Linux de dificultad `Media` de la plataforma de Dockerlabs. El entorno se compone de un servicio web que implementa la herramienta `Gitea`, dentro de esta debemos hacer un análisis de repositorios y explotar vulnerabilidades web para ganar acceso al sistema. Una vez estamos dentro, se nos presenta un escenario donde debemos hacer uso de `User Defined Functions` (UDF) en `mysql` para elevar nuestros privilegios y convertirnos en `root`.
 ---
 
 ![image-center](/assets/images/posts/gitea-dockerlabs.png){: .align-center}
@@ -16,6 +40,11 @@ sidebar:
 **Habilidades:** Virtual Hosting, Subdomain Fuzzing, Directory Fuzzing, Directory Path Traversal, SSH Credentials Brute Forcing - `hydra`, Abusing User Defined Functions (UDF) - MySQL [Privilege Escalation]
 {: .notice--primary }
 
+# Introducción
+
+Gitea es una máquina Linux de dificultad `Media` de la plataforma de Dockerlabs. El entorno se compone de un servicio web que implementa la herramienta `Gitea`, dentro de esta debemos hacer un análisis de repositorios y explotar vulnerabilidades web para ganar acceso al sistema. Una vez estamos dentro, se nos presenta un escenario donde debemos hacer uso de `User Defined Functions` (UDF) en `mysql` para elevar nuestros privilegios y convertirnos en `root`.
+
+<br>
 
 Antes de comenzar asignaré un nombre de dominio al contenedor y lo contemplaré en el archivo `/etc/hosts` 
 
@@ -210,7 +239,7 @@ Si visitamos la nueva URL podremos registrarnos con una cuenta, en mi caso he cr
 
 Dentro de `gitea` con nuestra sesión iniciada haremos clic en `Explore` para ver repositorios existentes. Lograremos ver tres concretamente
 
-![image-center](/assets/images/posts/gitea-repos-2.png){: .align-center}
+![image-center](/assets/images/posts/gitea-gitea-repos.png){: .align-center}
 
 ## `mysql` Repository Analysis
 

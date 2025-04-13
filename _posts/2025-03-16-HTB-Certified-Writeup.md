@@ -1,14 +1,48 @@
 ---
-title: "Certified - Writeup (Hackthebox)"
-permalink: "/Certified-Writeup/"
-tags: ["Windows", "Medium", "Active Directory", "Hackthebox", "Nmap Scanning", "BloodHound", "WriteOwner Permission", "GenericAll Privilege", "GenericWrite Permissions", "DACL Abuse", "AD CS Abuse", "Shadow Credentials", "BloodHound", "PassTheHash", "PassTheCertificate", "ESC9"]
-categories: ["writeup", "hacking", "active-directory", "windows", "hackthebox"]
+title: Certified - Writeup (HTB)
+permalink: /Certified-HTB-Writeup/
+tags:
+  - Windows
+  - Medium
+  - Active
+  - Directory
+  - Nmap
+  - Scanning
+  - BloodHound
+  - WriteOwner
+  - Permission
+  - GenericAll
+  - Privilege
+  - GenericWrite
+  - Permissions
+  - DACL
+  - Abuse
+  - AD
+  - CS
+  - Abuse
+  - Shadow
+  - Credentials
+  - BloodHound
+  - PassTheHash
+  - PassTheCertificate
+  - ESC9
+  - HTB
+categories:
+  - writeup
+  - hacking
+  - active-directory
+  - windows
+  - hackthebox
+  - htb
 toc: true
-toc_label: "Topics"
+toc_label: Topics
 toc_sticky: true
 sidebar:
-    - main
-    - docs
+  - main
+  - docs
+seo-title: Certified - Writeup (HTB)
+seo_description: Certified es una máquina Windows de dificultad medium en HackTheBox donde debemos explotar un entorno de Active Directory, el abuso de AD CS nos otorgará privilegios elevados.
+excerpt: Certified es una máquina de HackTheBox de dificultad `Medium` que simula un entorno corporativo implementado en Active Directory donde pondremos a prueba nuestras habilidades de análisis y movimiento lateral dentro de un entorno Windows. Aprenderemos acerca de abuso de permisos mal configurados en las ACLs además del abuso de vulnerabilidades relacionadas con AD CS (Active Directory Certificate Services) para otorgarnos privilegios elevados dentro del entorno de Directorio Activo.
 ---
 
 ![image-center](/assets/images/posts/certified-hackthebox.png){: .align-center}

@@ -1,14 +1,27 @@
 ---
-title: "Cap - Writeup (Hackthebox)"
-permalink: "/Cap-Writeup/"
-tags: ["Linux", "Hackthebox", "Easy", "IDOR", "Capabilities"]
-categories: ["linux", "hackthebox", "hacking", "writeup"]
+title: Cap - Writeup (HTB)
+permalink: /Cap-HTB-Writeup/
+tags:
+  - Linux
+  - Easy
+  - IDOR
+  - Capabilities
+  - HTB
+categories:
+  - linux
+  - hackthebox
+  - hacking
+  - writeup
+  - htb
 toc: true
-toc_label: "Topics"
+toc_label: Topics
 toc_sticky: true
 sidebar:
-    - main
-    - docs
+  - main
+  - docs
+seo_tittle: Cap - Writeup (HTB)
+seo_description: Cap es una máquina Linux de dificultad Easy en HackTheBox donde abusaremos de un diseño inseguro, analizaremos tráfico de red para acceder al sistema, además de aprovechar permisos y privilegios mal configurados.
+excerpt: Cap es una máquina Linux de dificultad fácil en HackTheBox enfocada en la enumeración y análisis de tráfico de red. A través de la inspección cuidadosa de los servicios expuestos, como atacantes podremos identificar información clave que permite el acceso inicial al sistema. La máquina también ofrece la oportunidad de aplicar técnicas básicas de escalada de privilegios para obtener el control total. Ideal para quienes buscan fortalecer sus habilidades en análisis de red y post-explotación.
 ---
 
 ![image-center](/assets/images/posts/cap-hackthebox.png){: .align-center}
@@ -18,7 +31,7 @@ sidebar:
 
 # Introducción
 
-Cap es una máquina de dificultad fácil en HackTheBox enfocada en la enumeración y análisis de tráfico de red. A través de la inspección cuidadosa de los servicios expuestos, como atacantes podremos identificar información clave que permite el acceso inicial al sistema. La máquina también ofrece la oportunidad de aplicar técnicas básicas de escalada de privilegios para obtener el control total. Ideal para quienes buscan fortalecer sus habilidades en análisis de red y post-explotación.
+Cap es una máquina Linux de dificultad fácil en HackTheBox enfocada en la enumeración y análisis de tráfico de red. A través de la inspección cuidadosa de los servicios expuestos, como atacantes podremos identificar información clave que permite el acceso inicial al sistema. La máquina también ofrece la oportunidad de aplicar técnicas básicas de escalada de privilegios para obtener el control total. Ideal para quienes buscan fortalecer sus habilidades en análisis de red y post-explotación.
 
 <br>
 

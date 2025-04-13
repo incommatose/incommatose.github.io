@@ -31,5 +31,8 @@ codekit-config.json
 _asset_bundler_cache
 _site
 
-# Prohibited posts
+# Prohibited posts and obsidian utils
 .hidden
+.obsidian
+template
+
