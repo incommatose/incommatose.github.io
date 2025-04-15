@@ -24,7 +24,7 @@ seo_description: Haz uso de fuerza bruta y análisis de archivos para compromete
 excerpt: Unrecover es una máquina de la plataforma Dockerlabs de dificultad `Media` donde aprenderemos conceptos de explotación en bases de datos MySQL. Esta máquina enfatiza en el uso de técnicas de fuerza bruta a servicios y contraseñas. Cuando logremos adentrarnos en el sistema operativo, se nos presentará un gran desafío que a tu capacidad de visión.
 header:
   overlay_image: /assets/images/headers/unrecover-dockerlabs.jpg
-  overlay_filter: 0.2
+  overlay_filter: 0.6
   og_image: /assets/images/headers/unrecover-dockerlabs.jpg
 ---
 
