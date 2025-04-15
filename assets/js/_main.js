@@ -232,16 +232,6 @@ $(document).ready(function () {
       });
   }
 
-  // Zoom image
-document.querySelectorAll('img').forEach(img => {
-  img.addEventListener('click', () => {
-    const zoom = img.style.transform === 'scale(1.5)' ? 'scale(1)' : 'scale(1.5)';
-    img.style.transition = 'transform 0.3s ease';
-    img.style.transform = zoom;
-});
-
-});
-});
 
 
 

@@ -31,8 +31,12 @@ toc_sticky: true
 sidebar:
   - main
 seo_tittle: Gitea - Writeup (Dockerlabs)
-seo_description: Máquina Linux de dificultad media en Dockerlabs que requiere analizar repositorios en Gitea, explotar vulnerabilidades web y usar funciones UDF en MySQL para obtener acceso privilegiado.
+seo_description: Pon en práctica explotación de vulnerabilidades web, fuerza bruta y explotación de MySQL para vencer a Gitea.
 excerpt: Gitea es una máquina Linux de dificultad `Media` de la plataforma de Dockerlabs. El entorno se compone de un servicio web que implementa la herramienta `Gitea`, dentro de esta debemos hacer un análisis de repositorios y explotar vulnerabilidades web para ganar acceso al sistema. Una vez estamos dentro, se nos presenta un escenario donde debemos hacer uso de `User Defined Functions` (UDF) en `mysql` para elevar nuestros privilegios y convertirnos en `root`.
+header:
+  overlay_image: /assets/images/headers/gitea-dockerlabs.jpg
+  overlay_filter: 0.2
+  og_image: /assets/images/headers/gitea-dockerlabs.jpg
 ---
 
 ![image-center](/assets/images/posts/gitea-dockerlabs.png){: .align-center}

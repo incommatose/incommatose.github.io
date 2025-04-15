@@ -16,6 +16,7 @@ categories:
   - hacking
   - dockerlabs
   - linux
+  - hacking-web
 toc: true
 toc_label: Topics
 toc_sticky: true
@@ -26,9 +27,9 @@ seo_tittle: Lifeordead - Hard (Dockerlabs)
 seo_description: Practica tus habilidades de fuerza bruta y abuso de privilegios sudoers para vencer Lifeordead.
 excerpt: Lifeordead es una máquina de la plataforma Dockerlabs de dificultad `Difícil`. En esta máquina se pondrán a prueba nuestras habilidades de hacking web. Aprenderemos diversos conceptos como fuzzing o fuerza bruta a inicios de sesión. Es una máquina ideal para avanzar dentro de la explotación a servicios web y configuración en entornos de contenedores con Docker.
 header:
-    overlay_image: /assets/images/headers/Lifeordead-dockerlabs.jpg
-    overlay_filter: 0.2
-    og_image: /assets/images/headers/lifeordead-dockerlabs.jpg
+  overlay_image: /assets/images/headers/lifeordead-dockerlabs.jpg
+  overlay_filter: 0.2
+  og_image: /assets/images/headers/lifeordead-dockerlabs.jpg
 ---
 
 ![image-center](/assets/images/posts/lifeordead-dockerlabs.png){: .align-center}

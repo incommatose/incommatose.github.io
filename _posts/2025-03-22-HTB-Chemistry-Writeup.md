@@ -35,8 +35,12 @@ toc_sticky: true
 sidebar:
   - main
 seo_tittle: Chemistry - Writeup (HTB)
-seo_description: Chemistry es una máquina Linux de dificultad Easy de la plataforma de HackTheBox. En esta oportunidad explotaremos vulnerabilidades conocidas en librerías de python para acceder al sistema mediante archivos CIF maliciosos además de lectura de archivos privilegiados.
+seo_description: Aprende a explotar un CVE mediante archivos CIF maliciosos y enumeración de sistemas Linux para vencer Chemistry.
 excerpt: Chemistry es una máquina de dificultad fácil en HackTheBox en la cual aprenderás cómo explotar vulnerabilidades en aplicaciones web que procesan archivos CIF. Una vez hayamos ganado acceso aprenderemos metodologías de enumeración de sistemas Linux y explotación de vulnerabilidades conocidas relacionadas a servicios internos mal configurados.
+header:
+  overlay_image: /assets/images/headers/chemistry-hackthebox.jpg
+  overlay_filter: 0.2
+  og_image: /assets/images/headers/chemistry-hackthebox.jpg
 ---
  
 ![image-center](/assets/images/posts/chemistry-hackthebox.png){: .align-center}

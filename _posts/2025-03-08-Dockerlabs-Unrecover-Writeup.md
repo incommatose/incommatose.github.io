@@ -20,8 +20,12 @@ toc_sticky: true
 sidebar:
   - main
 seo_tittle: Unrecover - Writeup (Dockerlabs)
-seo_description: Unrecover es una máquina de dificultad media en Dockerlabs donde debemos hacer uso de fuerza bruta y análisis de archivos para comprometer el sistema.
+seo_description: Haz uso de fuerza bruta y análisis de archivos para comprometer vencer Unrecover.
 excerpt: Unrecover es una máquina de la plataforma Dockerlabs de dificultad `Media` donde aprenderemos conceptos de explotación en bases de datos MySQL. Esta máquina enfatiza en el uso de técnicas de fuerza bruta a servicios y contraseñas. Cuando logremos adentrarnos en el sistema operativo, se nos presentará un gran desafío que a tu capacidad de visión.
+header:
+  overlay_image: /assets/images/headers/unrecover-dockerlabs.jpg
+  overlay_filter: 0.2
+  og_image: /assets/images/headers/unrecover-dockerlabs.jpg
 ---
 
 ![image-center](/assets/images/posts/unrecover-dockerlabs.png){: .align-center}

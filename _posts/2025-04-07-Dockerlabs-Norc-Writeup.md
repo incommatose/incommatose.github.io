@@ -21,14 +21,19 @@ categories:
   - hacking
   - dockerlabs
   - linux
+  - hacking-web
 toc: true
 toc_label: Topics
 toc_sticky: true
 sidebar:
   - main
 seo-title: NorC - Writeup (Dockerlabs)
-seo-description: Norc es una máquina de dificultad `Difícil` de la plataforma Dockerlabs donde aprenderemos diversos conceptos relacionados con la explotación de vulnerabilidades web dentro del gestor de contenido de Wordpress.
+seo-description: Pon a prueba tus habilidades de enumeración de Wordpress, explotación de SQL Injection y abuso de capabilities para vencer NorC.
 excerpt: Norc es una máquina de dificultad `Difícil` de la plataforma Dockerlabs. Revisaremos diversos conceptos relacionados con la explotación de vulnerabilidades web dentro de Wordpress. Combinaremos diversas técnicas para lograr cornos dentro del sistema y poder escalar entre usuarios hasta tener el control total del sistema.
+header:
+  overlay_image: /assets/images/headers/norc-dockerlabs.jpg
+  overlay_filter: 0.2
+  og_image: /assets/images/headers/norc-dockerlabs.jpg
 ---
 
 ![image-center](/assets/images/posts/norc-dockerlabs.png){: .align-center}
