@@ -1,6 +1,6 @@
 ---
 title: Bruteshock - Medium (Dockerlabs)
-permalink: /Bruteshock-Writeup/
+permalink: /Bruteshock-Dockerlabs-Writeup/
 tags:
   - Linux
   - Medium

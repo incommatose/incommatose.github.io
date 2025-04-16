@@ -1,6 +1,6 @@
 ---
 title: NorC - Hard (Dockerlabs)
-permalink: /NorC-Writeup/
+permalink: /Norc-Dockerlabs-Writeup/
 tags:
   - Linux
   - Hard

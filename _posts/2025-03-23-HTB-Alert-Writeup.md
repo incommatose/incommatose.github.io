@@ -32,7 +32,7 @@ seo_description: Aprende a hacer fuzzing para encontrar subdominios, explota XSS
 excerpt: Aprende a hacer fuzzing para encontrar subdominios, explota XSS y abusa de permisos para vencer Alert.
 header:
   overlay_image: /assets/images/headers/alert-hackthebox.jpg
-  overlay_filter: 0
+  overlay_filter: 0.7
   og_image: /assets/images/headers/alert-hackthebox.jpg
 ---
 
