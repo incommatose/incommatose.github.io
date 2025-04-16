@@ -1,5 +1,5 @@
 ---
-title: Chemistry - Writeup (HTB)
+title: Chemistry - Easy (HTB)
 permalink: /Chemistry-HTB-Writeup/
 tags:
   - Linux
@@ -34,12 +34,12 @@ toc_label: Topics
 toc_sticky: true
 sidebar:
   - main
-seo_tittle: Chemistry - Writeup (HTB)
+seo_tittle: Chemistry - Easy (HTB)
 seo_description: Aprende a explotar un CVE mediante archivos CIF maliciosos y enumeración de sistemas Linux para vencer Chemistry.
-excerpt: Chemistry es una máquina de dificultad fácil en HackTheBox en la cual aprenderás cómo explotar vulnerabilidades en aplicaciones web que procesan archivos CIF. Una vez hayamos ganado acceso aprenderemos metodologías de enumeración de sistemas Linux y explotación de vulnerabilidades conocidas relacionadas a servicios internos mal configurados.
+excerpt: Aprende a explotar un CVE mediante archivos CIF maliciosos y enumeración de sistemas Linux para vencer Chemistry.
 header:
   overlay_image: /assets/images/headers/chemistry-hackthebox.jpg
-  overlay_filter: 0.2
+  overlay_filter: 0.7
   og_image: /assets/images/headers/chemistry-hackthebox.jpg
 ---
  

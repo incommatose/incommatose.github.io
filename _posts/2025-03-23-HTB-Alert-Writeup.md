@@ -1,5 +1,5 @@
 ---
-title: Alert - Writeup (HTB)
+title: Alert - Easy (HTB)
 permalink: /Alert-HTB-Writeup/
 tags:
   - Linux
@@ -27,12 +27,12 @@ toc_sticky: true
 sidebar:
   - main
   - docs
-seo_tittle: Alert - Writeup (HTB)
+seo_tittle: Alert - Easy (HTB)
 seo_description: Aprende a hacer fuzzing para encontrar subdominios, explota XSS y abusa de permisos para vencer Alert.
-excerpt: Alert es una máquina perteneciente a la plataforma de HackTheBox de dificultad `Easy` que se enfoca en explotación de vulnerabilidades web comunes y técnicas básicas de escalada de privilegios en sistemas Linux. Esta máquina se centra en el aprendizaje para principiantes, aprenderemos a abusar de configuraciones inseguras en formularios de contacto para ganar acceso al sistema y posteriormente hacernos con el control de la máquina enfrentándonos a servicios internos.
+excerpt: Aprende a hacer fuzzing para encontrar subdominios, explota XSS y abusa de permisos para vencer Alert.
 header:
   overlay_image: /assets/images/headers/alert-hackthebox.jpg
-  overlay_filter: 0.2
+  overlay_filter: 0
   og_image: /assets/images/headers/alert-hackthebox.jpg
 ---
 

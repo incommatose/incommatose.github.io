@@ -1,5 +1,5 @@
 ---
-title: Certified - Writeup (HTB)
+title: Certified - Medium (HTB)
 permalink: /Certified-HTB-Writeup/
 tags:
   - Windows
@@ -40,12 +40,12 @@ toc_sticky: true
 sidebar:
   - main
   - docs
-seo-title: Certified - Writeup (HTB)
-seo_description: Pon a prueba tus conocimientos de enumeración, explotación de AD  CS en Active Directory y movimiento lateral mediante el abuso de permisos y privilegios para vencer  Certified.
-excerpt: Certified es una máquina de HackTheBox de dificultad `Medium` que simula un entorno corporativo implementado en Active Directory donde pondremos a prueba nuestras habilidades de análisis y movimiento lateral dentro de un entorno Windows. Aprenderemos acerca de abuso de permisos mal configurados en las ACLs además del abuso de vulnerabilidades relacionadas con AD CS (Active Directory Certificate Services) para otorgarnos privilegios elevados dentro del entorno de Directorio Activo.
+seo-title: Certified - Medium (HTB)
+seo_description: Practica enumeración en un entorno de Active Directory, explota vulnerabilidades relacionadas a permisos y privilegios mal configurados, utiliza técnicas de explotación al servicio de AD CS para vencer Certified.
+excerpt: Practica enumeración en un entorno de Active Directory, explota vulnerabilidades relacionadas a permisos y privilegios mal configurados, utiliza técnicas de explotación al servicio de AD CS para vencer Certified.
 header:
   overlay_image: /assets/images/headers/certified-hackthebox.jpg
-  overlay_filter: 0.2
+  overlay_filter: 0.7
   og_image: /assets/images/headers/certified-hackthebox.jpg
 ---
 

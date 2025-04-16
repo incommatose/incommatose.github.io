@@ -1,5 +1,5 @@
 ---
-title: Cap - Writeup (HTB)
+title: Cap - Easy (HTB)
 permalink: /Cap-HTB-Writeup/
 tags:
   - Linux
@@ -19,12 +19,12 @@ toc_sticky: true
 sidebar:
   - main
   - docs
-seo_tittle: Cap - Writeup (HTB)
+seo_tittle: Cap - Easy (HTB)
 seo_description: Aprende a analizar tráfico de red para descubrir información sensible, abusa de capabilities mal configuradas para vencer Cap.
-excerpt: Cap es una máquina Linux de dificultad fácil en HackTheBox enfocada en la enumeración y análisis de tráfico de red. A través de la inspección cuidadosa de los servicios expuestos, como atacantes podremos identificar información clave que permite el acceso inicial al sistema. La máquina también ofrece la oportunidad de aplicar técnicas básicas de escalada de privilegios para obtener el control total. Ideal para quienes buscan fortalecer sus habilidades en análisis de red y post-explotación.
+excerpt: Aprende a analizar tráfico de red para descubrir información sensible, abusa de capabilities mal configuradas para vencer Cap.
 header:
   overlay_image: /assets/images/headers/cap-hackthebox.jpg
-  overlay_filter: 0.2
+  overlay_filter: 0.7
   og_image: /assets/images/headers/cap-hackthebox.jpg
 ---
 

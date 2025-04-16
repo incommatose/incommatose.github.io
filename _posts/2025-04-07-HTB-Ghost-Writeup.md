@@ -1,5 +1,5 @@
 ---
-title: Ghost - Writeup (HTB)
+title: Ghost - Insane (HTB)
 permalink: /Ghost-HTB-Writeup/
 tags:
   - Windows
@@ -61,10 +61,10 @@ sidebar:
   - main
 seo_tittle: Ghost - Insane (HTB)
 seo_description: Practica habilidades de enumeración, explotación de vulnerabilidades y abuso de permisos en Active Directory. Aprende técnicas avanzadas para escalar privilegios para obtener control total dentro de Ghost.
-excerpt: Ghost es una máquina Windows de dificultad `Insane` perteneciente a la plataforma de Hackthebox. Esta máquina simulan entorno de Active Directory donde debemos emplear técnicas avanzadas de enumeración y explotación para comprometer sistema. Existen diversos servicios configurados y sitios web dentro de este entorno, los cuales debemos aprovechar para hacer una intrusión a la máquina. En la escalada, abusaremos de servicios de Active Directory mal configurados, los que nos permitirán hacernos con el control del dominio.
+excerpt: Practica habilidades de enumeración, explotación de vulnerabilidades y abuso de permisos en Active Directory. Aprende técnicas avanzadas para escalar privilegios para obtener control total dentro de Ghost.
 header:
   overlay_image: /assets/images/headers/ghost-hackthebox.jpg
-  overlay_filter: 0.2
+  overlay_filter: 0.7
   og_image: /assets/images/headers/ghost-hackthebox.jpg
 ---
 

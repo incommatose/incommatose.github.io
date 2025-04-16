@@ -1,5 +1,5 @@
 ---
-title: NorC - Writeup (Dockerlabs)
+title: NorC - Hard (Dockerlabs)
 permalink: /NorC-Writeup/
 tags:
   - Linux
@@ -27,15 +27,15 @@ toc_label: Topics
 toc_sticky: true
 sidebar:
   - main
-seo-title: NorC - Writeup (Dockerlabs)
+seo-title: NorC - Hard (Dockerlabs)
 seo-description: Pon a prueba tus habilidades de enumeración de Wordpress, explotación de SQL Injection y abuso de capabilities para vencer NorC.
-excerpt: Norc es una máquina de dificultad `Difícil` de la plataforma Dockerlabs. Revisaremos diversos conceptos relacionados con la explotación de vulnerabilidades web dentro de Wordpress. Combinaremos diversas técnicas para lograr cornos dentro del sistema y poder escalar entre usuarios hasta tener el control total del sistema.
+excerpt: Pon a prueba tus habilidades de enumeración de Wordpress, explotación de SQL Injection y abuso de capabilities para vencer NorC.
 header:
   overlay_image: /assets/images/headers/norc-dockerlabs.jpg
-  overlay_filter: 0.2
+  overlay_filter: 0.7
   og_image: /assets/images/headers/norc-dockerlabs.jpg
 ---
-
+ 
 ![image-center](/assets/images/posts/norc-dockerlabs.png){: .align-center}
 
 **Habilidades:** Wordpress Plugins Fuzzing, Time Based SQL Injection - (CVE-2023-6063), Credentials Leakage,  Abusing Wordpress Theme File Editor to RCE, Command Injection, Python Capability - `cap_setuid` [Privilege Escalation]

@@ -1,5 +1,5 @@
 ---
-title: Bruteshock - Writeup (Dockerlabs)
+title: Bruteshock - Medium (Dockerlabs)
 permalink: /Bruteshock-Writeup/
 tags:
   - Linux
@@ -32,12 +32,12 @@ toc_sticky: true
 sidebar:
   - main
   - docs
-seo_tittle: Bruteshock - Writeup (Dockerlabs)
+seo_tittle: Bruteshock - Medium (Dockerlabs)
 seo_description: Pon en práctica explotación ShellShock, fuerza bruta y explotación de privilegios en Linux para vencer Bruteshock.
-excerpt: Bruteshock es una máquina Linux de la plataforma de Dockerlabs de dificultad Media. En esta máquina aprenderemos a explotar la vulnerabilidad `shellshock` en una aplicación web alojada en un contenedor de Docker, ganar acceso al sistema se volverá todo un desafío. Además explotaremos conceptos relacionados con privilegios asignados a scripts y binarios en Linux para poco a poco elevar nuestros privilegios para ganar control total sobre el sistema.
+excerpt: Pon en práctica explotación ShellShock, fuerza bruta y explotación de privilegios en Linux para vencer Bruteshock.
 header:
   overlay_image: /assets/images/headers/bruteshock-dockerlabs.jpg
-  overlay_filter: 0.2
+  overlay_filter: 0.7
   og_image: /assets/images/headers/bruteshock-dockerlabs.jpg
 ---
 
