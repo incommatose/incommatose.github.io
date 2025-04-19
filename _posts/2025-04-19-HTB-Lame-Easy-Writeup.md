@@ -259,6 +259,10 @@ root@lame:/home/makis# cat user.txt
 
 Por último te dejo la frase del día, muchas gracias por ver...
 
-<% tp.web.daily_quote() %>
+> [!quote] Ability will never catch up with the demand for it.
+> — Confucius
+
+
+
 {: .text-center}
 
