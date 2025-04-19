@@ -17,9 +17,9 @@ seo_tittle: Lame - Easy (HTB)
 seo_description: Aprende a identificar y explotar vulnerabilidades conocidas en versiones antiguas de servicios para vencer Lame.
 excerpt: Aprende a identificar y explotar vulnerabilidades conocidas en versiones antiguas de servicios para vencer Lame.
 header:
-  overlay_image: /assets/images/headers/Lame-HTB.jpg
+  overlay_image: /assets/images/headers/lame-hackthebox.jpg
   overlay_filter: 0.7
-  og_image: /assets/images/headers/Lame-HTB.jpg
+  og_image: /assets/images/headers/lame-hackthebox.jpg
 ---
 
 

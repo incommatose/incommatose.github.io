@@ -28,9 +28,9 @@ seo_tittle: Administrator - Medium (HTB)
 seo_description: Practica enumeración y explotación de permisos mal configurados en un entorno de Active Directory para vencer a Administrator.
 excerpt: Practica enumeración y explotación de permisos mal configurados en un entorno de Active Directory para vencer a Administrator.
 header:
-  overlay_image: /assets/images/headers/Administrator-HTB.jpg
+  overlay_image: /assets/images/headers/administrator-hackthebox.jpg
   overlay_filter: 0.7
-  og_image: /assets/images/headers/Administrator-HTB.jpg
+  og_image: /assets/images/headers/administrator-hackthebox.jpg
 ---
 
 
