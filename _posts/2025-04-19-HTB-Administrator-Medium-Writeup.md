@@ -304,7 +304,7 @@ INFO: Compressing output into 20250417005459_bloodhound.zip
 ---
 ## Abusing AD ACLs - `GenericAll` Rights
 
-Si consultamos BloodHound en las propiedades del usuario > `Outbound Object Control`, podemos notar que el usuario `olivia` posee permisos `GenericAll` sobre la cuenta `michael`, esto nos otorga control total sobre este usuario
+Si consultamos BloodHound en las propiedades del usuario > `Outbound Object Control`, podemos notar que el usuario `olivia` posee derechos `GenericAll` sobre la cuenta `michael`, esto nos otorga control total sobre este usuario
 
 ![image-center](/assets/images/posts/administrator-bloodhound-1.png){: align-center}
 
@@ -364,7 +364,7 @@ administrator\michael
 
 ## Abusing AD ACLs - `ForceChangePassword` Rights
 
-Si exploramos los objetos que usuario `michael` puede controlar, notaremos que posee permisos `ForceChangePassword`. Como su nombre nos indica, nos otorga la capacidad de cambiar la contraseña de un usuario sin necesidad de conocer la actual
+Si exploramos los objetos que usuario `michael` puede controlar, notaremos que posee el derecho `ForceChangePassword`. Como su nombre nos indica, nos otorga la capacidad de cambiar la contraseña de un usuario sin necesidad de conocer la actual
 
 ![image-center](/assets/images/posts/administrator-bloodhound-2.png){: align-center}
 
@@ -487,13 +487,13 @@ evil-winrm -i 10.10.11.42 -u 'emily' -p 'UXLCI5iETUsIBoFVTj8yQFKoHjXmb'
 ---
 ## Targeted Kerberoasting Attack
 
-Podemos ver que el usuario `emily` cuenta con permisos `GenericWrite` sobre la cuenta de `ethan`, este permiso nos permite modificar los atributos de este usuario
+Podemos ver que el usuario `emily` cuenta con derechos `GenericWrite` sobre la cuenta de `ethan`, este permiso nos permite modificar los atributos de este usuario
 
 ![image-center](/assets/images/posts/administrator-bloodhound-3.png){: align-center}
 
-Para un Kerberoasting sabemos que necesitamos que existan cuentas con un SPN asociado. En el caso de `Targeted Kerberoasting`, tendremos que tener permisos para modificar propiedades de una cuenta, en este caso contamos con el permiso `GenericWrite` sobre el usuario `ethan`.
+Para un Kerberoasting sabemos que necesitamos que existan cuentas con un SPN asociado. En el caso de `Targeted Kerberoasting`, tendremos que tener derechos para modificar propiedades de una cuenta, en este caso contamos con el derecho `GenericWrite` sobre el usuario `ethan`.
 
-Es por esto que aprovecharemos este permiso para asignar un SPN a `ethan`, lo que lo hace vulnerable a `Kerberoast`, entonces podremos obtener un TGS e intentar crackearlo de forma offline con herramientas como `john` o `hashcat`
+Es por esto que aprovecharemos este derecho para asignar un SPN a `ethan`, lo que lo hace vulnerable a `Kerberoast`, entonces podremos obtener un TGS e intentar crackearlo de forma offline con herramientas como `john` o `hashcat`
 
 ~~~ bash
 targetedKerberoast.py -v -d 'administrator.htb' -u 'emily' -p 'UXLCI5iETUsIBoFVTj8yQFKoHjXmb' -f john
@@ -530,7 +530,7 @@ SMB         10.10.11.42     445    DC               [+] administrator.htb\ethan:
 
 ## DC Sync Attack
 
-El usuario `ethan` posee el permisos `GetChanges` y `GetChangesAll` sobre el dominio, esto nos permite obtener el hash `NT` de un usuario privilegiado con herramientas como `secretsdump`
+El usuario `ethan` posee los derechos `GetChanges` y `GetChangesAll` sobre el dominio, esto nos permite obtener el hash `NT` de un usuario privilegiado con herramientas como `secretsdump`
 
 ![image-center](/assets/images/posts/administrator-bloodhound-4.png){: align-center}
 
