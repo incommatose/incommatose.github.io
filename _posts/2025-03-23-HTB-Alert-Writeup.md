@@ -2,18 +2,14 @@
 title: Alert - Easy (HTB)
 permalink: /Alert-HTB-Writeup/
 tags:
-  - Linux
-  - Easy
-  - XSS
-  - Path
-  - Traversal
-  - Hash
-  - Cracking
-  - SSH
-  - Local
-  - Port
-  - Forwarding
-  - HTB
+  - "Linux"
+  - "Easy"
+  - "XSS"
+  - "Path Traversal"
+  - "Hash Cracking"
+  - "SSH Local Port Forwarding"
+  - "HTB"
+  - "HackTheBox"
 categories:
   - linux
   - hackthebox

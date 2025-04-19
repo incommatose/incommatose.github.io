@@ -2,24 +2,14 @@
 title: Gitea - Medium (Dockerlabs)
 permalink: /Gitea-Dockerlabs-Writeup/
 tags:
-  - Linux
-  - Medium
-  - Hacking
-  - Web
-  - Dockerlabs
-  - Fuzzing
-  - Subdomain
-  - Fuzzing
-  - Virtual
-  - Hosting
-  - SSH
-  - Brute
-  - Force
-  - Hydra
-  - User
-  - Defined
-  - Functions
-  - (UDF)
+  - "Linux"
+  - "Medium"
+  - "Hacking Web"
+  - "Dockerlabs"
+  - "Subdomain Fuzzing"
+  - "Virtual Hosting"
+  - "SSH Brute Force"
+  - "User Defined Functions (UDF)"
 categories:
   - writeup
   - hacking

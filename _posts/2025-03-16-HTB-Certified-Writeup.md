@@ -2,31 +2,22 @@
 title: Certified - Medium (HTB)
 permalink: /Certified-HTB-Writeup/
 tags:
-  - Windows
-  - Medium
-  - Active
-  - Directory
-  - Nmap
-  - Scanning
-  - BloodHound
-  - WriteOwner
-  - Permission
-  - GenericAll
-  - Privilege
-  - GenericWrite
-  - Permissions
-  - DACL
-  - Abuse
-  - AD
-  - CS
-  - Abuse
-  - Shadow
-  - Credentials
-  - BloodHound
-  - PassTheHash
-  - PassTheCertificate
-  - ESC9
-  - HTB
+  - "Windows"
+  - "Medium"
+  - "Active Directory"
+  - "BloodHound"
+  - "WriteOwner"
+  - "GenericAll"
+  - "GenericWrite"
+  - "Abusing DACL"
+  - "Abusing AD CS"
+  - "Shadow Credentials"
+  - "BloodHound"
+  - "PassTheHash"
+  - "PassTheCertificate"
+  - "ESC9"
+  - "HTB"
+  - "hackthebox"
 categories:
   - writeup
   - hacking

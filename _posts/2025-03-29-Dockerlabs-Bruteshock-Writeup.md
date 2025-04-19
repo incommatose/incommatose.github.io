@@ -2,24 +2,15 @@
 title: Bruteshock - Medium (Dockerlabs)
 permalink: /Bruteshock-Dockerlabs-Writeup/
 tags:
-  - Linux
-  - Medium
-  - Dockerlabs
-  - Login
-  - Page
-  - Brute
-  - Force
-  - Hash
-  - Cracking
-  - Bash
-  - eqCode
-  - Execution
-  - Sudoers
-  - Abuse
-  - Exim
-  - Abuse
-  - Dos2Unix
-  - Abuse
+  - "Linux"
+  - "Medium"
+  - "Dockerlabs"
+  - "Login Page Brute Forcing"
+  - "Hash Cracking"
+  - "Bash eq Command Execution"
+  - "Abusing Sudoers"
+  - "Exim"
+  - "Dos2Unix"
 categories:
   - writeup
   - hacking

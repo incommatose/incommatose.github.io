@@ -2,10 +2,11 @@
 title: Cap - Easy (HTB)
 permalink: /Cap-HTB-Writeup/
 tags:
-  - Linux
-  - Easy
-  - IDOR
-  - Capabilities
+  - "Linux"
+  - "Easy"
+  - "HackTheBox"
+  - "IDOR"
+  - "Capabilities"
   - HTB
 categories:
   - linux

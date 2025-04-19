@@ -2,27 +2,17 @@
 title: Chemistry - Easy (HTB)
 permalink: /Chemistry-HTB-Writeup/
 tags:
-  - Linux
-  - Easy
-  - CVE-2024-23346
-  - CVE-2024-23344
-  - SSH
-  - Local
-  - Port
-  - Forwarding
-  - Malicious
-  - CIF
-  - File
-  - Hash
-  - Cracking
-  - Path
-  - Traversal
-  - Enumeration
-  - SQLite
-  - pymatgem
-  - RCE
-  - aiohttp
-  - HTB
+  - "Linux"
+  - "Easy"
+  - "HackTheBox"
+  - "CVE-2024-23346"
+  - "CVE-2024-23344"
+  - "SSH"
+  - "CIF Files"
+  - "SQLite"
+  - "pymatgem RCE"
+  - "aiohttp"
+  - "HTB"
 categories:
   - writeup
   - hacking

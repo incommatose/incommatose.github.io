@@ -2,52 +2,29 @@
 title: Ghost - Insane (HTB)
 permalink: /Ghost-HTB-Writeup/
 tags:
-  - Windows
-  - Insane
-  - Active
-  - Directory
-  - LDAP
-  - Injection
-  - Python
-  - Scripting
-  - API
-  - Abusing
-  - Abusing
-  - SSH
-  - Multiplexing
-  - ADIDNS
-  - Poisoning
-  - Stealing
-  - Net-NTLMv2
-  - Hash
-  - Bloodhound
-  - Golden
-  - SAML
-  - Attack
-  - Golden
-  - Ticket
-  - Attack
-  - DCSync
-  - Hash
-  - Cracking
-  - PassTheHash
-  - Abusing
-  - SQL
-  - Server
-  - Abusing
-  - xp_cmdshell
-  - Powershell
-  - Reverse
-  - Shell
-  - Obfusctation
-  - Mimikatz
-  - Proxychains
-  - Dumping
-  - gMSA
-  - Password
-  - Abusing
-  - SeImpersonatePrivilege
-  - HTB
+  - "Windows"
+  - "Insane"
+  - "Active"
+  - "Directory"
+  - "LDAP Injection"
+  - "Python Scripting"
+  - "API Abusing"
+  - "Abusing SSH Multiplexing"
+  - "ADIDNS Poisoning"
+  - "Stealing Net-NTLMv2 Hash"
+  - "Bloodhound"
+  - "Golden SAML Attack"
+  - "Golden Ticket Attack"
+  - "DCSync"
+  - "Hash Cracking"
+  - "PassTheHash"
+  - "Abusing xp_cmdshell"
+  - "Powershell Reverse Shell Obfusctation"
+  - "Mimikatz"
+  - "Proxychains"
+  - "Dumping gMSA Password"
+  - "Abusing SeImpersonatePrivilege"
+  - "HTB"
 categories:
   - writeup
   - hacking

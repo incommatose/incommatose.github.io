@@ -2,15 +2,11 @@
 title: Lifeordead - Hard (Dockerlabs)
 permalink: /Lifeordead-Dockerlabs-Writeup/
 tags:
-  - Linux
-  - Dockerlabs
-  - Sudoers
-  - Abuse
-  - IP
-  - Aliasing
-  - Sudo
-  - Privileges
-  - Abuse
+  - "Linux"
+  - "Dockerlabs"
+  - "IP Aliasing"
+  - "Abusing Sudoers"
+  - "Script Hijacking"
 categories:
   - writeup
   - hacking

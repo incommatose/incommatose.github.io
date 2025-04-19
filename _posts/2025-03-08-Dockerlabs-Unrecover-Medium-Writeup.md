@@ -4,11 +4,8 @@ permalink: /Unrecover-Dockerlabs-Writeup/
 tags:
   - Linux
   - Medium
-  - Nmap
-  - Scanning
   - Dockerlabs
-  - Hash
-  - Cracking
+  - "Hash Cracking"
   - MySQL
 categories:
   - writeup

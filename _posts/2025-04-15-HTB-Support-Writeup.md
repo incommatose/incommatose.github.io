@@ -23,7 +23,7 @@ header:
 ![image-center](/assets/images/posts/support-hackthebox.png)
 {: .align-center}
 
-**Habilidades: ** SMB Enumeration, EXE Binary Analysis, Binary Debugging (`dnSPY`), LDAP Enumeration, DC Enumeration - BloodHound + `SharpHound.exe`, Resource Based Constrained Delegation Attack (RBCD) - [Privilege Escalation]
+**Habilidades:** SMB Enumeration, EXE Binary Analysis, Binary Debugging (`dnSPY`), LDAP Enumeration, DC Enumeration - BloodHound + `SharpHound.exe`, Resource Based Constrained Delegation Attack (RBCD) - [Privilege Escalation]
 {: .notice--primary}
 
 # Introducción
@@ -860,7 +860,7 @@ Impacket v0.10.0 - Copyright 2022 SecureAuth Corporation
 ~~~
 
 
-## PassTheTicket - Administrator
+## PassTheTicket - `Administrator`
 
 Ya hemos guardado el ticket en el archivo `Administrator.ccache`, para conectarnos necesitaremos exportar este archivo como una variable de entorno `KRB5CCNAME`
 

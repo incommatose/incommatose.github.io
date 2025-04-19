@@ -2,20 +2,14 @@
 title: NorC - Hard (Dockerlabs)
 permalink: /Norc-Dockerlabs-Writeup/
 tags:
-  - Linux
-  - Hard
-  - Dockerlabs
-  - Nmap
-  - Scanning
-  - Abusing
-  - Wordpress
-  - SQL
-  - Injection
-  - CVE-2023-6063
-  - Command
-  - Injection
-  - Abusing
-  - Capabilities
+  - "Linux"
+  - "Hard"
+  - "Dockerlabs"
+  - "Abusing Wordpress"
+  - "SQL Injection" 
+  - "CVE-2023-6063"
+  - "Command Injection"
+  - "Capabilities"
 categories:
   - writeup
   - hacking
