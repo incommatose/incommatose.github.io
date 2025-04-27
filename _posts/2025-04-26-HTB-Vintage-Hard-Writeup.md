@@ -393,7 +393,7 @@ bloodyAD --host "dc01.vintage.htb" -d "vintage.htb" --kerberos --dc-ip 10.10.11.
 ~~~
 
 > Si usamos esta cuenta por demasiado tiempo, considera ejecutar este comando para activarla cuando loa necesites (recuerda tener los privilegios suficientes)
-{: notice--danger}
+{: .notice--danger}
 
 
 ## AS-REP Roast
@@ -589,7 +589,7 @@ Mode                 LastWriteTime         Length Name
 Descargamos las `Master Keys` y probaremos usando ambas para desencriptar el archivo de credenciales. 
 
 >Necesitaremos hacer un pequeño tratamiento con `powershell` para quitar los atributos `hidden` y `system`, lo que nos dará conflictos a la hora de intentar descargarlos con `evil-winrm`
-{: notice--danger}
+{: .notice--danger}
 
 Finalmente la clave maestra que necesitamos será `99cf41a3-a552-4cf7-a8d7-aca2d6f7339b`
 
@@ -777,7 +777,7 @@ Impacket v0.13.0.dev0+20250109.91705.ac02e0ee - Copyright Fortra, LLC and its af
 ~~~
 
 > WinRM usa HTTP como su protocolo de transporte base porque es un protocolo basado en SOAP, (protocolo de acceso de objetos simples), su funcionalidad central se basa en el protocolo HTTP para la comunicación
-{: notice--danger}
+{: .notice--danger}
 
 
 ## (Extra) DCSync - Dumping NT Hashes
