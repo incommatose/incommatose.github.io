@@ -582,7 +582,6 @@ nt authority\system
 
 Espero este artículo te haya ayudado a aprender más sobre enumeración y explotación en entornos de Active Directory. Por último, te dejo la frase del día para reflexionar, muchas gracias por leer.
 
-> [!quote] Happiness is found in doing, not merely possessing.
+> Happiness is found in doing, not merely possessing.
 > — Napoleon Hill
-
-{: .text-center}
+{: .notice--info}

@@ -1360,7 +1360,7 @@ select srvname from sysservers;
 Vemos que existen dos servidores, `DC01` y `PRIMARY`
 
 
-## MSSQL Injection - Abusing `xp_cmdshell` to RCE
+## Abusing SQL Server - Enabling `xp_cmdshell` to RCE
 
 Intentaremos activar el procedimiento almacenado `xp_cmdshell` para ejecutar comandos en el servidor de forma remota
 
@@ -1775,7 +1775,7 @@ done
 ~~~
 
 
-## PassTheHash - `Administrator`
+## Shell as `Administrator` - PassTheHash
 
 Una vez extraído el hash `NT` del usuario `Administrator` del dominio, es posible hacer `PassTheHash`, y de esta forma conectarnos a la máquina víctima con una consola de `powershell` y eliminar toda la información del dominio o inyectar un `Ransomware` o lo que te dé la gana 
 

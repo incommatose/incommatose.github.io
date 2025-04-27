@@ -10,13 +10,13 @@ Hola, mi nombre es Andrés. Soy alguien con gustos por la tecnología y el campo
 
 Actualmente estoy cursando la carrera de Ingeniería en Informática, además, estudio **hacking** de forma autodidacta. La seguridad informática es un tema que siempre me ha causado curiosidad e interés por aprender.
 
-Hago este proyecto con el objetivo de ayudar a principiantes y aportar conocimientos a la comunidad de habla hispana, no me creo un experto porque cuando aprendo algo nuevo de este mundo me doy cuenta que aún queda mucho por aprender.
+Hago este proyecto con el objetivo de ayudar a principiantes y aportar conocimientos a la comunidad de habla hispana, no digo que soy un experto porque cuando aprendo algo nuevo de este mundo me doy cuenta que aún queda mucho camino.
 
-Si te interesa lo que hago y quieres enviarme un mensaje puedes contactarme mediante mis redes sociales. Aquí la cita random del día
+Si te interesa lo que hago y quieres enviarme un mensaje puedes contactarme mediante mis redes sociales. Aquí la cita random del día.
 
-> [!quote] Most of the important things in the world have been accomplished by people who have kept on trying when there seemed to be no hope at all.
+> Most of the important things in the world have been accomplished by people who have kept on trying when there seemed to be no hope at all.
 > — Dale Carnegie
-
+{: notice--info}
 
 
 

@@ -259,10 +259,7 @@ root@lame:/home/makis# cat user.txt
 
 Por último te dejo la frase del día, muchas gracias por ver...
 
-> [!quote] Ability will never catch up with the demand for it.
+> Ability will never catch up with the demand for it.
 > — Confucius
-
-
-
-{: .text-center}
+{: .notice--info}
 
