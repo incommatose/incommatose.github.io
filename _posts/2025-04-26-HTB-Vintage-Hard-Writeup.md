@@ -14,9 +14,9 @@ seo_tittle: Vintage - Hard (HTB)
 seo_description: Practica enumeración de servicios antiguos dentro de un entorno controlado de Active Directory, explota diversos ataques avanzados hasta obtener control total del dominio.
 excerpt: Practica enumeración de servicios antiguos dentro de un entorno controlado de Active Directory, explota diversos ataques avanzados hasta obtener control total del dominio.
 header:
-  overlay_image: /assets/images/headers/Vintage-HTB.jpg
+  overlay_image: /assets/images/headers/vintage-hackthebox.jpg
   overlay_filter: 0.7
-  og_image: /assets/images/headers/Vintage-HTB.jpg
+  og_image: /assets/images/headers/vintage-hackthebox.jpg
 ---
 
 
