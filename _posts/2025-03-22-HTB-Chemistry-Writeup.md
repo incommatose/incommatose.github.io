@@ -7,7 +7,7 @@ tags:
   - "HackTheBox"
   - "CVE-2024-23346"
   - "CVE-2024-23344"
-  - "SSH"
+  - "SSH Local Port Forwarding"
   - "CIF Files"
   - "SQLite"
   - "pymatgem RCE"

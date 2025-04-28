@@ -4,21 +4,18 @@ permalink: /Certified-HTB-Writeup/
 tags:
   - "Windows"
   - "Medium"
-  - "Active Directory"
+  - "HackTheBox"
   - "BloodHound"
   - "WriteOwner"
   - "GenericAll"
   - "GenericWrite"
-  - "Abusing AD DACL"
-  - "Abusing AD CS"
+  - "AD DACL"
+  - "AD CS"
   - "Shadow Credentials"
   - "BloodHound"
   - "PassTheHash"
-  - "PassTheCertificate"
   - "ESC9"
   - "PassTheCert"
-  - "HTB"
-  - "HackTheBox"
 categories:
   - writeup
   - windows

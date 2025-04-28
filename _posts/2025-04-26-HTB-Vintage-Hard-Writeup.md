@@ -2,11 +2,11 @@
 title: Vintage - Hard (HTB)
 permalink: /Vintage-HTB-Writeup/
 tags: 
-  - "LDAP Enumeration"
+  - "LDAP Enumeration" 
   - "BloodHound"
   - "Pre-Win 2k Compatibility Enumeration"
   - "PassTheTicket"
-  - "Abusing AD DACL"
+  - "AD DACL"
   - "ReadGMSAPassword"
   - "AddSelf"
   - "GenericWrite"
