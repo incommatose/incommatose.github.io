@@ -4,17 +4,17 @@ permalink: /Gitea-Dockerlabs-Writeup/
 tags:
   - "Linux"
   - "Medium"
-  - "Hacking Web"
   - "Dockerlabs"
   - "Subdomain Fuzzing"
+  - "Path Traversal"
   - "Virtual Hosting"
   - "SSH Brute Force"
   - "User Defined Functions (UDF)"
 categories:
-  - writeup
-  - hacking
-  - dockerlabs
-  - hacking-web
+  - "writeup"
+  - "hacking"
+  - "dockerlabs"
+  - "hacking-web"
 toc: true
 toc_label: Topics
 toc_sticky: true
@@ -31,7 +31,7 @@ header:
 
 ![image-center](/assets/images/posts/gitea-dockerlabs.png){: .align-center}
 
-**Habilidades:** Virtual Hosting, Subdomain Fuzzing, Directory Fuzzing, Directory Path Traversal, SSH Credentials Brute Forcing - `hydra`, Abusing User Defined Functions (UDF) - MySQL [Privilege Escalation]
+**Habilidades:** Virtual Hosting, Subdomain Fuzzing, Directory Path Traversal, SSH Credentials Brute Forcing - `hydra`, Abusing User Defined Functions (UDF) - MySQL [Privilege Escalation]
 {: .notice--primary }
 
 # Introducción

@@ -11,14 +11,11 @@ tags:
   - "CIF Files"
   - "SQLite"
   - "pymatgem RCE"
-  - "aiohttp"
-  - "HTB"
 categories:
   - writeup
   - hacking
-  - linux
   - hackthebox
-  - htb
+  - hacking-web
 toc: true
 toc_label: Topics
 toc_sticky: true

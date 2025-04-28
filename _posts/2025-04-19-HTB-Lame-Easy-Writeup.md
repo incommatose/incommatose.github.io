@@ -2,13 +2,14 @@
 title: Lame - Easy (HTB)
 permalink: /Lame-HTB-Writeup/
 tags:
-  - CVE-2007-2447
+  - "Linux"
+  - "HackTheBox"
+  - "SMB"
+  - "CVE-2007-24471"
 categories:
   - writeup
   - hacking
-  - htb
   - hackthebox
-  - htb
 toc: true
 toc_label: Topics
 toc_sticky: true

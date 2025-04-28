@@ -5,7 +5,7 @@ tags:
   - "Linux"
   - "Medium"
   - "Dockerlabs"
-  - "Login Page Brute Forcing"
+  - "Login Page Brute Force"
   - "Hash Cracking"
   - "Bash eq Command Execution"
   - "Abusing Sudoers"
@@ -14,7 +14,6 @@ tags:
 categories:
   - writeup
   - hacking
-  - linux
   - dockerlabs
   - hacking-web
 toc: true

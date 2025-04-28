@@ -9,22 +9,22 @@ tags:
   - "WriteOwner"
   - "GenericAll"
   - "GenericWrite"
-  - "Abusing DACL"
+  - "Abusing AD DACL"
   - "Abusing AD CS"
   - "Shadow Credentials"
   - "BloodHound"
   - "PassTheHash"
   - "PassTheCertificate"
   - "ESC9"
+  - "PassTheCert"
   - "HTB"
-  - "hackthebox"
+  - "HackTheBox"
 categories:
   - writeup
-  - hacking
-  - active-directory
   - windows
   - hackthebox
-  - htb
+  - hacking
+  - active-directory
 toc: true
 toc_label: Topics
 toc_sticky: true
@@ -42,7 +42,7 @@ header:
 
 ![image-center](/assets/images/posts/certified-hackthebox.png){: .align-center}
 
-**Habilidades:** RPC Enumeration, DC Enumeration - BloodHound (`bloodhound-python`), Abusing `WriteOwner` Permission (AD-DACL), Shadow Credentials - Abusing `GenericWrite` Permissions (AD-DACL), PassTheHash, Abusing `GenericAll` Privileges (AD-DACL), Abusing AD CS (Active Directory Certificates Services) - Using the `ESC9` Technique to Issue a Privileged Certificate [Privilege Escalation], Pass the Certificate
+**Habilidades:** RPC Enumeration, DC Enumeration - BloodHound (`bloodhound-python`), Abusing AD DACL - `WriteOwner` Rights , Shadow Credentials, Abusing AD DACL - `GenericWrite` Rights, PassTheHash, Abusing AD DACL - `GenericAll` Rights, Abusing AD CS (Active Directory Certificates Services) - Using the `ESC9` Technique to Issue a Privileged Certificate [Privilege Escalation], PassTheCert
 {: .notice--primary}
 
 # Introducción

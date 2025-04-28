@@ -4,33 +4,33 @@ permalink: /Ghost-HTB-Writeup/
 tags:
   - "Windows"
   - "Insane"
-  - "Active"
-  - "Directory"
+  - "HackTheBox"
+  - "Active Directory"
   - "LDAP Injection"
   - "Python Scripting"
   - "API Abusing"
   - "Abusing SSH Multiplexing"
   - "ADIDNS Poisoning"
   - "Stealing Net-NTLMv2 Hash"
+  - "ReadGMSAPassword"
   - "Bloodhound"
-  - "Golden SAML Attack"
-  - "Golden Ticket Attack"
-  - "DCSync"
+  - "Golden SAML"
+  - "Golden Ticket"
+  - "DC Sync"
   - "Hash Cracking"
   - "PassTheHash"
   - "Abusing xp_cmdshell"
   - "Powershell Reverse Shell Obfusctation"
   - "Mimikatz"
+  - "SeImpersonatePrivilege"
   - "Proxychains"
-  - "Dumping gMSA Password"
-  - "Abusing SeImpersonatePrivilege"
-  - "HTB"
+  - "Chisel"
 categories:
   - writeup
   - hacking
-  - windows
+  - hackthebox
   - active-directory
-  - htb
+
 toc: true
 toc_label: Topics
 toc_sticky: true
@@ -47,7 +47,7 @@ header:
 
 ![image-center](/assets/images/posts/ghost-hackthebox.png){: .align-center}
 
-**Habilidades:** Virtual Hosting, LDAP Injection, Blind LDAP Injection - Credential Brute Forcing (Python Scripting), Local File Inclusion (GhostCMS), Abusing Ghost CMS Api (Command Injection), Abusing SSH Multiplexing, ADIDNS Poisoning - `dnstool.py`, Stealing NetNTLMv2 Hashes With `Responder.py`, Hash Cracking (NetNTLMv2), DC Enumeration (SharpHound.exe), Dumping gMSA Password, PassTheHash (Evil-WinRM), Golden SAML Attack using `ADFSpoof.py`, Abusing SQL Server `xp_cmdshell` to RCE, Powershell Reverse Shell Obfuscation (PowerJoker), Abusing SeImpersonatePrivilege (EfsPotato.exe) [Local Privilege Escalation], DCSync Using Mimikatz, Golden Ticket Attack - Requesting TGT using `ticketer.py`, Pivoting with Chisel + PassTheTicket (`proxychains` + `secretsdump.py`) [Privilege Escalation], Golden Ticket Attack using Bash Scripting
+**Habilidades:** Virtual Hosting, LDAP Injection, Blind LDAP Injection - Credential Brute Forcing (Python Scripting), Local File Inclusion (GhostCMS), Abusing Ghost CMS Api (Command Injection), Abusing SSH Multiplexing, ADIDNS Poisoning - `dnstool.py`, Stealing NetNTLMv2 Hashes With `Responder.py`, Hash Cracking (NetNTLMv2), DC Enumeration (SharpHound.exe), ReadGMSAPassword, PassTheHash (Evil-WinRM), Golden SAML Attack using `ADFSpoof.py`, Abusing SQL Server `xp_cmdshell` to RCE, Powershell Reverse Shell Obfuscation (PowerJoker), Abusing SeImpersonatePrivilege (EfsPotato.exe) [Local Privilege Escalation], DCSync Using Mimikatz, Golden Ticket Attack - Requesting TGT using `ticketer.py`, Pivoting with Chisel + PassTheTicket (`proxychains` + `secretsdump.py`) [Privilege Escalation], Golden Ticket Attack using Bash Scripting
 {: .notice--primary}
 
 # Introducción

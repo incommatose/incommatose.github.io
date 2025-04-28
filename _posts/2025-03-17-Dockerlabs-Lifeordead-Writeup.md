@@ -4,14 +4,13 @@ permalink: /Lifeordead-Dockerlabs-Writeup/
 tags:
   - "Linux"
   - "Dockerlabs"
-  - "IP Aliasing"
+  - "Virtual IP Aliasing"
   - "Abusing Sudoers"
   - "Script Hijacking"
 categories:
   - writeup
   - hacking
   - dockerlabs
-  - linux
   - hacking-web
 toc: true
 toc_label: Topics

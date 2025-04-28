@@ -5,7 +5,8 @@ tags:
   - "HackTheBox"
   - "Windows"
   - "Medium"
-  - "Abusing AD ACL"
+  - "Active Directory"
+  - "Abusing AD DACL"
   - "Bloodhound"
   - "GenericAll"
   - "ForceChangePassword"
@@ -17,7 +18,6 @@ tags:
 categories:
   - writeup
   - hacking
-  - htb
   - hackthebox
   - active-directory
 toc: true
@@ -37,7 +37,7 @@ header:
 ![image-center](/assets/images/posts/administrator-hackthebox.png)
 {: .align-center}
 
-**Habilidades:** RPC Enumeration, DC Enumeration - BloodHound + `bloodhound-python`, Abusing AD ACLs - `GenericAll` Rights, Abusing AD ACLs - `ForceChangePassword` Rights, Hash Cracking - `pwsafe2john` + `john`, `.psafe3` File Analysis,  Targeted Kerberoasting - `targetedKerberosast.py`, DC Sync Attack - `secretsdump.py` [Privilege Escalation], PassTheHash
+**Habilidades:** RPC Enumeration, DC Enumeration - BloodHound + `bloodhound-python`, Abusing AD DACL - `GenericAll` Rights, Abusing AD DACL - `ForceChangePassword` Rights, Hash Cracking - `pwsafe2john` + `john`, `.psafe3` File Analysis,  Targeted Kerberoasting - `targetedKerberosast.py`, DC Sync Attack - `secretsdump.py` [Privilege Escalation], PassTheHash
 {: .notice--primary}
 
 # Introducción

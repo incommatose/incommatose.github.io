@@ -4,19 +4,17 @@ permalink: /Alert-HTB-Writeup/
 tags:
   - "Linux"
   - "Easy"
+  - "HackTheBox"
   - "XSS"
   - "Path Traversal"
   - "Hash Cracking"
   - "SSH Local Port Forwarding"
-  - "HTB"
-  - "HackTheBox"
+  - "PHP"
 categories:
-  - linux
-  - hackthebox
   - hacking
-  - hacking-web
   - writeup
-  - htb
+  - hackthebox
+  - hacking-web
 toc: true
 toc_label: Topics
 toc_sticky: true

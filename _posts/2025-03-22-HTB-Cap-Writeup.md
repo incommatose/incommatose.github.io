@@ -7,13 +7,10 @@ tags:
   - "HackTheBox"
   - "IDOR"
   - "Capabilities"
-  - HTB
 categories:
-  - linux
+  - writeup
   - hackthebox
   - hacking
-  - writeup
-  - htb
 toc: true
 toc_label: Topics
 toc_sticky: true

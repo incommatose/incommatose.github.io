@@ -14,7 +14,6 @@ categories:
   - writeup
   - hacking
   - dockerlabs
-  - linux
   - hacking-web
 toc: true
 toc_label: Topics

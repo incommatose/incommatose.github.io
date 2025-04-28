@@ -1,7 +1,13 @@
 ---
 title: Support - Easy (HTB)
 permalink: /Support-HTB-Writeup/
-tags: ["SMB Enumeration", "EXE Binary Analysis", "LDAP Enumeration", "DC Enumeration", "SharpHound", "BloodHound", "RBCD Attack"]
+tags: 
+  - "SMB Enumeration"
+  - "dnSPY" 
+  - "LDAP Enumeration"
+  - "BloodHound"
+  - "SharpHound"
+  - "RBCD"
 categories:
   - writeup
   - hacking

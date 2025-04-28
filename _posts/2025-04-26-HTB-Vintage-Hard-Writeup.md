@@ -2,10 +2,29 @@
 title: Vintage - Hard (HTB)
 permalink: /Vintage-HTB-Writeup/
 tags: 
+  - "LDAP Enumeration"
+  - "BloodHound"
+  - "Pre-Win 2k Compatibility Enumeration"
+  - "PassTheTicket"
+  - "Abusing AD DACL"
+  - "ReadGMSAPassword"
+  - "AddSelf"
+  - "GenericWrite"
+  - "GenericAll"
+  - "AS-REP Roast"
+  - "Hash Cracking"
+  - "Kerberos"
+  - "Evil-WinRM"
+  - "Abusing DPAPI"
+  - "RBCD"
+  - "S4U2Self"
+  - "S4U2Proxy"
+  - "DC Sync"
 categories:
-  - writeup
-  - hacking
-  - htb
+  - "writeup"
+  - "hacking"
+  - "hackthebox"
+  - "active-directory"
 toc: true
 toc_label: Topics
 toc_sticky: true
@@ -23,7 +42,7 @@ header:
 ![image-center](/assets/images/posts/vintage-hackthebox.png)
 {: .align-center}
 
-**Habilidades:** LDAP Enumeration, BloodHound Analysis, Pre-Windows 2000 Compatibility Access Enumeration - `pre2k`, PassTheTicket Abusing AD DACL - `ReadGMSAPassword` Rights, Abusing AD DACL - `AddSelf` and `GenericWrite` Rights, Abusing AD DACL - `GenericAll` Rights, AS-REP Roast, Hash Cracking using `john`, Kerberos Client Configuration, PassTheTicket over WinRM - `evil-winrm`, Abusing DPAPI Secrets - Master Key Extraction + Credential File Decryption, Abusing Resource Based Constrained Delegation (RBCD) + S4U2Self and S4U2Proxy - Getting Service Ticket, (Extra) DC Sync - Dumping NT Hashes
+**Habilidades:** LDAP Enumeration, BloodHound Analysis, Pre-Windows 2000 Compatibility Access Enumeration - `pre2k`, PassTheTicket, Abusing AD DACL - `ReadGMSAPassword` Rights, Abusing AD DACL - `AddSelf` and `GenericWrite` Rights, Abusing AD DACL - `GenericAll` Rights, AS-REP Roast, Hash Cracking using `john`, Kerberos Client Configuration, PassTheTicket over WinRM - `evil-winrm`, Abusing DPAPI Secrets - Master Key Extraction + Credential File Decryption, Abusing Resource Based Constrained Delegation (RBCD) + S4U2Self and S4U2Proxy - Getting Service Ticket, (Extra) DC Sync - Dumping NT Hashes
 {: .notice--primary}
 
 # Introducción
