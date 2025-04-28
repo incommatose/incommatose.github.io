@@ -193,6 +193,7 @@ username=hola' or 1=1-- -&password=hola
 ~~~
 
 > De esta forma podemos ignorar el valor de `username` para obligar a la consulta a que retorne un valor verdadero, además, no importará el valor de `password` ya que estamos comentando el resto de la query SQL
+{: .notice--danger}
 
 Ingresaremos a la siguiente web, donde podremos agregar una nueva obra de arte
  
@@ -213,6 +214,7 @@ Fatal error: Uncaught mysqli_sql_exception: You have an error in your SQL syntax
 Estamos de igual forma ocasionando un error de sintaxis al abrir una nueva cadena en la consulta SQL
 
 > Intentaremos hacer una consulta para adivinar la cantidad de columnas que admite la tabla. **Comenzaremos con un número grande para forzar un error e iremos disminuyéndolo hasta que la consulta se ejecute sin errores**
+{: .notice--danger}
 
 ~~~ sql
 ' ORDER BY 10-- -
