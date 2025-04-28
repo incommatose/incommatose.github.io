@@ -452,7 +452,7 @@ if (isset($_POST['command'])) {
 ~~~
 
 > Gracias a que contamos con el archivo que contiene el código de la web, podemos hacer un análisis para identificar un vector de explotación más rápidamente. De lo contrario, deberíamos hacer pruebas manuales enviando `;`, `|` o caracteres similares de `bash`
-
+{: .notice--danger}
 
 ## Command Injection
 
@@ -483,6 +483,7 @@ En este punto tendríamos varias formas para elevar nuestros privilegios ya que 
 ~~~
 
 > Podemos intentar asignar el bit `SUID` a la `bash`, antes de asumir la ruta, podemos ver donde está con el comando `which`.
+{: .notice--danger}
 
 Enviaremos el comando a la terminal web para hacer la `bash`, un binario `suid`
 
