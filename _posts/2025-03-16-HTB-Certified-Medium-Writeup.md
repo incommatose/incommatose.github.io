@@ -18,7 +18,6 @@ tags:
   - "PassTheCert"
 categories:
   - writeup
-  - windows
   - hackthebox
   - hacking
   - active-directory

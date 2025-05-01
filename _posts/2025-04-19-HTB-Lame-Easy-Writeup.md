@@ -4,6 +4,7 @@ permalink: /Lame-HTB-Writeup/
 tags:
   - "Linux"
   - "HackTheBox"
+  - "Easy"
   - "SMB"
   - "CVE-2007-24471"
 categories:

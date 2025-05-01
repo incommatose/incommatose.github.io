@@ -4,6 +4,7 @@ permalink: /Lifeordead-Dockerlabs-Writeup/
 tags:
   - "Linux"
   - "Dockerlabs"
+  - "Hard"
   - "Virtual IP Aliasing"
   - "Abusing Sudoers"
   - "Script Hijacking"

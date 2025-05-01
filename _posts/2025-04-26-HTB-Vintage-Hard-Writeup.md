@@ -1,7 +1,10 @@
 ---
 title: Vintage - Hard (HTB)
 permalink: /Vintage-HTB-Writeup/
-tags: 
+tags:
+  - "Windows"
+  - "HackTheBox"
+  - "Hard"
   - "LDAP Enumeration" 
   - "BloodHound"
   - "Pre-Win 2k Compatibility Enumeration"
