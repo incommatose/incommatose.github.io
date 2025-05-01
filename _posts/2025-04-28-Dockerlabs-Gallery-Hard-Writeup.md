@@ -1,5 +1,5 @@
 ---
-title: Gallery - Writeup (Dockerlabs)
+title: Gallery - Hard (Dockerlabs)
 permalink: /Gallery-Dockerlabs-Writeup/
 tags:
   - "Linux"
@@ -16,7 +16,7 @@ toc: true
 toc_label: Topics
 toc_sticky: true
 sidebar: main
-seo_tittle: Gallery - Writeup (Dockerlabs)
+seo_tittle: Gallery - Hard (Dockerlabs)
 seo_description: Practica inyecciones SQL para eludir autenticación en una web. Enumera bases de datos para extraer información sensible y logra ejecución de comandos para vencer Gallery.
 excerpt: Practica inyecciones SQL para eludir autenticación en una web. Enumera bases de datos para extraer información sensible y logra ejecución de comandos para vencer Gallery.
 header:
