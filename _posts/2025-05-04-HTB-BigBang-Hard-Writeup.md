@@ -2182,6 +2182,6 @@ bash-5.1# cat /root/root.txt
 <br>
 Gracias por leer este artículo, espero te haya sido de ayuda. Te dejo la cita del día:
 
-> [!quote] An invasion of armies can be resisted, but not an idea whose time has come.
+> An invasion of armies can be resisted, but not an idea whose time has come.
 > — Victor Hugo
 {: .notice--info}
