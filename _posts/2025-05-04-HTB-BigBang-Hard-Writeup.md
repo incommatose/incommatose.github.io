@@ -15,10 +15,8 @@ tags:
   - CVE-2024-2961
   - Chisel
   - MySQL
-  - Hash
-  - Cracking
-  - SSH
-  - "Local Port Forwarding"
+  - "Hash Cracking"
+  - "SSH Local Port Forwarding"
   - SQLite
   - Grafana
   - grafana2hashcat
@@ -1654,9 +1652,10 @@ Si buscamos en Google, llegaremos al siguiente artículo donde se explica muy bi
 > Para convertir el hash en formato `hashcat`, necesitaremos lo siguiente de la base de datos que ya conocemos, usemos de ejemplo al usuario `developer`:
 {: .notice--danger}
 
-- `Password` -> `7e8018a4210efbaeb12f0115580a476fe8f98a4f9bada2720e652654860c59db93577b12201c0151256375d6f883f1b8d960`
-- `Salt` -> `4umebBJucv`
-
+~~~ text
+Hash -> 7e8018a4210efbaeb12f0115580a476fe8f98a4f9bada2720e652654860c59db93577b12201c0151256375d6f883f1b8d960
+Salt -> 4umebBJucv
+~~~
 Según el autor, el algoritmo utilizado para construir el hash final es `PBKDF2-HMAC-SHA256`. Además explica cómo podemos convertir el hash de modo que sea entendido por `hashcat`, ya que esta herramienta contempla este algoritmo, el siguiente código está en lenguaje `go`
 
 ~~~ go
