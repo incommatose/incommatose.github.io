@@ -20,8 +20,8 @@ toc_label: Topics
 toc_sticky: true
 sidebar: main
 seo_tittle: Strutted - Medium (HTB)
-seo_description: Practica tus habilidades de  de xplota un CVE en Apache Struts y abusa de tcpdump para vencer Strutted
-excerpt: Practica tus habilidades de  de xplota un CVE en Apache Struts y abusa de tcpdump para vencer Strutted
+seo_description: Practica explotación a Apache Struts y abusa de privilegios mal configurados para vencer Strutted
+excerpt: Practica explotación a Apache Struts y abusa de privilegios mal configurados para vencer Strutted
 header:
   overlay_image: /assets/images/headers/strutted-hackthebox.jpg
   overlay_filter: 0.7
