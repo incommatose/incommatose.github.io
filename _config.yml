@@ -134,11 +134,8 @@ author:
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
       url: "https://github.com/incommatose"
-    - label: "Instagram"
-      icon: "fab fa-fw fa-instagram"
-      url: "https://instagram.com/incommatosee"
-
-# Site Footer
+    
+    
 footer:
   links:
     - label: "Twitter"
@@ -150,10 +147,6 @@ footer:
     - label: "GitLab"
       icon: "fab fa-fw fa-gitlab"
       # url:
-    - label: "Instagram"
-      icon: "fab fa-fw fa-instagram"
-      url: "https://instagram.com/incommatosee"
-
 
 # Reading Files
 include:
