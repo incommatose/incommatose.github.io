@@ -1161,7 +1161,7 @@ e41...
 <br>
 
 
-# Reconocimiento - `172.20.0.2`
+# Reconocimiento - `backup`
 ---
 Recordemos que tenemos asignada una nueva IP (`172.20.0.3`)
 
