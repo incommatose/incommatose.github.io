@@ -32,7 +32,7 @@ _asset_bundler_cache
 _site
 
 # Prohibited posts and obsidian utils
-.hidden
+active_machines
 .obsidian
 template
 
