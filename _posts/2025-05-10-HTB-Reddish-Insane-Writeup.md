@@ -570,10 +570,11 @@ Serving HTTP on 0.0.0.0 port 80 (http://0.0.0.0:80/) ...
 
 Si tienes problemas con `libc`, puedes descargar un binario pre-compilado desde el reposotorio oficial y descomprimirlo con `gunzip`
 
-- https://github.com/jpillora/chisel/releases/download/v1.7.6/chisel_1.7.6_linux_amd64.gz
-
 ~~~ bash
-gunzip chisel_1.7.6_amd64
+wget https://github.com/jpillora/chisel/releases/download/v1.7.6/chisel_1.7.6_linux_amd64.gz
+
+gunzip chisel_1.7.6_amd64.gz
+./chisel_1.76_amd64.gz
 ~~~
 
 ### HTTP Request without `curl` Command

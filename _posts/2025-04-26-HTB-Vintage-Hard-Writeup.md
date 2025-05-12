@@ -187,7 +187,7 @@ Cannot connect to server.  Error was NT_STATUS_NOT_SUPPORTED
 Sin embargo no podremos conectarnos debido a que el servidor no admite el uso del protocolo RPC para al menos esta cuenta de usuario
 
 
-# (Posible) SMB Enumeration
+## (Posible) SMB Enumeration
 
 Si hacemos uso del protocolo `smb` para conectarnos al DC tampoco tendremos éxito, con y sin credenciales
  
