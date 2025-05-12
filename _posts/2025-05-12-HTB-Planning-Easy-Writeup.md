@@ -23,7 +23,7 @@ header:
 ![image-center](/assets/images/posts/planning-hackthebox.png)
 {: .align-center}
 
-# ⛔ Contenido Bloqueado - Máquina activa
+# ⛔ Contenido Bloqueado
 
 Planning es una máquina Linux de dificultad `Easy` en HackTheBox que se encuentra activa, una vez sea retirada podrás acceder a la resolución. 
 {: .notice--danger}
