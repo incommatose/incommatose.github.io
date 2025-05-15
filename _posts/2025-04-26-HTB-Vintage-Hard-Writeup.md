@@ -566,7 +566,9 @@ Para abusar de este componente, necesitaremos tener acceso a los archivos de cre
 
 Además debemos saber que para descifrar estos archivos necesitamos una clave simétrica almacenada comúnmente en la siguiente ruta
 
-- `C:\Users\$USER\AppData\Roaming\Microsoft\Protect\$SUID\$GUID`
+~~~ text
+C:\Users\$USER\AppData\Roaming\Microsoft\Protect\$SUID\$GUID
+~~~
 
 Esta técnica nos permitirá ver credenciales en texto claro y poder movernos lateralmente dentro del dominio, en el siguiente artículo se profundiza más acercad de este concepto.
 

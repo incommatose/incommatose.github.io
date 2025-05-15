@@ -2,7 +2,6 @@
 title: EscapeTwo - Easy (HTB)
 permalink: /EscapeTwo-HTB-Writeup/
 tags:
-  - HackTheBox
   - Easy
   - Windows
 categories:

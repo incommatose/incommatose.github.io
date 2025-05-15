@@ -2,7 +2,6 @@
 title: Planning - Easy (HTB)
 permalink: /Planning-HTB-Writeup/
 tags:
-  - HackTheBox
   - Easy
   - Linux
 categories:

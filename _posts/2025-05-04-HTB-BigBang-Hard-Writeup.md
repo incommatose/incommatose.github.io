@@ -27,7 +27,7 @@ tags:
 categories:
   - writeup
   - hacking
-  - htb
+  - hackthebox
 toc: true
 toc_label: Topics
 toc_sticky: true
