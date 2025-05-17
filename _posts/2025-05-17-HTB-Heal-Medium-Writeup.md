@@ -1,7 +1,7 @@
 ---
 title: Heal - Medium (HTB)
 permalink: /Heal-HTB-Writeup/
-tags: 
+tags:
   - "Virtual Hosting"
   - "Local File Inclusion"
   - "SQLite"
@@ -23,8 +23,8 @@ toc_label: Topics
 toc_sticky: true
 sidebar: main
 seo_tittle: Heal - Medium (HTB)
-seo_description: 
-excerpt: 
+seo_description: ?? Practica enumeraci¨®n y explotaci¨®n de servicios web vulnerables y abusa de servicios internos mal configurados para vencer Heal.
+excerpt: ?? Practica enumeraci¨®n y explotaci¨®n de servicios web vulnerables y abusa de servicios internos mal configurados para vencer Heal.
 header:
   overlay_image: /assets/images/headers/heal-hackthebox.jpg
   overlay_filter: 0.7
@@ -861,5 +861,5 @@ root@heal:/# cat /root/root.txt
 Gracias por leer este artÃ­culo, espero te haya sido de ayuda. Te dejo la cita del dÃ­a:
 
 > To be beautiful means to be yourself. You donï¿½t need to be accepted by others. You need to accept yourself.
-> â€” Thich Nhat Hanh
+> â€?Thich Nhat Hanh
 {: .notice--info}
