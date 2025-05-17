@@ -2,18 +2,30 @@
 title: Heal - Medium (HTB)
 permalink: /Heal-HTB-Writeup/
 tags:
-  - "Virtual Hosting"
-  - "Local File Inclusion"
-  - "SQLite"
-  - "Hash Cracking"
-  - "LimeSurvey"
-  - "File Upload"
-  - "CVE-2021-44967"
-  - "Credentials Leakage"
-  - "SSH Local Port Forwarding"
-  - "Abusing HashiCorp Consul"
-  - "RCE"
-  - "Abusing API"
+  - Virtual
+  - Hosting
+  - Local
+  - File
+  - Inclusion
+  - SQLite
+  - Hash
+  - Cracking
+  - LimeSurvey
+  - File
+  - Upload
+  - CVE-2021-44967
+  - Credentials
+  - Leakage
+  - SSH
+  - Local
+  - Port
+  - Forwarding
+  - Abusing
+  - HashiCorp
+  - Consul
+  - RCE
+  - Abusing
+  - API
 categories:
   - writeup
   - hacking
@@ -23,8 +35,8 @@ toc_label: Topics
 toc_sticky: true
 sidebar: main
 seo_tittle: Heal - Medium (HTB)
-seo_description: ?? Practica enumeración y explotación de servicios web vulnerables y abusa de servicios internos mal configurados para vencer Heal.
-excerpt: ?? Practica enumeración y explotación de servicios web vulnerables y abusa de servicios internos mal configurados para vencer Heal.
+seo_description: Practica enumeraci贸n y explotaci贸n de servicios web vulnerables y abusa de servicios internos mal configurados para vencer Heal.
+excerpt: Practica enumeraci贸n y explotaci贸n de servicios web vulnerables y abusa de servicios internos mal configurados para vencer Heal.
 header:
   overlay_image: /assets/images/headers/heal-hackthebox.jpg
   overlay_filter: 0.7
@@ -860,6 +872,6 @@ root@heal:/# cat /root/root.txt
 <br>
 Gracias por leer este art铆culo, espero te haya sido de ayuda. Te dejo la cita del d铆a:
 
-> To be beautiful means to be yourself. You don锟絫 need to be accepted by others. You need to accept yourself.
-> 鈥?Thich Nhat Hanh
+> To be beautiful means to be yourself. You don't need to be accepted by others. You need to accept yourself.
+> - Thich Nhat Hanh
 {: .notice--info}
