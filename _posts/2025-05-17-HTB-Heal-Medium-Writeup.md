@@ -2,30 +2,18 @@
 title: Heal - Medium (HTB)
 permalink: /Heal-HTB-Writeup/
 tags:
-  - Virtual
-  - Hosting
-  - Local
-  - File
-  - Inclusion
-  - SQLite
-  - Hash
-  - Cracking
-  - LimeSurvey
-  - File
-  - Upload
-  - CVE-2021-44967
-  - Credentials
-  - Leakage
-  - SSH
-  - Local
-  - Port
-  - Forwarding
-  - Abusing
-  - HashiCorp
-  - Consul
-  - RCE
-  - Abusing
-  - API
+  - "Virtual Hosting"
+  - "Local File Inclusion"
+  - "SQLite"
+  - "Hash Cracking"
+  - "Abusing LimeSurvey"
+  - "File Upload"
+  - "CVE-2021-44967"
+  - "Credentials Leakage"
+  - "SSH Local Port Forwarding"
+  - "Abusing HashiCorp Consul"
+  - "RCE"
+  - "Abusing API"
 categories:
   - writeup
   - hacking
