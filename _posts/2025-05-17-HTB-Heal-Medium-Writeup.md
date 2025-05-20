@@ -35,7 +35,7 @@ header:
 ![image-center](/assets/images/posts/heal-hackthebox.png)
 {: .align-center}
 
-**Habilidades:** Virtual Hosting, Local File Inclusion, SQLite Database Analysis, Hash Cracking, `LimeSurvey` Arbitrary File Upload (CVE-2021-44967), Credentials Leakage, SSH Local Port Forwarding, Consul Remote Command Execution via Services API
+**Habilidades:** Virtual Hosting, Local File Inclusion, SQLite Database Analysis, Hash Cracking, `LimeSurvey` Arbitrary File Upload (CVE-2021-44967), Credentials Leakage, SSH Local Port Forwarding, Consul Remote Command Execution via Services API [Privilege Escalation]
 {: .notice--primary}
 
 # Introducción

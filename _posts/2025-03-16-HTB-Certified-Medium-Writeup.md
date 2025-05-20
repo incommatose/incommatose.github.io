@@ -4,7 +4,6 @@ permalink: /Certified-HTB-Writeup/
 tags:
   - "Windows"
   - "Medium"
-  - "HackTheBox"
   - "BloodHound"
   - "WriteOwner"
   - "GenericAll"

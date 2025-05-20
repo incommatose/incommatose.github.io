@@ -45,7 +45,7 @@ header:
 ![image-center](/assets/images/posts/bigbang-hackthebox.png)
 {: .align-center}
 
-**Habilidades:** Wordpress Enumeration (`wpscan`), BuddyForms 2.7.7 - Unauthenticated Insecure Deserialization (CVE-2023-26326), PHP Wrappers Chain + Server Side Request Forgery (SSRF), Buffer Overflow - `glibc 2.39` (CVE-2024-2961), Port Forwarding - `chisel`, MySQL Querying - Wordpress Database, Hash Cracking, Basic System Enumeration, SSH Local Port Forwarding, SQLite Database Analysis, Cracking `grafana` Hashes - Building a `grafana2hashcat` Tool, APK Analysis (`apktool`), API Enumeration, Command Injection
+**Habilidades:** Wordpress Enumeration (`wpscan`), BuddyForms 2.7.7 - Unauthenticated Insecure Deserialization (CVE-2023-26326), PHP Wrappers Chain + Server Side Request Forgery (SSRF), Buffer Overflow - `glibc 2.39` (CVE-2024-2961), Port Forwarding - `chisel`, MySQL Querying - Wordpress Database, Hash Cracking, Basic System Enumeration, SSH Local Port Forwarding, SQLite Database Analysis, Cracking `grafana` Hashes - Building a `grafana2hashcat` Tool, APK Analysis (`apktool`), API Enumeration, Command Injection [Privilege Escalation]
 {: .notice--primary}
 
 # Introducción

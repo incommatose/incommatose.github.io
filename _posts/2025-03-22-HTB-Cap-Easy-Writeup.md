@@ -4,7 +4,6 @@ permalink: /Cap-HTB-Writeup/
 tags:
   - "Linux"
   - "Easy"
-  - "HackTheBox"
   - "IDOR"
   - "Capabilities"
 categories:
