@@ -13,9 +13,9 @@ seo_tittle: Nocturnal - Easy (HTB)
 seo_description: ⛔ Esta máquina se encuentra activa en HackTheBox, una vez retirada, este post será desbloqueado y podrás ver la resolución.
 excerpt: ⛔ Esta máquina se encuentra activa en HackTheBox, una vez retirada, este post será desbloqueado y podrás ver la resolución.
 header:
-  overlay_image: /assets/images/headers/nocturnal-htb.jpg
+  overlay_image: /assets/images/headers/nocturnal-hackthebox.jpg
   overlay_filter: 0.7
-  og_image: /assets/images/headers/nocturnal-htb.jpg
+  og_image: /assets/images/headers/nocturnal-hackthebox.jpg
 ---
 
 
