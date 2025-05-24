@@ -1,7 +1,8 @@
 document.addEventListener('DOMContentLoaded', () => {
-  document.querySelectorAll('.post-content img').forEach(img => {
+  document.querySelectorAll('.page__content img').forEach(img => {
     img.style.cursor = 'zoom-in';
     img.addEventListener('click', () => {
+	  console.log("Click img!")
 
       // Construir el modal
       const modal = document.createElement('div');
