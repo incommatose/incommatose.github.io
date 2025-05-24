@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
-  document.querySelectorAll('.post__content img').forEach(img => {
+  document.querySelectorAll('.page__content img').forEach(img => {
     img.style.cursor = 'zoom-in';
 
     img.addEventListener('click', () => {
