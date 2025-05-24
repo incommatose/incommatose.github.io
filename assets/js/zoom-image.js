@@ -1,10 +1,8 @@
-// assets/js/image-zoom.js
 document.addEventListener('DOMContentLoaded', () => {
-  // Selecciona las imágenes dentro del contenido de posts/páginas
   document.querySelectorAll('.post-content img, .page-content img').forEach(img => {
     img.style.cursor = 'zoom-in';
     img.addEventListener('click', () => {
-      // Crea el overlay completo
+
       const overlay = document.createElement('div');
       overlay.id = 'img-zoom-overlay';
       Object.assign(overlay.style, {
@@ -31,7 +29,6 @@ document.addEventListener('DOMContentLoaded', () => {
       overlay.appendChild(modalImg);
       document.body.appendChild(overlay);
 
-      // Al hacer click fuera de la img o sobre el overlay, lo cerramos
       overlay.addEventListener('click', () => {
         document.body.removeChild(overlay);
       });
