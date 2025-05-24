@@ -2,21 +2,21 @@
 title: EscapeTwo - Easy (HTB)
 permalink: /EscapeTwo-HTB-Writeup/
 tags:
-  - "Windows"
-  - "Easy"
+  - Windows
+  - Easy
   - "Active Directory"
   - "RPC Enumeration"
   - "SMB Enumeration"
-  - "Abusing xp_cmdshell" 
-  - "Bloodhound"
+  - "Abusing xp_cmdshell"
+  - Bloodhound
   - "AD DACL"
-  - "WriteOwner"
-  - "GenericAll"
+  - WriteOwner
+  - GenericAll
   - "Shadow Credentials"
   - "AD CS"
-  - "ESC4"
-  - "PassTheHash"
-  - "PassTheCert"
+  - ESC4
+  - PassTheHash
+  - PassTheCert
 categories:
   - writeup
   - hacking
@@ -27,8 +27,8 @@ toc_label: Topics
 toc_sticky: true
 sidebar: main
 seo_tittle: EscapeTwo - Easy (HTB)
-seo_description: 🕵️‍♂️ Aprende enumeración y explotación de fallos en servicios de Active Directory y eleva tus privilegios mediante el abuso de certificados en AD CS para vencer EscapeTwo.
-excerpt: 🕵️‍♂️ Aprende enumeración y explotación de fallos en servicios de Active Directory y eleva tus privilegios mediante el abuso de certificados en AD CS para vencer EscapeTwo.
+seo_description: Aprende enumeración y explotación de fallos en servicios de Active Directory y eleva tus privilegios mediante el abuso de certificados en AD CS para vencer EscapeTwo.
+excerpt: Aprende enumeración y explotación de fallos en servicios de Active Directory y eleva tus privilegios mediante el abuso de certificados en AD CS para vencer EscapeTwo.
 header:
   overlay_image: /assets/images/headers/escapeTwo-hackthebox.jpg
   overlay_filter: 0.7
