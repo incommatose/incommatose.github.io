@@ -18,3 +18,12 @@ search: false
   max-width: 100%;
   height: auto;
 }
+
+#img-zoom-overlay {
+  animation: fadeIn 0.1s ease-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}

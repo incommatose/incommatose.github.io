@@ -20,7 +20,7 @@ rtl                      : # true, false (default) # turns direction of the page
 title                    : "My Hacking Notes"
 title_separator          : "-"
 subtitle                 : # site tagline that appears below site title in masthead
-name                     : "Andrew's Blog"
+name                     : "My Hacking Notes"
 description              : ""
 url                      : "https://incommatose.github.io"
 baseurl                  : # "/"
@@ -122,15 +122,9 @@ author:
     - label: "Email"
       icon: "fas fa-fw fa-envelope-square"
       # url: "mailto:your.name@email.com"
-    - label: "Website"
-      icon: "fas fa-fw fa-link"
-      # url: "https://your-website.com"
     - label: "Twitter"
       icon: "fab fa-fw fa-twitter-square"
       url: "https://twitter.com/incommatose"
-    - label: "Facebook"
-      icon: "fab fa-fw fa-facebook-square"
-      # url: "https://facebook.com/"
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
       url: "https://github.com/incommatose"
@@ -144,9 +138,6 @@ footer:
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
       url: "https://github.com/incommatose"
-    - label: "GitLab"
-      icon: "fab fa-fw fa-gitlab"
-      # url:
 
 # Reading Files
 include:
@@ -317,3 +308,7 @@ defaults:
       share: true
       related: true
 
+
+
+footer-scripts:
+  - /assets/js/zoom-image.js
