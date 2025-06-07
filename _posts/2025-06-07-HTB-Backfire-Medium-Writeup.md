@@ -43,6 +43,7 @@ header:
 
  Backfire es una máquina Linux de dificultad `Medium` en HackTheBox que requiere explotación de servicios de `Commnand and Control` (C2) para ejecutar comandos en el servidor y ganar acceso inicial. Abusaremos de permisos `sudo` para escalar privilegios y convertirnos en `root` dentro de Backfire.
 <br>
+
 # Reconocimiento
 ---
 Enviaremos una traza ICMP para comprobar que la máquina víctima se encuentre activa
@@ -166,12 +167,12 @@ Si navegamos hasta este servicio veremos que efectivamente se está listando el 
 ![image-center](/assets/images/posts/backfire-port-8000.png)
 {: .align-center}
 
-> A .patch file (or sometimes .diff) is **a text file that represents the differences between two versions of a file or set of files**
+> Un archivo .patch (o a veces .diff) es un archivo de texto que **representa las diferencias entre dos versiones de un archivo o conjunto de archivos**
 {: .notice--info}
 
 En cuanto al archivo `yaotl`, buscando en Google podemos darnos cuenta que pertenece a un archivo de configuración del framework `Havoc C2`
 
-> The Havoc command and control (C2) framework is a flexible **post-exploitation framework** written in Golang 
+> El framework `Command and Control` (C2) Havoc es un marco flexible de **post-explotación** escrito en Golang
 {: .notice--info}
 
 Podemos directamente hacer clic para descargar estos archivos o hacerlo desde consola con `wget`
@@ -293,7 +294,7 @@ Un atacante puede enviar solicitudes maliciosas con el propósito de que el `Tea
 
 ### Setting up
 
-Clonaremos el repositorio e instalaremos las dependencias necesarias para que el exploit se ejecute correctamente
+Utilizaremos una versión modificada del exploit original debido a que ya se encuentra casi configurado. Clonaremos el repositorio e instalaremos las dependencias necesarias para que el exploit se ejecute correctamente
 
 ~~~ bash
 git clone https://github.com/thisisveryfunny/CVE-2024-41570-Havoc-C2-RCE
@@ -506,7 +507,7 @@ I hope he prefers Havoc bcoz I don't wanna learn another C2 framework, also Go >
 
 Listaremos puertos abiertos internamente, o sea, que solo son accesibles desde la máquina víctima
 
-~~~ basgh
+~~~ bash
 ilya@backfire:~$ ss -tunl | grep LISTEN
 tcp   LISTEN 0      512          0.0.0.0:5000       0.0.0.0:*          
 tcp   LISTEN 0      512          0.0.0.0:7096       0.0.0.0:*          
@@ -559,7 +560,7 @@ Ahora accederemos a `https://127.0.0.1:7096/` desde nuestro navegador, deberíam
 > Una investigación de seguridad reveló varias vulnerabilidades críticas que permiten a atacantes no autenticados escribir archivos arbitrarios, eludir la autenticación, y potencialmente lograr la ejecución remota de código.
 {: .notice--info}
 
-- https://blog.sth.sh/hardhatc2-0-days-rce-authn-bypass-96ba683d9dd7
+Más información y detalles en el artículo [HardHatC2 0-Days](https://blog.sth.sh/hardhatc2-0-days-rce-authn-bypass-96ba683d9dd7)
 
 ### Authentication Bypass
 
@@ -701,9 +702,8 @@ Crearemos una nueva regla que permita tráfico en la interfaz `loopback`, esto s
 
 En el siguiente ejemplo agregaremos un comentario a modo de prueba de concepto
 
-~~~
--A INPUT -i lo -m comment --comment "Allow packets to localhost
-This rule rocks!" -j ACCEPT
+~~~ bash
+-A INPUT -i lo -m comment --comment "Allow packets to localhost This rule rocks!" -j ACCEPT
 ~~~
 
 Ahora guardaremos las reglas generando un archivo con el comando `iptables-save`
@@ -729,8 +729,7 @@ sergej@backfire:/tmp$ cat test.txt
 -A INPUT -s 127.0.0.1/32 -p tcp -m tcp --dport 7096 -j ACCEPT
 -A INPUT -s 127.0.0.1/32 -p tcp -m tcp --dport 7096 -j ACCEPT
 -A INPUT -p tcp -m tcp --dport 7096 -j REJECT --reject-with icmp-port-unreachable
--A INPUT -i lo -m comment --comment "Allow packets to localhost
-This rule rocks!" -j ACCEPT
+-A INPUT -i lo -m comment --comment "Allow packets to localhost This rule rocks!" -j ACCEPT
 COMMIT
 # Completed on Sat Jun  7 10:48:53 2025
 ~~~
@@ -804,6 +803,6 @@ d31...
 <br>
 Gracias por leer este artículo, espero te haya sido de ayuda. Te dejo la cita del día:
 
-> [!quote] Successful people ask better questions, and as a result, they get better answers.
+> Successful people ask better questions, and as a result, they get better answers.
 > — Tony Robbins
 {: .notice--info}
