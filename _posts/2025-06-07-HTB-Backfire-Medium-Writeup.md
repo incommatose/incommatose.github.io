@@ -703,7 +703,7 @@ Crearemos una nueva regla que permita tráfico en la interfaz `loopback`, esto s
 En el siguiente ejemplo agregaremos un comentario a modo de prueba de concepto
 
 ~~~ bash
--A INPUT -i lo -m comment --comment "Allow packets to localhost This rule rocks!" -j ACCEPT
+sergej@backfire:/tmp$ sudo iptables -A INPUT -i lo -m comment --comment "Allow packets to localhost This rule rocks!" -j ACCEPT
 ~~~
 
 Ahora guardaremos las reglas generando un archivo con el comando `iptables-save`
