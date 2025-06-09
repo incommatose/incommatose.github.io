@@ -21,7 +21,9 @@ categories:
 toc: true
 toc_label: Topics
 toc_sticky: true
-sidebar: main
+sidebar:
+  - main
+  - docs
 seo_tittle: Administrator - Medium (HTB)
 seo_description: Practica enumeración y explotación de permisos mal configurados en un entorno de Active Directory para vencer a Administrator.
 excerpt: Practica enumeración y explotación de permisos mal configurados en un entorno de Active Directory para vencer a Administrator.

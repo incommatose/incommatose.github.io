@@ -1,4 +1,4 @@
----
+	---
 title: Certified - Medium (HTB)
 permalink: /Certified-HTB-Writeup/
 tags:

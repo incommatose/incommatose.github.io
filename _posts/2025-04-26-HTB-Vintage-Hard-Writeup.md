@@ -29,7 +29,9 @@ categories:
 toc: true
 toc_label: Topics
 toc_sticky: true
-sidebar: main
+sidebar:
+  - main
+  - docs
 seo_tittle: Vintage - Hard (HTB)
 seo_description: Practica enumeración de servicios antiguos dentro de un entorno controlado de Active Directory, explota diversos ataques avanzados hasta obtener control total del dominio.
 excerpt: Practica enumeración de servicios antiguos dentro de un entorno controlado de Active Directory, explota diversos ataques avanzados hasta obtener control total del dominio.

@@ -23,7 +23,9 @@ categories:
 toc: true
 toc_label: Topics
 toc_sticky: true
-sidebar: main
+sidebar:
+  - main
+  - docs
 seo_tittle: Heal - Medium (HTB)
 seo_description: Practica enumeración y explotación de servicios web vulnerables y abusa de servicios internos mal configurados para vencer Heal.
 excerpt: Practica enumeración y explotación de servicios web vulnerables y abusa de servicios internos mal configurados para vencer Heal.

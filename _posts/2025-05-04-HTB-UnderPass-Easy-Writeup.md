@@ -16,7 +16,9 @@ categories:
 toc: true
 toc_label: Topics
 toc_sticky: true
-sidebar: main
+sidebar:
+  - main
+  - docs
 seo_tittle: UnderPass - Easy (HTB)
 seo_description: Aprende escaneo de puertos en el protocolo UDP, enumeración a SNMP y abuso de privilegios mal configurados para vencer UnderPass.
 excerpt: Aprende escaneo de puertos en el protocolo UDP, enumeración a SNMP y abuso de privilegios mal configurados para vencer UnderPass.
@@ -262,7 +264,7 @@ Investigando en el proyecto oficial de `github` podemos encontrar mayor informac
 
 # Intrusión / Explotación
 ---
-## Abusing `daloRADIUS` Default Credentials
+## Abusing `daloRADIUS` - Default Credentials
 
 Podemos intentar hacer una búsqueda rápida de credenciales por defecto para utilizarlas para iniciar sesión en este servicio
 

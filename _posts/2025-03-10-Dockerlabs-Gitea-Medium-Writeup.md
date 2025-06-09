@@ -19,6 +19,7 @@ toc_label: Topics
 toc_sticky: true
 sidebar:
   - main
+  - docs
 seo_tittle: Gitea - Medium (Dockerlabs)
 seo_description: Pon en práctica explotación de vulnerabilidades web, fuerza bruta y explotación de MySQL para vencer a Gitea.
 excerpt: Pon en práctica explotación de vulnerabilidades web, fuerza bruta y explotación de MySQL para vencer a Gitea.

@@ -25,7 +25,9 @@ categories:
 toc: true
 toc_label: Topics
 toc_sticky: true
-sidebar: main
+sidebar:
+  - main
+  - docs
 seo_tittle: EscapeTwo - Easy (HTB)
 seo_description: Aprende enumeración y explotación de fallos en servicios de Active Directory y eleva tus privilegios mediante el abuso de certificados en AD CS para vencer EscapeTwo.
 excerpt: Aprende enumeración y explotación de fallos en servicios de Active Directory y eleva tus privilegios mediante el abuso de certificados en AD CS para vencer EscapeTwo.

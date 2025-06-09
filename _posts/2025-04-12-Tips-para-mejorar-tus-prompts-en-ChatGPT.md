@@ -4,7 +4,9 @@ permalink: /tips-para-mejorar-tus-prompts-en-chatgpt/
 toc: true
 toc_label: Topics
 excerpt: Comprende el potencial que tiene esta herramienta de **inteligencia artificial** para llevar tu **aprendizaje** en ciberseguridad u otros temas al **siguiente nivel**.
-sidebar: main
+sidebar:
+  - main
+  - docs
 tags:
   - ChatGPT
   - Productivity

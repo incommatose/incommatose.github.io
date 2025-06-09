@@ -19,6 +19,7 @@ toc_label: Topics
 toc_sticky: true
 sidebar:
   - main
+  - docs
 seo-title: NorC - Hard (Dockerlabs)
 seo-description: Pon a prueba tus habilidades de enumeración de Wordpress, explotación de SQL Injection y abuso de capabilities para vencer NorC.
 excerpt: Pon a prueba tus habilidades de enumeración de Wordpress, explotación de SQL Injection y abuso de capabilities para vencer NorC.

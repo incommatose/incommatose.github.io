@@ -30,7 +30,9 @@ categories:
 toc: true
 toc_label: Topics
 toc_sticky: true
-sidebar: main
+sidebar:
+  - main
+  - docs
 seo_tittle: BigBang - Hard (HTB)
 seo_description: Aprende enumeración y explotación de complementos de Wordpress, Buffer Overflow, inyección de comandos y mucho más. Pondrás en práctica habilidades avanzadas para ganar acceso privilegiado a la máquina y vencer BigBang.
 excerpt: Aprende enumeración y explotación de complementos de Wordpress, Buffer Overflow, inyección de comandos y mucho más. Pondrás en práctica habilidades avanzadas para ganar acceso privilegiado a la máquina y vencer BigBang.

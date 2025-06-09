@@ -22,7 +22,9 @@ categories:
 toc: true
 toc_label: Topics
 toc_sticky: true
-sidebar: main
+sidebar:
+  - main
+  - docs
 seo_tittle: Backfire - Medium (HTB)
 seo_description: Explota servicios de Command and Control y configura reglas de firewall para ganar acceso privilegiado y vencer Backfire.
 excerpt: Explota servicios de Command and Control y configura reglas de firewall para ganar acceso privilegiado y vencer Backfire.

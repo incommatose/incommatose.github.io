@@ -21,12 +21,12 @@ title                    : "My Hacking Notes"
 title_separator          : "-"
 subtitle                 : # site tagline that appears below site title in masthead
 name                     : "My Hacking Notes"
-description              : ""
+description              : "This is a place to learn different pentesting techniques. Here you can find write-ups, cheat sheets or pentesting methodologies for different services."
 url                      : "https://incommatose.github.io"
 baseurl                  : # "/"
 repository               : # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
 teaser                   : # "/assets/images/500x300.png"
-logo                     : # "/assets/images/logo88x88.png"
+logo                     : "/assets/images/icon/favicon.ico"
 masthead_title           : # overrides the website title displayed in the masthead, use " " for no title
 breadcrumbs              : true
 words_per_minute         : 200

@@ -20,6 +20,7 @@ toc_label: Topics
 toc_sticky: true
 sidebar:
   - main
+  - docs
 seo_tittle: Chemistry - Easy (HTB)
 seo_description: Aprende a explotar un CVE mediante archivos CIF maliciosos y enumeración de sistemas Linux para vencer Chemistry.
 excerpt: Aprende a explotar un CVE mediante archivos CIF maliciosos y enumeración de sistemas Linux para vencer Chemistry.

@@ -13,7 +13,9 @@ categories:
 toc: true
 toc_label: Topics
 toc_sticky: true
-sidebar: main
+sidebar:
+  - main
+  - docs
 seo_tittle: Lame - Easy (HTB)
 seo_description: Aprende a identificar y explotar vulnerabilidades conocidas en versiones antiguas de servicios para vencer Lame.
 excerpt: Aprende a identificar y explotar vulnerabilidades conocidas en versiones antiguas de servicios para vencer Lame.

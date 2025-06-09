@@ -17,7 +17,9 @@ categories:
 toc: true
 toc_label: Topics
 toc_sticky: true
-sidebar: main
+sidebar:
+  - main
+  - docs
 seo_tittle: Support - Easy (HTB)
 seo_description: Aprende acerca de enumeración de diversos protocolos en entornos de Active Directory. Pon en práctica habilidades de Debugging, enumeración con BloodHound y explotación de RBCD para vencer Support.
 excerpt: Aprende acerca de enumeración de diversos protocolos en entornos de Active Directory. Pon en práctica habilidades de Debugging, enumeración con BloodHound y explotación de RBCD para vencer Support.

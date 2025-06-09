@@ -23,18 +23,18 @@ tags:
   - "SeImpersonatePrivilege"
   - "Proxychains"
   - "Chisel"
-   "Port Forwarding"
+  - "Port Forwarding"
 categories:
   - writeup
   - hacking
   - hackthebox
   - active-directory
-
 toc: true
 toc_label: Topics
 toc_sticky: true
 sidebar:
   - main
+  - docs
 seo_tittle: Ghost - Insane (HTB)
 seo_description: Practica habilidades de enumeración, explotación de vulnerabilidades y abuso de permisos en Active Directory. Aprende técnicas avanzadas para escalar privilegios para obtener control total dentro de Ghost.
 excerpt: Practica habilidades de enumeración, explotación de vulnerabilidades y abuso de permisos en Active Directory. Aprende técnicas avanzadas para escalar privilegios para obtener control total dentro de Ghost.

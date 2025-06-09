@@ -15,6 +15,7 @@ toc_label: Topics
 toc_sticky: true
 sidebar:
   - main
+  - docs
 seo_tittle: Unrecover - Medium (Dockerlabs)
 seo_description: Haz uso de fuerza bruta y análisis de archivos para comprometer vencer Unrecover.
 excerpt: Haz uso de fuerza bruta y análisis de archivos para comprometer vencer Unrecover.

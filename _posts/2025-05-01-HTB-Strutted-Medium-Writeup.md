@@ -17,7 +17,9 @@ categories:
 toc: true
 toc_label: Topics
 toc_sticky: true
-sidebar: main
+sidebar:
+  - main
+  - docs
 seo_tittle: Strutted - Medium (HTB)
 seo_description: Practica explotación a Apache Struts y abusa de privilegios mal configurados para vencer Strutted
 excerpt: Practica explotación a Apache Struts y abusa de privilegios mal configurados para vencer Strutted

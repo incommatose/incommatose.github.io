@@ -8,7 +8,9 @@ categories:
   - writeup
   - hacking
   - hackthebox
-sidebar: main
+sidebar:
+  - main
+  - docs
 seo_tittle: Planning - Easy (HTB)
 seo_description: ⛔ Esta máquina se encuentra activa en HackTheBox, una vez retirada, este post será desbloqueado y podrás ver la resolución.
 excerpt: ⛔ Esta máquina se encuentra activa en HackTheBox, una vez retirada, este post será desbloqueado y podrás ver la resolución.

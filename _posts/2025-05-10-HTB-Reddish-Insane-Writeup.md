@@ -19,7 +19,9 @@ categories:
 toc: true
 toc_label: Topics
 toc_sticky: true
-sidebar: main
+sidebar:
+  - main
+  - docs
 seo_tittle: Reddish - Insane (HTB)
 seo_description: Practica pivoting en entornos Linux comprometiendo máquinas en redes internas y abusa de tareas cron para vencer Reddish.
 excerpt: Practica pivoting en entornos Linux comprometiendo máquinas en redes internas y abusa de tareas cron para vencer Reddish.

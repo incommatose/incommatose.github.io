@@ -24,7 +24,9 @@ categories:
 toc: true
 toc_label: Topics
 toc_sticky: true
-sidebar: main
+sidebar:
+  - main
+  - docs
 seo_tittle: Checker - Hard (HTB)
 seo_description: Practica explotación de CVEs, abusa de TOTP para autenticarte en SSH con 2FA y explota Race Condition para vencer Checker.
 excerpt: Practica explotación de CVEs, abusa de TOTP para autenticarte en SSH con 2FA y explota Race Condition para vencer Checker.

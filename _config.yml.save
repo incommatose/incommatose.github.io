@@ -17,11 +17,11 @@ minimal_mistakes_skin    : "dark" # "air", "aqua", "contrast", "dark", "dirt", "
 # Site Settings
 locale                   : "en-US"
 rtl                      : # true, false (default) # turns direction of the page into right to left for RTL languages
-title                    : "Andrew's Blog - Hacking"
+title                    : "My Hacking Notes"
 title_separator          : "-"
 subtitle                 : # site tagline that appears below site title in masthead
-name                     : "Andrew's Blog"
-description              : ""
+name                     : "My Hacking Notes"
+description              : "This is a place to learn different pentesting techniques. Here you can find write-ups, cheat sheets or pentesting methodologies for different services."
 url                      : "https://incommatose.github.io"
 baseurl                  : # "/blog"
 repository               : # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
