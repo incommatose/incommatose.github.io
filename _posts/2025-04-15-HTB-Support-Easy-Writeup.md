@@ -4,7 +4,6 @@ permalink: /Support-HTB-Writeup/
 tags: 
   - "Windows"
   - "Easy"
-  - "HackTheBox"
   - "SMB Enumeration"
   - "dnSPY" 
   - "LDAP Enumeration"

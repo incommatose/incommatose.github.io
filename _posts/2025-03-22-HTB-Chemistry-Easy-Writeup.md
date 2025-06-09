@@ -4,7 +4,6 @@ permalink: /Chemistry-HTB-Writeup/
 tags:
   - "Linux"
   - "Easy"
-  - "HackTheBox"
   - "CVE-2024-23346"
   - "CVE-2024-23344"
   - "SSH Local Port Forwarding"

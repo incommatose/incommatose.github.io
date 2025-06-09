@@ -4,7 +4,6 @@ permalink: /Alert-HTB-Writeup/
 tags:
   - "Linux"
   - "Easy"
-  - "HackTheBox"
   - "XSS"
   - "Path Traversal"
   - "Hash Cracking"

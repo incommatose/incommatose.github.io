@@ -2,7 +2,6 @@
 title: Administrator - Medium (HTB)
 permalink: /Administrator-HTB-Writeup/
 tags:
-  - "HackTheBox"
   - "Windows"
   - "Medium"
   - "AD DACL"

@@ -4,7 +4,6 @@ permalink: /Unrecover-Dockerlabs-Writeup/
 tags:
   - "Linux"
   - "Medium"
-  - "Dockerlabs"
   - "Hash Cracking"
   - "MySQL"
 categories:

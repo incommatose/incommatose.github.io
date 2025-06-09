@@ -4,7 +4,6 @@ permalink: /Gitea-Dockerlabs-Writeup/
 tags:
   - "Linux"
   - "Medium"
-  - "Dockerlabs"
   - "Subdomain Fuzzing"
   - "Path Traversal"
   - "Virtual Hosting"

@@ -2,7 +2,6 @@
 title: BigBang - Hard (HTB)
 permalink: /BigBang-HTB-Writeup/
 tags:
-  - HackThebox
   - Linux
   - Hard
   - Wordpress
@@ -22,7 +21,7 @@ tags:
   - grafana2hashcat
   - "APK Analysis"
   - apktool
-  - "API Enumeration"
+  - "API Abuse"
   - "Command Injection"
 categories:
   - writeup

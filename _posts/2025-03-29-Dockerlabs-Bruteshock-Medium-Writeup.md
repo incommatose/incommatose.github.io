@@ -4,12 +4,11 @@ permalink: /Bruteshock-Dockerlabs-Writeup/
 tags:
   - "Linux"
   - "Medium"
-  - "Dockerlabs"
   - "Login Page Brute Force"
   - "Hash Cracking"
   - "Bash eq"
   - "Command Injection"
-  - "Abusing Sudoers"
+  - "Sudoers"
   - "Exim"
   - "Dos2Unix"
 categories:

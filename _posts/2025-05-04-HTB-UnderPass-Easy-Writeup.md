@@ -7,7 +7,7 @@ tags:
   - "UDP"
   - "SNMP Enumeration"
   - "Hash Cracking"
-  - "Abusing mosh"
+  - "mosh-server"
   - "Sudoers"
 categories:
   - writeup

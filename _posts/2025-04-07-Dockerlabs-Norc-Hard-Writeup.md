@@ -4,8 +4,7 @@ permalink: /Norc-Dockerlabs-Writeup/
 tags:
   - "Linux"
   - "Hard"
-  - "Dockerlabs"
-  - "Abusing Wordpress"
+  - "Wordpress"
   - "SQL Injection" 
   - "CVE-2023-6063"
   - "Command Injection"

@@ -2,21 +2,21 @@
 title: EscapeTwo - Easy (HTB)
 permalink: /EscapeTwo-HTB-Writeup/
 tags:
-  - Windows
-  - Easy
+  - "Windows"
+  - "Easy"
   - "Active Directory"
   - "RPC Enumeration"
   - "SMB Enumeration"
-  - "Abusing xp_cmdshell"
-  - Bloodhound
+  - "xp_cmdshell"
+  - "Bloodhound"
   - "AD DACL"
-  - WriteOwner
-  - GenericAll
+  - "WriteOwner"
+  - "GenericAll"
   - "Shadow Credentials"
   - "AD CS"
-  - ESC4
-  - PassTheHash
-  - PassTheCert
+  - "ESC4"
+  - "PassTheHash"
+  - "PassTheCert"
 categories:
   - writeup
   - hacking

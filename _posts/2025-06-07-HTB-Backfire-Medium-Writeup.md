@@ -11,7 +11,7 @@ tags:
  - "SSH Key-Based Auth"
  - "SSH Local Port Forwarding"
  - "HardHatC2"
- - "Bypass Auth"
+ - "Auth Bypass"
  - "RCE"
  - "iptables"
  - "Sudoers"

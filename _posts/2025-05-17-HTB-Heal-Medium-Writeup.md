@@ -2,6 +2,8 @@
 title: Heal - Medium (HTB)
 permalink: /Heal-HTB-Writeup/
 tags:
+  - "Linux"
+  - "Medium"
   - "Virtual Hosting"
   - "Local File Inclusion"
   - "SQLite"
@@ -13,7 +15,7 @@ tags:
   - "SSH Local Port Forwarding"
   - "Abusing HashiCorp Consul"
   - "RCE"
-  - "Abusing API"
+  - "API Abuse"
 categories:
   - writeup
   - hacking

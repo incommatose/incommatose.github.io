@@ -3,7 +3,6 @@ title: Gallery - Hard (Dockerlabs)
 permalink: /Gallery-Dockerlabs-Writeup/
 tags:
   - "Linux"
-  - "Dockerlabs"
   - "Hard"
   - "SQL Injection"
   - "SSH Local Port Forwarding"

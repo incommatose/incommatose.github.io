@@ -2,15 +2,15 @@
 title: Reddish - Insane (HTB)
 permalink: /Reddish-HTB-Writeup/
 tags: 
-  - "Abusing Node-RED"
-  - "Abusing Redis"
+  - "Node-RED"
+  - "Redis"
   - "Dynamic Port Forwarding"
   - "chisel"
   - "socat"
   - "proxychains"
   - "Pivoting"
-  - "Abusing rsync"
-  - "Abusing cron Jobs"
+  - "rsync Abuse"
+  - "Cron"
   - "Disk Mount"
 categories:
   - writeup

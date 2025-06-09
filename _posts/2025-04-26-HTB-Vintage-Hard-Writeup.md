@@ -3,7 +3,6 @@ title: Vintage - Hard (HTB)
 permalink: /Vintage-HTB-Writeup/
 tags:
   - "Windows"
-  - "HackTheBox"
   - "Hard"
   - "LDAP Enumeration" 
   - "BloodHound"
@@ -17,8 +16,7 @@ tags:
   - "AS-REP Roast"
   - "Hash Cracking"
   - "Kerberos"
-  - "Evil-WinRM"
-  - "Abusing DPAPI"
+  - "DPAPI Abuse"
   - "RBCD"
   - "S4U2Self"
   - "S4U2Proxy"
@@ -489,7 +487,7 @@ Version: dev (n/a) - 04/25/25 - Ronnie Flathers @ropnop
 ~~~
 
 
-## Configuring Kerberos Client
+## Kerberos Client Setup
 
 Si intentamos ingresar a través de `winrm` con las credenciales obtenidas, no tendremos éxito. Debemos configurar el archivo de configuración de `kerberos` para que nuestra máquina encuentre el KDC para una autenticación empleando `kerberos`
 
@@ -522,7 +520,7 @@ cat /etc/krb5.conf
 ~~~
 
 
-## Shell as `C.Neri` - Evil-WinRM
+## Shell as `C.Neri`
 
 Con la configuración preparada, utilizaremos `evil-winrm` para conectarnos a la máquina como el usuario `c.neri`
 
@@ -690,7 +688,7 @@ Unknown     : Uncr4ck4bl3P4ssW0rd0312
 Acabamos de obtener las credenciales para el usuario `c.neri_adm`. Ahora veamos en BloodHound lo que puede hacer este usuario
 
 
-## Bloodhound Analysis - Shortest Path to Domain Admins
+## Bloodhound Analysis
 
 El usuario `C.Neri_adm` posee derechos `AddSelf` y `GenericWrite` sobre el grupo `Delegated Admins`, estos derechos le permiten agregarse a sí mismo al grupo y modificar atributos del mismo
 
@@ -705,7 +703,7 @@ Dentro del grupo `Delegated Admins`, se encuentra el usuario `l.bianchi_adm` com
 ![image-center](/assets/images/posts/vintage-bloodhound-7.png)
 
 
-## Abusing Resource Based Constrained Delegation (RBCD)
+## Resource Based Constrained Delegation (RBCD)
 
 Los miembros del grupo `Delegated Admins` pueden añadirse al atributo `msDS-AllowedToActOnBehalfOfOtherIdentity`. Este atributo permite impersonar a un usuario abusando de `S4U2Self/S4UProxy`. Algunas de las condiciones para llevar a cabo este ataque son las siguientes:
 
@@ -804,7 +802,7 @@ Impacket v0.13.0.dev0+20250109.91705.ac02e0ee - Copyright Fortra, LLC and its af
 {: .notice--danger}
 
 
-## (Extra) DCSync - Dumping NT Hashes
+## (Extra) DCSync
 
 Además podemos extraer el NTDS de todos los usuarios del dominio para conectarnos como `Administrator` si nos da la gana (aunque está restringido). En otras palabras, solicitaremos recursos privilegiados al Domain Controller haciéndonos pasar por un DC
 
@@ -837,7 +835,13 @@ FS01$:1108:aad3b435b51404eeaad3b435b51404ee:44a59c02ec44a90366ad1d0f8a781274:::
 ~~~
 
 
-## Shell as `L.Bianchi` - Evil-WinRM
+## Shell as `L.Bianchi_adm`
+
+Primeramnete cargamos el archivo `.ccache` en la variable `KRB5CCNAME`
+
+~~~ bash
+export KRB5CCNAME=L.Bianchi_adm.ccache
+~~~
 
 Ahora que tenemos un ticket cargado como el usuario `L.Bianchi_adm`, podremos conectarnos al dominio utilizando `evil-winrm` de la misma forma en la que nos conectamos con el usuario `C.Neri`
 

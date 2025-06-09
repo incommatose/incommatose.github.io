@@ -2,15 +2,14 @@
 title: Strutted - Medium (HTB)
 permalink: /Strutted-HTB-Writeup/
 tags: 
-- "Linux"
-- "Medium"
-- "HackTheBox"
-- "Apache Struts"
-- "CVE-2024-53677"
-- "Tomcat"
-- "Information Leakage"
-- "Sudoers"
-- "tcpdump"
+  - "Linux"
+  - "Medium"
+  - "Apache Struts"
+  - "CVE-2024-53677"
+  - "Tomcat"
+  - "Information Leakage"
+  - "Sudoers"
+  - "tcpdump"
 categories:
   - writeup
   - hacking
@@ -268,7 +267,7 @@ Priority: u=0, i
 ...
 ...
 -----------------------------304365947826637974553275897232
-Content-Disposition: form-data; name="upload"; filename="cat.jpeg"
+Content-Disposition: form-data; name="Upload"; filename="cat.jpeg"
 Content-Type: image/jpeg
 
 ÿØÿà
@@ -284,7 +283,7 @@ En la solicitud que interceptamos podemos ver que el parámetro `name` tiene com
 
 ~~~ bash
 -----------------------------371893311142375625202151022458
-Content-Disposition: form-data; name="upload"; filename="cat.jpeg"
+Content-Disposition: form-data; name="Upload"; filename="cat.jpeg"
 Content-Type: image/jpeg
 
 ÿØÿà
@@ -317,7 +316,7 @@ Editaremos la solicitud para enviar el contenido de la `web shell` como parte de
 
 ~~~ bash
 -----------------------------371893311142375625202151022458
-Content-Disposition: form-data; name="upload"; filename="cat.jpeg"
+Content-Disposition: form-data; name="Upload"; filename="cat.jpeg"
 Content-Type: image/jpeg
 
 ÿØÿà

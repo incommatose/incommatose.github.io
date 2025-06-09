@@ -8,7 +8,7 @@ tags:
   - "WriteOwner"
   - "GenericAll"
   - "GenericWrite"
-  - "AD DACL"
+  - "AD DACL Abuse"
   - "AD CS"
   - "Shadow Credentials"
   - "BloodHound"
