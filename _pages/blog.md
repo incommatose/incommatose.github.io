@@ -5,5 +5,3 @@ layout: search
 permalink: /blog/
 author_profile: true
 ---
-
----
