@@ -40,13 +40,14 @@ categories:
   - writeup
   - hacking
   - hackthebox
+  - active-directory
 toc: true
 toc_label: Topics
 toc_sticky: true
 sidebar:
   - main
 seo_tittle: Infiltrator - Insane (HTB)
-seo_description: Un escenario de Active Directory donde debes escabullirte por diferentes servicios comprometiendo cuentas, explotando derechos DACL mal configurados y abusando de AD CS para vencer Infiltrator.
+seo_description: Un escenario de Active Directory donde debes moverte sigilosamente por diferentes servicios comprometiendo cuentas, explotando derechos DACL mal configurados y abusando de AD CS para vencer Infiltrator.
 excerpt: Un escenario de Active Directory donde debes escabullirte por diferentes servicios comprometiendo cuentas, explotando derechos DACL mal configurados y abusando de AD CS para vencer Infiltrator.
 header:
   overlay_image: /assets/images/headers/infiltrator-hackthebox.jpg
@@ -1612,7 +1613,7 @@ E:\Windows Server 2012 R2 - Backups\Users\Administrator\Documents> dir
 
 Tenemos permisos suficientes para copiar este archivo a una carpeta que nosotros controlemos, en mi caso, `C:\Temp`
 
-~~~ cmd
+~~~ bash
 E:\Windows Server 2012 R2 - Backups\Users\Administrator\Documents> copy Backup_Credentials.7z C:\Temp
 
         1 file(s) copied.
