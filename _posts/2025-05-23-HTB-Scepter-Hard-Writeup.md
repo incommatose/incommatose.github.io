@@ -6,6 +6,7 @@ categories:
   - writeup
   - hacking
   - hackthebox
+  - active-directory
 sidebar:
   - main
   - docs

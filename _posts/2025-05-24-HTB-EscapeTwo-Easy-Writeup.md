@@ -4,7 +4,6 @@ permalink: /EscapeTwo-HTB-Writeup/
 tags:
   - "Windows"
   - "Easy"
-  - "Active Directory"
   - "RPC Enumeration"
   - "SMB Enumeration"
   - "xp_cmdshell"

@@ -9,8 +9,8 @@ tags:
   - "socat"
   - "proxychains"
   - "Pivoting"
-  - "rsync Abuse"
-  - "Cron"
+  - "rsync"
+  - "Cron Jobs"
   - "Disk Mount"
 categories:
   - writeup

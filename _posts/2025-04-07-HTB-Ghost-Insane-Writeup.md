@@ -22,7 +22,7 @@ tags:
   - "Mimikatz"
   - "SeImpersonatePrivilege"
   - "Proxychains"
-  - "Chisel"
+  - "chisel"
   - "Port Forwarding"
 categories:
   - writeup

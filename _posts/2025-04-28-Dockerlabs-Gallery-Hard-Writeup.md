@@ -5,7 +5,8 @@ tags:
   - "Linux"
   - "Hard"
   - "SQL Injection"
-  - "SSH Local Port Forwarding"
+  - "Local Port Forwarding"
+  - "ssh"
   - "Command Injection"
 categories:
   - "writeup"

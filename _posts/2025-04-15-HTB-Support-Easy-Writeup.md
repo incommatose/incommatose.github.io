@@ -6,6 +6,7 @@ tags:
   - "Easy"
   - "SMB Enumeration"
   - "dnSPY" 
+  - "Binary Reversing"
   - "LDAP Enumeration"
   - "BloodHound"
   - "SharpHound"
@@ -14,6 +15,7 @@ categories:
   - writeup
   - hacking
   - hackthebox
+  - active-directory
 toc: true
 toc_label: Topics
 toc_sticky: true
