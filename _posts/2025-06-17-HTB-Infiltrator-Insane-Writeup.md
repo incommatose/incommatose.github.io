@@ -54,7 +54,7 @@ header:
   overlay_filter: 0.7
   og_image: /assets/images/headers/infiltrator-hackthebox.jpg
 ---
-
+ 
 ![image-center](/assets/images/posts/infiltrator-hackthebox.png)
 {: .align-center}
 
