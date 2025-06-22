@@ -4,7 +4,6 @@ permalink: /Bruteshock-Dockerlabs-Writeup/
 tags:
   - "Linux"
   - "Medium"
-  - "Login Page Brute Force"
   - "Hash Cracking"
   - "Bash eq"
   - "Command Injection"
@@ -15,7 +14,7 @@ categories:
   - writeup
   - hacking
   - dockerlabs
-  - hacking-web
+  - "hacking web"
 toc: true
 toc_label: Topics
 toc_sticky: true

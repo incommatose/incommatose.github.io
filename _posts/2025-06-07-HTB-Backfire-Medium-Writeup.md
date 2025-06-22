@@ -8,17 +8,18 @@ tags:
  - "Havoc C2"
  - "SSRF"
  - "CVE-2024-41570"
- - "SSH Key-Based Auth"
- - "SSH Local Port Forwarding"
- - "HardHatC2"
+ - "Authorized Keys"
+ - "Local Port Forwarding"
+ - "SSH"
+ - "HardHatC2 Abuse"
  - "Auth Bypass"
- - "RCE"
- - "iptables"
+ - "Iptables"
  - "Sudoers"
 categories:
   - writeup
   - hacking
   - hackthebox
+  - "hacking web"
 toc: true
 toc_label: Topics
 toc_sticky: true

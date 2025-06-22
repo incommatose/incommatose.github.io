@@ -9,17 +9,17 @@ tags:
   - "Tomcat"
   - "Information Leakage"
   - "Sudoers"
-  - "tcpdump"
+  - "Tcpdump"
 categories:
   - writeup
   - hacking
   - hackthebox
+  - "hacking web"
 toc: true
 toc_label: Topics
 toc_sticky: true
 sidebar:
   - main
-  - docs
 seo_tittle: Strutted - Medium (HTB)
 seo_description: Practica explotación a Apache Struts y abusa de privilegios mal configurados para vencer Strutted
 excerpt: Practica explotación a Apache Struts y abusa de privilegios mal configurados para vencer Strutted

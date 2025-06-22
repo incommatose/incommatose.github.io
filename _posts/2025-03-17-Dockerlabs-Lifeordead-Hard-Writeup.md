@@ -11,7 +11,7 @@ categories:
   - writeup
   - hacking
   - dockerlabs
-  - hacking-web
+  - "hacking web"
 toc: true
 toc_label: Topics
 toc_sticky: true

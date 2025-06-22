@@ -6,18 +6,18 @@ tags:
   - "Hard"
   - "SQL Injection"
   - "Local Port Forwarding"
-  - "ssh"
+  - "SSH"
   - "Command Injection"
 categories:
   - "writeup"
   - "hacking"
   - "dockerlabs"
+  - "hacking web"
 toc: true
 toc_label: Topics
 toc_sticky: true
 sidebar:
   - main
-  - docs
 seo_tittle: Gallery - Hard (Dockerlabs)
 seo_description: Practica inyecciones SQL para eludir autenticación en una web. Enumera bases de datos para extraer información sensible y logra ejecución de comandos para vencer Gallery.
 excerpt: Practica inyecciones SQL para eludir autenticación en una web. Enumera bases de datos para extraer información sensible y logra ejecución de comandos para vencer Gallery.

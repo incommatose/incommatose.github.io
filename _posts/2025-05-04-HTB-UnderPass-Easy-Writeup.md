@@ -7,7 +7,7 @@ tags:
   - "UDP"
   - "SNMP Enumeration"
   - "Hash Cracking"
-  - "mosh-server"
+  - "Mosh"
   - "Sudoers"
 categories:
   - writeup
@@ -18,7 +18,6 @@ toc_label: Topics
 toc_sticky: true
 sidebar:
   - main
-  - docs
 seo_tittle: UnderPass - Easy (HTB)
 seo_description: Aprende escaneo de puertos en el protocolo UDP, enumeración a SNMP y abuso de privilegios mal configurados para vencer UnderPass.
 excerpt: Aprende escaneo de puertos en el protocolo UDP, enumeración a SNMP y abuso de privilegios mal configurados para vencer UnderPass.

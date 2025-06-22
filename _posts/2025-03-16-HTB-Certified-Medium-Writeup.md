@@ -1,4 +1,4 @@
-	---
+---
 title: Certified - Medium (HTB)
 permalink: /Certified-HTB-Writeup/
 tags:
@@ -19,13 +19,12 @@ categories:
   - writeup
   - hackthebox
   - hacking
-  - active-directory
+  - "active directory"
 toc: true
 toc_label: Topics
 toc_sticky: true
 sidebar:
   - main
-  - docs
 seo-title: Certified - Medium (HTB)
 seo_description: Practica enumeración en un entorno de Active Directory, explota vulnerabilidades relacionadas a permisos y privilegios mal configurados, utiliza técnicas de explotación al servicio de AD CS para vencer Certified.
 excerpt: Practica enumeración en un entorno de Active Directory, explota vulnerabilidades relacionadas a permisos y privilegios mal configurados, utiliza técnicas de explotación al servicio de AD CS para vencer Certified.

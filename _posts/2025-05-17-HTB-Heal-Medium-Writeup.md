@@ -4,7 +4,6 @@ permalink: /Heal-HTB-Writeup/
 tags:
   - "Linux"
   - "Medium"
-  - "Virtual Hosting"
   - "Local File Inclusion"
   - "SQLite"
   - "Hash Cracking"
@@ -12,7 +11,8 @@ tags:
   - "File Upload"
   - "CVE-2021-44967"
   - "Credentials Leakage"
-  - "SSH Local Port Forwarding"
+  - "Local Port Forwarding"
+  - "SSH"
   - "Abusing HashiCorp Consul"
   - "RCE"
   - "API Abuse"

@@ -6,14 +6,13 @@ tags:
   - "Medium"
   - "Subdomain Fuzzing"
   - "Path Traversal"
-  - "Virtual Hosting"
   - "SSH Brute Force"
-  - "User Defined Functions (UDF)"
+  - "UDF"
 categories:
   - "writeup"
   - "hacking"
   - "dockerlabs"
-  - "hacking-web"
+  - "hacking web"
 toc: true
 toc_label: Topics
 toc_sticky: true

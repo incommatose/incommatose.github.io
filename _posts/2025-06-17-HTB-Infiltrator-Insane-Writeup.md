@@ -16,8 +16,8 @@ tags:
   - "ForceChangePassword"
   - "Kerberos"
   - "Port Forwarding"
-  - "chisel"
-  - "socat"
+  - "Chisel"
+  - "Socat"
   - "Binary Reversing"
   - "dnSPY"
   - "AES Decrypt"
@@ -28,7 +28,7 @@ tags:
   - "Network Traffic Analysis"
   - "pcap"
   - "BitLocker"
-  - "7z"
+  - "7z Files"
   - "NTDS"
   - "ntdissector"
   - "ReadGMSAPassword"
@@ -40,7 +40,7 @@ categories:
   - writeup
   - hacking
   - hackthebox
-  - active-directory
+  - "active directory"
 toc: true
 toc_label: Topics
 toc_sticky: true

@@ -7,13 +7,15 @@ tags:
   - "XSS"
   - "Path Traversal"
   - "Hash Cracking"
-  - "SSH Local Port Forwarding"
+  - "Local Port Forwarding"
+  - "SSH"
   - "PHP"
+  - "File Permissions"
 categories:
   - hacking
   - writeup
   - hackthebox
-  - hacking-web
+  - "hacking web"
 toc: true
 toc_label: Topics
 toc_sticky: true

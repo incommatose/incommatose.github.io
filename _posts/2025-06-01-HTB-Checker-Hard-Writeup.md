@@ -21,6 +21,7 @@ categories:
   - writeup
   - hacking
   - hackthebox
+  - "hacking web"
 toc: true
 toc_label: Topics
 toc_sticky: true

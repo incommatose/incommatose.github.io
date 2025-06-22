@@ -2,14 +2,16 @@
 title: Reddish - Insane (HTB)
 permalink: /Reddish-HTB-Writeup/
 tags: 
+  - "Linux"
+  - "Insane"
   - "Node-RED"
   - "Redis"
   - "Dynamic Port Forwarding"
-  - "chisel"
-  - "socat"
-  - "proxychains"
+  - "Chisel"
+  - "Socat"
+  - "Proxychains"
   - "Pivoting"
-  - "rsync"
+  - "Rsync"
   - "Cron Jobs"
   - "Disk Mount"
 categories:

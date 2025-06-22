@@ -2,31 +2,33 @@
 title: BigBang - Hard (HTB)
 permalink: /BigBang-HTB-Writeup/
 tags:
-  - Linux
-  - Hard
-  - Wordpress
-  - wpscan
-  - Buddyforms
-  - CVE-2023-26326
+  - "Linux"
+  - "Hard"
+  - "Wordpress"
+  - "Wpscan"
+  - "Buddyforms"
+  - "CVE-2023-26326"
   - "PHP Wrappers Chain"
   - "Server Side Request Forgery"
   - "Buffer Overflow"
-  - CVE-2024-2961
-  - Chisel
-  - MySQL
+  - "CVE-2024-2961"
+  - "Chisel"
+  - "MySQL"
   - "Hash Cracking"
-  - "SSH Local Port Forwarding"
-  - SQLite
-  - Grafana
-  - grafana2hashcat
+  - "Local Port Forwarding"
+  - "SSH"
+  - "SQLite"
+  - "Grafana"
+  - "Grafana2hashcat"
   - "APK Analysis"
-  - apktool
+  - "Apktool"
   - "API Abuse"
   - "Command Injection"
 categories:
   - writeup
   - hacking
   - hackthebox
+  - "hacking web"
 toc: true
 toc_label: Topics
 toc_sticky: true

@@ -10,6 +10,7 @@ categories:
   - writeup
   - hackthebox
   - hacking
+  - "hacking web"
 toc: true
 toc_label: Topics
 toc_sticky: true

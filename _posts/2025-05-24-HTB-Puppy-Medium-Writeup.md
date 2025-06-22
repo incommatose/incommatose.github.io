@@ -8,7 +8,6 @@ categories:
   - hackthebox
 sidebar:
   - main
-  - docs
 seo_tittle: Puppy - Medium (HTB)
 seo_description: ⛔ Esta máquina se encuentra activa en HackTheBox, una vez retirada, este post será desbloqueado y podrás ver la resolución.
 excerpt: ⛔ Esta máquina se encuentra activa en HackTheBox, una vez retirada, este post será desbloqueado y podrás ver la resolución.

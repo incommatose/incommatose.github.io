@@ -6,10 +6,9 @@ categories:
   - writeup
   - hacking
   - hackthebox
-  - active-directory
+  - "active directory"
 sidebar:
   - main
-  - docs
 seo_tittle: Scepter - Hard (HTB)
 seo_description: ⛔ Esta máquina se encuentra activa en HackTheBox, una vez retirada, este post será desbloqueado y podrás ver la resolución.
 excerpt: ⛔ Esta máquina se encuentra activa en HackTheBox, una vez retirada, este post será desbloqueado y podrás ver la resolución.

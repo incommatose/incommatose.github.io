@@ -6,7 +6,8 @@ tags:
   - "Easy"
   - "CVE-2024-23346"
   - "CVE-2024-23344"
-  - "SSH Local Port Forwarding"
+  - "Local Port Forwarding"
+  - "SSH"
   - "CIF Files"
   - "SQLite"
   - "pymatgem RCE"
@@ -14,7 +15,7 @@ categories:
   - writeup
   - hacking
   - hackthebox
-  - hacking-web
+  - "hacking web"
 toc: true
 toc_label: Topics
 toc_sticky: true
