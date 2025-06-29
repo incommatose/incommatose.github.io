@@ -35,7 +35,7 @@ header:
 ![image-center](/assets/images/posts/support-hackthebox.png)
 {: .align-center}
 
-**Habilidades:** SMB Enumeration, EXE Binary Analysis, Binary Debugging (`dnSPY`), LDAP Enumeration, DC Enumeration - BloodHound + `SharpHound.exe`, Resource Based Constrained Delegation Attack (RBCD) - [Privilege Escalation]
+**Habilidades:** SMB Enumeration, EXE Binary Analysis, Binary Debugging (`dnSPY`), LDAP Enumeration, Domain Analysis - BloodHound + `SharpHound.exe`, Resource Based Constrained Delegation Attack (RBCD) - [Privilege Escalation]
 {: .notice--primary}
 
 # Introducción

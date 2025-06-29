@@ -4,7 +4,7 @@ permalink: /Administrator-HTB-Writeup/
 tags:
   - "Windows"
   - "Medium"
-  - "AD DACL"
+  - "ACL Rights"
   - "BloodHound"
   - "GenericAll"
   - "ForceChangePassword"
@@ -23,7 +23,6 @@ toc_label: Topics
 toc_sticky: true
 sidebar:
   - main
-  - docs
 seo_tittle: Administrator - Medium (HTB)
 seo_description: Practica enumeración y explotación de permisos mal configurados en un entorno de Active Directory para vencer a Administrator.
 excerpt: Practica enumeración y explotación de permisos mal configurados en un entorno de Active Directory para vencer a Administrator.
@@ -37,7 +36,7 @@ header:
 ![image-center](/assets/images/posts/administrator-hackthebox.png)
 {: .align-center}
 
-**Habilidades:** RPC Enumeration, DC Enumeration - BloodHound + `bloodhound-python`, Abusing AD DACL - `GenericAll` Rights, Abusing AD DACL - `ForceChangePassword` Rights, Hash Cracking - `pwsafe2john` + `john`, `.psafe3` File Analysis,  Targeted Kerberoasting - `targetedKerberosast.py`, DC Sync Attack - `secretsdump.py` [Privilege Escalation], PassTheHash
+**Habilidades:** RPC Enumeration, DC Enumeration - BloodHound + `bloodhound-python`, Abusing ACL - `GenericAll` Rights, Abusing ACL - `ForceChangePassword` Rights, Hash Cracking - `pwsafe2john` + `john`, `.psafe3` File Analysis,  Targeted Kerberoasting - `targetedKerberosast.py`, DC Sync Attack - `secretsdump.py` [Privilege Escalation], PassTheHash
 {: .notice--primary}
 
 # Introducción
@@ -272,7 +271,7 @@ rpcclient -U "Olivia%ichliebedich" 10.10.11.42 -c enumdomusers | grep -oP '\[.*?
 ~~~
 
 
-## DC Enumeration - BloodHound
+## Domain Analysis - BloodHound
 
 Recolectaremos información del dominio para analizar vías potenciales mediante las cuales elevar nuestros privilegios
 
@@ -302,7 +301,7 @@ INFO: Compressing output into 20250417005459_bloodhound.zip
  
 # Intrusión / Explotación
 ---
-## Abusing AD ACLs - `GenericAll` Rights
+## Abusing ACL - `GenericAll` Rights
 
 Si consultamos BloodHound en las propiedades del usuario > `Outbound Object Control`, podemos notar que el usuario `olivia` posee derechos `GenericAll` sobre la cuenta `michael`, esto nos otorga control total sobre este usuario
 
@@ -310,7 +309,7 @@ Si consultamos BloodHound en las propiedades del usuario > `Outbound Object Cont
 
 Tenemos la capacidad de cambiarle la contraseña al usuario `michael`, en este escenario aplicaremos este método, sin embargo en entornos reales no es lo más recomendable ya que puedes tumbar servicios si lo usas frente a una cuenta de servicio.
 
-### Forcing Change Password - `michael`
+### Forcing Password Change - `michael`
 
 En este caso, la cuenta `olivia` puede obtener una shell remota a través de `wirnm`, esto porque es miembro del grupo `Remote Management Users`. Nos conectaremos con `evil-winrm` y llevaremos a cabo este ataque mediante `powershell` para hacerlo de una forma más manual, aunque podamos hacerlo a través de la herramienta `net`
 
@@ -362,7 +361,7 @@ administrator\michael
 ~~~
 
 
-## Abusing AD ACLs - `ForceChangePassword` Rights
+## Abusing ACL - `ForceChangePassword` Rights
 
 Si exploramos los objetos que usuario `michael` puede controlar, notaremos que posee el derecho `ForceChangePassword`. Como su nombre nos indica, nos otorga la capacidad de cambiar la contraseña de un usuario sin necesidad de conocer la actual
 
@@ -485,7 +484,7 @@ evil-winrm -i 10.10.11.42 -u 'emily' -p 'UXLCI5iETUsIBoFVTj8yQFKoHjXmb'
 
 # Escalada de privilegios
 ---
-## Targeted Kerberoasting Attack
+## Targeted Kerberoasting
 
 Podemos ver que el usuario `emily` cuenta con derechos `GenericWrite` sobre la cuenta de `ethan`, este permiso nos permite modificar los atributos de este usuario
 
@@ -557,7 +556,7 @@ DC$:1000:aad3b435b51404eeaad3b435b51404ee:cf411ddad4807b5b4a275d31caa1d4b3:::
 ~~~
 
 
-## PassTheHash - `Administrator`
+## PassTheHash - Root Time
 
 Como disponemos del hash del usuario Administrador, podemos hacer PassTheHash con `psexec` para conectarnos con privilegios elevados
 

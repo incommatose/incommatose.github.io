@@ -8,7 +8,7 @@ tags:
   - "SMB Enumeration"
   - "xp_cmdshell"
   - "Bloodhound"
-  - "AD DACL"
+  - "ACL Rights"
   - "WriteOwner"
   - "GenericAll"
   - "Shadow Credentials"
@@ -38,7 +38,7 @@ header:
 
 ![image-center](/assets/images/posts/escapeTwo-hackthebox.png){: .align-center}
 
-**Habilidades:** RPC Enumeration, SMB Enumeration, Information Leakage, Abusing xp_cmdshell, DC Enumeration - BloodHound Analysis, Abusing AD DACL - `WriteOwner` Rights, Shadow Credentials, Abusing AD CS - `ESC4`, PassTheCertificate, PassTheHash
+**Habilidades:** RPC Enumeration, SMB Enumeration, Information Leakage, Abusing xp_cmdshell, DC Enumeration - BloodHound Analysis, Abusing ACL - `WriteOwner` Rights, Shadow Credentials, Abusing AD CS - `ESC4`, PassTheCertificate, PassTheHash
 {: .notice--primary}
 
 # Introducción
@@ -502,7 +502,7 @@ Encontraremos el siguiente objeto el cual el usuario `ryan` posee control
 ![image-center](/assets/images/posts/escapeTwo-bloodhound-1.png){: .align-center}
 
 
-## Abusing AD DACL - `WriteOwner` Rights
+## Abusing ACL - `WriteOwner` Rights
 
 El usuario `ryan` tiene derechos `WriteOwner` sobre la cuenta `ca_svc`. Esto permite modificar el propietario de esta cuenta. Podemos aprovechar esto para posteriormente extraer el hash `NT` de la cuenta `ca_svc` y hacer `PassTheHash`.
 

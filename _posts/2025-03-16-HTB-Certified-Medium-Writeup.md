@@ -8,7 +8,7 @@ tags:
   - "WriteOwner"
   - "GenericAll"
   - "GenericWrite"
-  - "AD DACL"
+  - "ACL Rights"
   - "AD CS"
   - "Shadow Credentials"
   - "BloodHound"
@@ -36,7 +36,7 @@ header:
 
 ![image-center](/assets/images/posts/certified-hackthebox.png){: .align-center}
 
-**Habilidades:** RPC Enumeration, DC Enumeration - BloodHound (`bloodhound-python`), Abusing AD DACL - `WriteOwner` Rights , Shadow Credentials, Abusing AD DACL - `GenericWrite` Rights, PassTheHash, Abusing AD DACL - `GenericAll` Rights, Abusing AD CS (Active Directory Certificates Services) - Using the `ESC9` Technique to Issue a Privileged Certificate [Privilege Escalation], PassTheCert
+**Habilidades:** RPC Enumeration, DC Enumeration - BloodHound (`bloodhound-python`), Abusing ACL - `WriteOwner` Rights , Shadow Credentials, Abusing ACL - `GenericWrite` Rights, PassTheHash, Abusing ACL - `GenericAll` Rights, Abusing AD CS (Active Directory Certificates Services) - Using the `ESC9` Technique to Issue a Privileged Certificate [Privilege Escalation], PassTheCert
 {: .notice--primary}
 
 # Introducción
@@ -291,7 +291,7 @@ bloodhound &>/dev/null & disown
 
 # Explotación / Intrusión
 ---
-## Abusing `WriteOwner` Permissions (AD-DACL)
+## Abusing ACL - `WriteOwner` Rights
 
 Podemos ver que el usuario `judith.mader` cuenta con permisos para modificar el propietario del grupo `Management`, esto lo podemos en `Node info` > `Outbound Object Control` > `Group Delegated Object Control`
 
@@ -338,7 +338,7 @@ CERTIFIED\management_svc
 ~~~
 
 
-## Shadow Credentials - Abusing `GenericWrite` Permissions (AD-DACL)
+## Shadow Credentials - Abusing `GenericWrite` ACL Rights
 
 El grupo `Management` tiene permisos `GenericWrite` sobre `management_svc`, lo que significa que podemos actualizar atributos de este objeto o en este caso una cuenta de servicio, podemos verificar esta información en `Analysis`  > `Shortest Paths` > `Shortest Path to Domain Admins`
 
@@ -452,7 +452,7 @@ Evil-WinRM shell v3.5
 
 # Escalada de privilegios
 ---
-## Abusing `GenericAll` Privileges (AD-DACL)
+## Abusing ACL - `GenericAll` Rights
 
 Si exploramos la cuenta `management_svc` en `Node Info` > `Outbound Object Control`, podemos darnos cuenta que posee privilegios `GenericAll` sobre la cuenta `ca_operator`, esto permite modificar cualquier atributo de la cuenta
 
@@ -484,7 +484,7 @@ Certipy v4.8.2 - by Oliver Lyak (ly4k)
 ~~~
 
 
-## Abusing AD CS (Active Directory Certificate Services)
+## Abusing AD CS - `ESC9` Technique
 
 El servicio de certificados en Active Directory autentica a usuarios dentro de un dominio o bosque. En esta fase de la resolución debemos abusar de certificados para convertirnos en `Administrator` emitiendo un certificado privilegiado. Comenzaremos buscaremos plantillas vulnerables haciendo PassTheHash con el usuario `ca_operator`
 
@@ -576,7 +576,7 @@ Certificate Templates
 ~~~
 
 
-### The `ESC9` technique to Escalate Privileges 
+### Exploiting
 
 En este caso la plantilla a utilizar se llama `certified-DC01-CA` y está configurada sin la extensión de seguridad. Como el reporte nos indica, esta plantilla cumple los requerimientos para poder usar la técnica `ESC9` para elevar nuestros privilegios
 
@@ -621,7 +621,7 @@ Volver a ejecutar si primeramente obtenemos un error como este
 {: .notice--warning}
 
 
-## PassTheCertificate - `Administrator`
+## PassTheCertificate - Root Time
 
 Usaremos el certificado que acabamos de generar para autenticarnos frente al KDC como el usuario `Administrator`, quizá necesitemos sincronizar el reloj con el Domain Controller
 

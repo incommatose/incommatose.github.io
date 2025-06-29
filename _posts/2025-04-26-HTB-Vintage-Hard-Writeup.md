@@ -8,8 +8,9 @@ tags:
   - "BloodHound"
   - "Pre-Win 2k Compatibility Enumeration"
   - "PassTheTicket"
-  - "AD DACL"
+  - "ACL Rights"
   - "ReadGMSAPassword"
+  - "gMSA Abuse"
   - "AddSelf"
   - "GenericWrite"
   - "GenericAll"
@@ -44,7 +45,7 @@ header:
 ![image-center](/assets/images/posts/vintage-hackthebox.png)
 {: .align-center}
 
-**Habilidades:** LDAP Enumeration, BloodHound Analysis, Pre-Windows 2000 Compatibility Access Enumeration - `pre2k`, PassTheTicket, Abusing AD DACL - `ReadGMSAPassword` Rights, Abusing AD DACL - `AddSelf` and `GenericWrite` Rights, Abusing AD DACL - `GenericAll` Rights, AS-REP Roast, Hash Cracking using `john`, Kerberos Client Configuration, PassTheTicket over WinRM - `evil-winrm`, Abusing DPAPI Secrets - Master Key Extraction + Credential File Decryption, Abusing Resource Based Constrained Delegation (RBCD) + S4U2Self and S4U2Proxy - Getting Service Ticket, (Extra) DC Sync - Dumping NT Hashes
+**Habilidades:** LDAP Enumeration, Domain Analysis, Pre-Windows 2000 Compatibility Access Enumeration - `pre2k`, PassTheTicket, Abusing ACL - `ReadGMSAPassword` Rights, Abusing ACL - `AddSelf` and `GenericWrite` Rights, Abusing ACL - `GenericAll` Rights, AS-REP Roast, Hash Cracking using `john`, Kerberos Client Configuration, PassTheTicket over WinRM - `evil-winrm`, Abusing DPAPI Secrets - Master Key Extraction + Credential File Decryption, Abusing Resource Based Constrained Delegation (RBCD) + S4U2Self and S4U2Proxy - Getting Service Ticket, (Extra) DC Sync - Dumping NT Hashes
 {: .notice--primary}
 
 # Introducción
@@ -328,7 +329,7 @@ LDAP        10.10.11.45     389    dc01.vintage.htb [+] vintage.htb\FS01$ from c
 ~~~
 
 
-## Abusing AD DACL - `ReadGMSAPassword`
+## Abusing ACL - `ReadGMSAPassword` Rights
 
 Si enumeramos a través de `ldap`, los usuarios, podemos notar que la cuenta `gmsa` forma parte del grupo `Manage Service Accounts`.
 
@@ -375,7 +376,7 @@ Impacket v0.10.0 - Copyright 2022 SecureAuth Corporation
 ~~~
 
 
-## Abusing AD DACL - `AddSelf` and `GenericWrite` Rights
+## Abusing ACL - `AddSelf` and `GenericWrite` Rights
 
 La cuenta `gMSA01$` tiene la capacidad de agregarse a sí misma al grupo `Service Managers` utilizando los derechos `AddSelf`, además de poseer derechos `GenericWrite`, lo que permite editar atributos del grupo en cuestión
 
@@ -399,7 +400,7 @@ bloodyAD --host "dc01.vintage.htb" -d "vintage.htb" -k get object "CN=SERVICEMAN
 ~~~
 
 
-## Abusing AD DACL - `GenericAll` Rights
+## Abusing ACL - `GenericAll` Rights
 
 El grupo `SERVICEMANAGERS` posee derechos `GenericAll` sobre las cuentas `svc_ark`, `svc_sql` y `svc_ldap`. Con los permisos actuales, podremos activar la cuenta del usuario `svc_sql`, la cual se encuentra deshabilitada
 
@@ -689,7 +690,7 @@ Unknown     : Uncr4ck4bl3P4ssW0rd0312
 Acabamos de obtener las credenciales para el usuario `c.neri_adm`. Ahora veamos en BloodHound lo que puede hacer este usuario
 
 
-## Bloodhound Analysis
+## Domain Analysis - Bloodhound
 
 El usuario `C.Neri_adm` posee derechos `AddSelf` y `GenericWrite` sobre el grupo `Delegated Admins`, estos derechos le permiten agregarse a sí mismo al grupo y modificar atributos del mismo
 
@@ -836,7 +837,7 @@ FS01$:1108:aad3b435b51404eeaad3b435b51404ee:44a59c02ec44a90366ad1d0f8a781274:::
 ~~~
 
 
-## Shell as `L.Bianchi_adm`
+## Shell as `L.Bianchi_adm` - Root Time
 
 Primeramnete cargamos el archivo `.ccache` en la variable `KRB5CCNAME`
 

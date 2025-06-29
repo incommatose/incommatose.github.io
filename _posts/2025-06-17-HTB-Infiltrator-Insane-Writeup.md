@@ -10,7 +10,7 @@ tags:
   - "RPC Enumeration"
   - "Credentials Leakage"
   - "BloodHound"
-  - "AD DACL"
+  - "ACL Rights"
   - "GenericAll"
   - "AddSelf"
   - "ForceChangePassword"
@@ -32,6 +32,7 @@ tags:
   - "NTDS"
   - "ntdissector"
   - "ReadGMSAPassword"
+  - "gMSA Abuse"
   - "AD CS"
   - "ESC4"
   - "ESC1"
@@ -58,7 +59,7 @@ header:
 ![image-center](/assets/images/posts/infiltrator-hackthebox.png)
 {: .align-center}
 
-**Habilidades:** AS-REP Roast Attack, Hash Cracking, RPC Enumeration, Credentials Leakage, Abusing AD DACL - `GenericAll Rights`, Shadow Credentials, Abusing `AddSelf` Rights, Abusing `ForceChangePassword` Rights, Kerberos Client Setup, Port Forwarding with `chisel` + `socat`, Binary Reversing with `dnSPY`, AES CBC Mode Decrypt, `sqlite` Database Analysis, API Enumeration - Output Messenger `Chatroom` Logs, Abusing Output Messenger Calendar, Network Traffic Analysis - `.pcapng` File, BitLocker Backup Analysis, Cracking `7z` File Password, Dumping Active Directory Password Hashes, NTDS Analysis with `ntdissector`, Abusing `ReadGMSAPassword` Rights, Abusing AD CS - `ESC4` Technique [Privilege Escalation], PassTheTicket
+**Habilidades:** AS-REP Roast Attack, Hash Cracking, RPC Enumeration, Credentials Leakage, Abusing ACL - `GenericAll Rights`, Shadow Credentials, Abusing `AddSelf` Rights, Abusing `ForceChangePassword` Rights, Kerberos Client Setup, Port Forwarding with `chisel` + `socat`, Binary Reversing with `dnSPY`, AES CBC Mode Decrypt, `sqlite` Database Analysis, API Enumeration - Output Messenger `Chatroom` Logs, Abusing Output Messenger Calendar, Network Traffic Analysis - `.pcapng` File, BitLocker Backup Analysis, Cracking `7z` File Password, Dumping Active Directory Password Hashes, NTDS Analysis with `ntdissector`, Abusing `ReadGMSAPassword` Rights, Abusing AD CS - `ESC4` Technique [Privilege Escalation], PassTheTicket
 {: .notice--primary}
 
 # Introducción
@@ -519,7 +520,7 @@ Valid starting       Expires              Service principal
 ~~~
 
 
-## Abusing AD DACL - `GenericAll` Rights
+## Abusing ACL - `GenericAll` Rights
 
 El usuario `d.anderson` posee derechos `GenericAll` sobre la Unidad Organizativa `Marketing Digital`, esto le permite obtener control total sobre esta OU
 
@@ -565,7 +566,7 @@ Certipy v4.8.2 - by Oliver Lyak (ly4k)
 ~~~
 
 
-## Abusing AD DACL - `AddSelf` Rights
+## Abusing ACL - `AddSelf` Rights
 
 El usuario `e.rodriguez` posee derechos `AddSelf` sobre el grupo `Chiefs Marketing`, esto le da la capacidad de añadirse por su cuenta y convertirse en un miembro de este grupo 
 
@@ -581,7 +582,7 @@ bloodyAD --host "dc01.infiltrator.htb" -d "infiltrator.htb" --dc-ip 10.10.11.31 
 ~~~
 
 
-## Abusing AD DACL - `ForceChangePassword` Rights
+## Abusing ACL - `ForceChangePassword` Rights
 
 El grupo `Chiefs Marketing` posee el derecho `ForceChangePassword` sobre el usuario `m.harris`, esto le permite a los miembros de este grupo forzar un cambio de contraseña como el nombre nos indica
 
@@ -1855,7 +1856,7 @@ SMB         10.10.11.31     445    DC01             [+] infiltrator.htb\lan_mana
 ~~~
 
 
-## Abusing AD DACL - `ReadGMSAPassword` Rights
+## Abusing ACL - `ReadGMSAPassword` Rights
 
 La cuenta `infiltrator_svc$` es una cuenta `gMSA` (Group Managed Service Account), este tipo de cuentas es gestionada por el DC, quien cambia y maneja sus credenciales de forma automática. 
 

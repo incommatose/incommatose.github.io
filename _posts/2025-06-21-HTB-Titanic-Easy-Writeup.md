@@ -29,7 +29,6 @@ header:
   overlay_filter: 0.7
   og_image: /assets/images/headers/titanic-hackthebox.jpg
 ---
-
 ![image-center](/assets/images/posts/titanic-hackthebox.png)
 {: .align-center}
 
@@ -551,8 +550,7 @@ developer@titanic:/tmp/.mount_magick4ANRra$ echo $LD_LIBRARY_PATH
 
 Habiendo entendido cómo podríamos explotar esta vulnerabilidad, podemos seguir dos métodos para ejecutar comandos
 
-
-## Proof of Concept - `delegates.xml` File
+### Proof of Concept - `delegates.xml` File
 
 El primer método consiste en crear un archivo `delegates.xml` en el directorio donde busca el script `identify_images.sh`
 
@@ -583,8 +581,7 @@ uid=0(root) gid=0(root) groups=0(root)
 /opt/app/static/assets/images/exquisite-dining.jpg JPEG 1024x1024 1024x1024+0+0 8-bit sRGB 280854B 0.000u 0:00.000
 ~~~
 
-
-## Exploiting via Shared Library - `libxcb.so.1`
+### Exploiting via Shared Library - `libxcb.so.1`
 
 Para el segundo método, compilaremos una biblioteca compartida maliciosa que ejecute un comando en el sistema. En este caso enviaremos una reverse shell a nuestro equipo por un puerto
 
@@ -623,7 +620,7 @@ Ya podremos ver la flag en el directorio `/root` para concluir la máquina
 
 ~~~ bash
 root@titanic:~# cat ~/root.txt
-cfb411a1baafeb19b8d603a4082ad68f
+cfb...
 ~~~
 <br>
 Gracias por leer este artículo, espero te haya sido de ayuda. Te dejo la cita del día:
