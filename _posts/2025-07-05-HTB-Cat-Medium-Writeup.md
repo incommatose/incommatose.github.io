@@ -1,7 +1,19 @@
 ---
 title: Cat - Medium (HTB)
 permalink: /Cat-HTB-Writeup/
-tags: 
+tags:
+  - "Linux"
+  - "Medium"
+  - "Git"
+  - "XSS"
+  - "SQL Injection"
+  - "Hash Cracking"
+  - "adm Group"
+  - "Local Port Forwarding"
+  - "SSH"
+  - "Gitea"
+  - "CVE-2024-6886"
+  - "Python Scripting"
 categories:
   - writeup
   - hacking
@@ -9,10 +21,11 @@ categories:
 toc: true
 toc_label: Topics
 toc_sticky: true
-sidebar: main
+sidebar:
+  - main
 seo_tittle: Cat - Medium (HTB)
-seo_description: 
-excerpt: 
+seo_description: Practica explotación de XSS y SQLi en diferentes servicios web para vencer Cat.
+excerpt: Practica explotación de XSS y SQLi en diferentes servicios web para vencer Cat.
 header:
   overlay_image: /assets/images/headers/cat-hackthebox.jpg
   overlay_filter: 0.7
