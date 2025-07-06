@@ -25,7 +25,7 @@ sidebar:
   - main
 seo_tittle: Cat - Medium (HTB)
 seo_description: Practica explotación de XSS y SQLi en diferentes servicios web para vencer Cat.
-excerpt: Practica explotación de XSS y SQLi en diferentes servicios web para vencer Cat.
+excerpt: Practica explotación de XSS y SQLi en un servicio web, abuso de configuraciones inseguras y explotación de CVE-2024-6886 (Gitea) para vencer Cat.
 header:
   overlay_image: /assets/images/headers/cat-hackthebox.jpg
   overlay_filter: 0.7
