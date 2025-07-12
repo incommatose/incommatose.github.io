@@ -1,5 +1,5 @@
 ---
-title: Dog - Medium (HTB)
+title: Dog - Easy (HTB)
 permalink: /Dog-HTB-Writeup/
 tags: 
   - "Linux"
@@ -19,7 +19,7 @@ toc_label: Topics
 toc_sticky: true
 sidebar:
   - main
-seo_tittle: Dog - Medium (HTB)
+seo_tittle: Dog - Easy (HTB)
 seo_description: Practica tus habilidades de explotación web en Backdrop CMS y servicios mal configurados para vencer Dog.
 excerpt: Practica tus habilidades de explotación web en Backdrop CMS y servicios mal configurados para vencer Dog.
 header:
@@ -130,7 +130,7 @@ whatweb http://10.10.11.58
 http://10.10.11.58 [200 OK] Apache[2.4.41], Content-Language[en], Country[RESERVED][ZZ], HTTPServer[Ubuntu Linux][Apache/2.4.41 (Ubuntu)], IP[10.10.11.58], UncommonHeaders[x-backdrop-cache,x-generator], X-Frame-Options[SAMEORIGIN]
 ~~~
 
-Si visitamos la web en el navegador, veremos lo siguiente. ¡Un sitio de perritos!
+Vemos que se emplea `Backdrop CMS`. Si visitamos la web en el navegador, veremos lo siguiente. ¡Un sitio de perritos!
 
 ![image-center](/assets/images/posts/dog-web-analysis.png)
 {: .align-center}
