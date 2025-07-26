@@ -2,6 +2,16 @@
 title: Cypher - Medium (HTB)
 permalink: /Cypher-HTB-Writeup/
 tags: 
+  - "Linux"
+  - "Medium"
+  - "Reversing"
+  - "CRF"
+  - "Java"
+  - "Cypher Injection"
+  - "Command Injection"
+  - "Credentials Leakage"
+  - "Bbot"
+  - "Sudoers"
 categories:
   - writeup
   - hacking
@@ -489,7 +499,7 @@ User graphasm may run the following commands on cypher:
 ~~~
 
 > BBOT, o "Bighuge BLS OSINT Tool", es un framework de automatización OSINT (Inteligencia de Fuentes Abiertas) de código abierto desarrollado por [Black Lantern Security](https://translate.google.com/translate?u=https://blog.blacklanternsecurity.com/p/bbot&hl=es&sl=en&tl=es&client=sge)
-{: . notice--info}
+{: .notice--info}
 
 Con los privilegios actuales, podemos [crear un módulo](https://www.blacklanternsecurity.com/bbot/Stable/dev/module_howto/) aparentemente inofensivo, que realmente ejecutará un comando en el sistema. Como podemos ejecutarlo emulando ser `root`, sería una vía potencial para escalar privilegios.
 
