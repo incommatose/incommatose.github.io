@@ -92,7 +92,7 @@ root@vultr:~# apt -y install curl
 
 Una vez las dependencias han sido actualizadas, crearemos un nuevo usuario, quien será designado para instalar `T-Pot`
 
-> Recuerda usar contraseñas robustas que no sean fáciles de adivinar, como combinaciones de caracteres especiales y números aleatorios
+> Recuerda usar contraseñas robustas que no sean fáciles de adivinar, como combinaciones de caracteres especiales y números aleatorios, por ejemplo `4ewD$R3_:#$`
 {: .notice--danger}
 
 ~~~ bash
@@ -123,7 +123,7 @@ Una vez el usuario esté configurado, podremos continuar con la instalación de 
 
 ~~~ bash
 root@vultr:~# su tuser
-tuser@vultr:/root$ cd # Ir al directorio /home ;TZJ3R4,caj4rbXf | ;TZJ3R4,caj4rbXf243reds
+tuser@vultr:/root$ cd # Ir al directorio /home
 ~~~
 
 Desde el repositorio se recomienda utilizar el siguiente comando para la instalación, aquí necesitaremos utilizar la contraseña que asignamos al usuario que agregamos
