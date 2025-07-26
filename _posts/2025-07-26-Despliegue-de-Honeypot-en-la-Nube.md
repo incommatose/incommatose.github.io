@@ -19,9 +19,9 @@ toc_sticky: true
 seo_tittle: 
 seo_description: Conoce de qué manera operan los ciberatacantes en el mundo real.
 header:
-  overlay_image: /assets/images/headers/t-pot-en-cloud.jpg
+  overlay_image: /assets/images/headers/honeypot-tpot.jpg
   overlay_filter: 0.7
-  og_image: /assets/images/headers/t-pot-en-cloud.jpg
+  og_image: /assets/images/headers/honeypot-tpot.jpg
 ---
 # Introducción
 ---
