@@ -35,7 +35,7 @@ header:
 ![image-center](/assets/images/posts/code-hackthebox.png)
 {: .align-center}
 
-**Habilidades:** Python Sandbox Escape - Bypassing Restrictions using Loaded Classes, SQLite Database Analysis, Hash Cracking, Abusing `bash` Script - Sudoers Privileges, Path Traversal
+**Habilidades:** Python Sandbox Escape - No Builtins Modules, SQLite Database Analysis, Hash Cracking, Abusing `bash` Script - Sudoers Privileges, Path Traversal
 {: .notice--primary}
 
 # Introducción
@@ -151,7 +151,7 @@ code=print("Hello World")
 ~~~
 
  
-## Python Sandbox Escape - No Builtins
+## Python Sandbox Escape - No Builtins Modules
 
 Como no podemos usar ciertas palabas, buscaremos una forma de ejecutar comandos en el servidor mediante el uso indirecto de módulos disponibles que se encuentren cargados en la memoria. Podemos ver detalles en el uso de esta técnica en el siguiente artículo de [`HackTricks`](https://hacktricks.boitatech.com.br/misc/basic-python/bypass-python-sandboxes#no-builtins)
 
