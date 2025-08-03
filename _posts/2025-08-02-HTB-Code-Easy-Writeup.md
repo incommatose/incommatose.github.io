@@ -780,7 +780,9 @@ martin@code:/tmp$ cat /usr/bin/backy.sh | sed -n '19p'
 El conflicto es ocasionado por [`protected_regular`](https://docs.kernel.org/admin-guide/sysctl/fs.html#protected-regular), el cual es un mecanismo de seguridad en Linux para evitar escrituras de archivos en directorios `sticky` y de escritura global.
 
 > `0`: **Desactivado**. Sin restricciones.
+> 
 > `1`: **Restringe escrituras** con `O_CREAT` en archivos regulares existentes que **no pertenecen al usuario**, si están en directorios `world-writable` y `sticky`, como `/tmp` o `/dev/shm`. Excepto si el archivo lo creó el dueño del directorio.
+> 
 > `2`: Igual que `1`, pero también aplica a directorios `group-writable` y `sticky`.
 {: .notice--info}
 
