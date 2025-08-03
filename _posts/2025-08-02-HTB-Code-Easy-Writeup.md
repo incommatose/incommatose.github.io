@@ -151,9 +151,9 @@ code=print("Hello World")
 ~~~
 
  
-## Python Sandbox Escape - Bypassing Restrictions using Loaded Classes
+## Python Sandbox Escape - No Builtins
 
-Como no podemos usar ciertas palabas, buscaremos una forma de ejecutar comandos en el servidor mediante el uso indirecto de módulos disponibles que se encuentren cargados en la memoria. Podemos ver detalles en el uso de esta técnica en el siguiente [artículo](https://medium.com/@zavadanazar/trying-to-break-out-of-the-python-repl-sandbox-in-a-kubernetes-environment-a-practical-journey-25da83b259b3)
+Como no podemos usar ciertas palabas, buscaremos una forma de ejecutar comandos en el servidor mediante el uso indirecto de módulos disponibles que se encuentren cargados en la memoria. Podemos ver detalles en el uso de esta técnica en el siguiente artículo de [`HackTricks`](https://hacktricks.boitatech.com.br/misc/basic-python/bypass-python-sandboxes#no-builtins)
 
 > En `python`, todas las clases o subclases en ejecución heredan de `object`, esta es la raíz de la jerarquía de clases
 {: .notice--info}
