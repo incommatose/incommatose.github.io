@@ -113,21 +113,20 @@ analytics:
 
 # Site Author
 author:
-  name             : "Andrew"
+  name             : "Andrew (incommatose)"
   avatar           : "/assets/images/author.jpg"
   bio              : "`Cybersecurity Enthusiast 🕵️‍♂️ | CTF Player 🚩 | Ethical Hacking 💻`"
   location         : "Chile"
   email            :
   links:
-    - label: "Email"
-      icon: "fas fa-fw fa-envelope-square"
-      # url: "mailto:your.name@email.com"
     - label: "Twitter"
       icon: "fab fa-fw fa-twitter-square"
       url: "https://twitter.com/incommatose"
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
       url: "https://github.com/incommatose"
+    - label: "@incommatose"
+      icon: "fab da-fw fa-discord"
     
     
 footer:
@@ -138,6 +137,8 @@ footer:
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
       url: "https://github.com/incommatose"
+    - label: "@incommatose"
+      icon: "fab da-fw fa-discord"
 
 # Reading Files
 include:
