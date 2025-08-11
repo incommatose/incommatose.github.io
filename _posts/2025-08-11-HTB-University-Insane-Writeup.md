@@ -1,11 +1,30 @@
 ---
 title: University - Insane (HTB)
 permalink: /University-HTB-Writeup/
-tags: 
+tags:
+  - "Windows"
+  - "Insane"
+  - "RCE"
+  - "CVE-2023-33733"
+  - "Credentials Leakage"
+  - "Pivoting"
+  - "Chisel"
+  - "Proxychains"
+  - "Information Leakage"
+  - "X509 Certificate"
+  - "Phishing"
+  - "RBCD"
+  - "NTLM Relay"
+  - "Rubeus"
+  - "TGT Extraction"
+  - "PassTheTicket"
+  - "ACL Rights"
+  - "ReadGMSAPassword"
 categories:
   - writeup
   - hacking
   - hackthebox
+  - "active directory"
 toc: true
 toc_label: Topics
 toc_sticky: true
@@ -24,7 +43,7 @@ header:
 ![image-center](/assets/images/posts/university-hackthebox.png)
 {: .align-center}
 
-**Habilidades:** 
+**Habilidades:** RCE in `ReportLab` PDF Toolkit (CVE-2023-33733), Credentials Leakage, Domain Analysis with Bloodhound, Network Pivoting - (`chisel` + `proxychains`), Internal Network Scanning, Information Leakage, Build X.509 Certificate, Abusing RBCD (Resource-Based Constrained Delegation)  + NTLM Relay, Kerberos Client Setup, Ticket Extraction (`Rubeus.exe`), PassTheTicket, Abusing ACL Rights - `ReadGMSAPassword`, RBCD
 {: .notice--primary}
 
 # Introducción
@@ -1417,7 +1436,7 @@ KRB5CCNAME=Rose.L.ccache evil-winrm -i DC.university.htb -r university.htb
 ~~~
 
 
-## Abusing AD ACLs - `ReadGMSAPassword`
+## Abusing ACL Rights - `ReadGMSAPassword`
 
 La cuenta `Rose.L` forma parte del grupo `Account Operators`, esto otorga control sobre muchos objetos dentro del dominio, como podemos ver en la siguiente imagen
 
