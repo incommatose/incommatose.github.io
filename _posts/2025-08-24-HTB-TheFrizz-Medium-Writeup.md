@@ -700,7 +700,7 @@ Para transferir el comprimido, utilizaremos el servicio web de Apache, el cual n
 Desde la consola de `ssh` como el usuario `f.frizzle`, copiaremos el recurso `$RE2XMEG.7z` a un directorio donde cualquier usuario tenga acceso, como `C:\Programdata`, además le daremos permisos completos a otros usuarios
 
 ~~~ bash
-PS C:\$RECYCLE.BIN\S-1-5-21-2386970044-1145388522-2932701813-1103> cp '.\$RE2XMEG.7z' C:\Programdata
+PS C:\$RECYCLE.BIN\S-1-5-21-2386970044-1145388522-2932701813-1103> copy '.\$RE2XMEG.7z' C:\Programdata
 
 PS C:\$RECYCLE.BIN\S-1-5-21-2386970044-1145388522-2932701813-1103> icacls 'C:\Programdata\$RE2XMEG.7z' /grant everyone:F
 processed file: C:\Programdata\$RE2XMEG.7z
