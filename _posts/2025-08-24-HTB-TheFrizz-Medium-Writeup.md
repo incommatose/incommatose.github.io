@@ -1004,7 +1004,7 @@ Impacket v0.13.0.dev0+20250109.91705.ac02e0ee - Copyright Fortra, LLC and its af
 Ahora cargaremos el ticket en la variable `KRB5CCNAME` para emplearlo a modo de autenticación frente a `SSH`, ten en cuenta que debemos **cerrar la sesión actual del usuario `m.school`**
 
 ~~~ bash
-KRB5CCNAME=f.frizzle.ccache ssh -k f.frizzle@frizzdc.frizz.htb
+KRB5CCNAME=m.schoolbus.ccache ssh -k m.schoolbus@frizzdc.frizz.htb
 ~~~
 
 >Alternativamente, podremos conectarnos a través de herramientas como `psexec.py`, podremos obtener una consola como `nt authority\system`
