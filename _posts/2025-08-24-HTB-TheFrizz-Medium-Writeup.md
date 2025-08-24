@@ -2,10 +2,24 @@
 title: TheFrizz - Medium (HTB)
 permalink: /TheFrizz-HTB-Writeup/
 tags:
+  - "Windows"
+  - "Medium"
+  - "CVE-2023-45878"
+  - "RCE"
+  - "Arbitrary File Write"
+  - "GibbonEdu"
+  - "MySQL"
+  - "XAMPP"
+  - "Credentials Leakage"
+  - "Kerberos"
+  - "Hash Cracking"
+  - "GPO Abuse"
+  - "SharpGPOAbuse"
 categories:
   - writeup
   - hacking
   - hackthebox
+  - "active directory"
 toc: true
 toc_label: Topics
 toc_sticky: true
@@ -23,7 +37,7 @@ header:
 ![image-center](/assets/images/posts/thefrizz-hackthebox.png)
 {: .align-center}
 
-**Habilidades:** CVE-2023-45878 -  Unauthenticated Arbitrary File Write in `Gibbon LMS 25.0.1`, MySQL Database Enumeration, Hash Cracking  - `SHA256($salt.$pass)`, Kerberos Client Setup, Credentials Leakage, Abusing GPOs (Group Policy Objects) -  `SharpGPOAbuse.exe`
+**Habilidades:** CVE-2023-45878 -  Unauthenticated Arbitrary File Write in `Gibbon LMS 25.0.1`, MySQL Database Enumeration, Hash Cracking  - `SHA256($salt.$pass)`, Kerberos Client Setup, Credentials Leakage, Abusing GPOs (Group Policy Objects) - `SharpGPOAbuse.exe`
 {: .notice--primary}
 
 # Introducción
