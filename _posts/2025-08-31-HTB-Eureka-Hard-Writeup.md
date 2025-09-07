@@ -2,6 +2,16 @@
 title: Eureka - Hard (HTB)
 permalink: /Eureka-HTB-Writeup/
 tags:
+  - "Linux"
+  - "Hard"
+  - "Spring Boot"
+  - "Exposed Actuator"
+  - "Heapdump"
+  - "JDumpSpider"
+  - "Credentials Leakage"
+  - "pspy"
+  - "Eureka Server"
+  - "Bash eq"  
 categories:
   - writeup
   - hacking
