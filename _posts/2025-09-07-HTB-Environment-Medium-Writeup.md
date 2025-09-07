@@ -543,6 +543,7 @@ backup/keyvault.gpg: PGP RSA encrypted session key - keyid: B755B0ED D6CFCFD3 RS
 Los archivos necesarios para `GnuPG` se encuentran dentro del directorio personal del usuario, en este caso dentro de `/home/hish`.
 
  >El directorio `~/.gnupg` es la ubicación estándar en sistemas Linux donde GNU Privacy Guard (GPG) almacena sus archivos de configuración y las claves privadas y públicas del usuario para cifrado y firma digital.
+{: .notice--info}
 
 ~~~ bash
 bash-5.2$ HOME=/home/hish gpg --list-keys 
