@@ -2,25 +2,25 @@
 title: Planning - Easy (HTB)
 permalink: /Planning-HTB-Writeup/
 tags:
-  - "Linux"
-  - "Easy"
-  - "Subdomain Fuzzing"
-  - "Grafana"
-  - "CVE-2024-9264"
-  - "Dynamic Port Forwarding"
-  - "Cron Jobs"
+  - Linux
+  - Easy
+  - Subdomain Fuzzing
+  - Grafana
+  - CVE-2024-9264
+  - Dynamic Port Forwarding
+  - Cron Jobs
 categories:
   - writeup
   - hacking
   - hackthebox
-  - "hacking web"
+  - hacking web
 toc: true
 toc_label: Topics
 toc_sticky: true
 sidebar: main
 seo_tittle: Planning - Easy (HTB)
-seo_description: 
-excerpt:
+seo_description: Explota un CVE dentro del servicio Grafana y abusa de tareas cron en Crontab UI para vencer Planning.
+excerpt: Explota un CVE dentro del servicio Grafana y abusa de tareas cron en Crontab UI para vencer Planning.
 header:
   overlay_image: /assets/images/headers/planning-hackthebox.jpg
   overlay_filter: 0.7
