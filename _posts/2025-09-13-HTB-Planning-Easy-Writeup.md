@@ -427,7 +427,20 @@ Podemos usar `proxychains` para utilizar el túnel que hemos definido en nuestro
 {: .notice--warning}
 
 ~~~ bash
-
+...
+...
+...
+strict_chain
+...
+...
+...
+[ProxyList]
+# add proxy here ...
+# meanwile
+# defaults set to "tor"
+#socks4 	127.0.0.1 9050
+#socks5	127.0.0.1 9050
+socks5 127.0.0.1 1080
 ~~~
 
 Ahora con la ayuda de `nmap` podemos realizan un escaneo que intente identificar versiones de los servicios que se ejecutan, en este caso debemos hacer un escaneo a `localhost`
@@ -684,6 +697,7 @@ Las tareas cron (o `Cron jobs`) son **comandos o scripts que se ejecutan automá
 El servidor nos redirige a la siguiente web, donde al parecer tenemos un panel de administración de tareas `cron`, se trata del servicio [`Crontab UI`](https://github.com/alseambusher/crontab-ui).
 
 > Crontab UI es una interfaz web (GUI) de código abierto que facilita la gestión de los trabajos programados (cron jobs) en sistemas operativos Unix y Linux.
+{: .notice--info}
 
 ![image-center](/assets/images/posts/planning-abusing-cron.png)
 {: .align-center}
