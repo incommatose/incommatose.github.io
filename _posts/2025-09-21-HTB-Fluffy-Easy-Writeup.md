@@ -1,19 +1,19 @@
 ---
 title: Fluffy - Easy (HTB)
 permalink: /Fluffy-HTB-Writeup/
-tags: 
-  - "Windows"
-  - "Easy"
-  - "SMB Enumeration"
-  - "BloodHound"
-  - "CVE-2025-24071"
-  - "Spoofing"
-  - "Hash Cracking"
-  - "Shadow Credentials"
-  - "PassTheHash"
-  - "AD CS"
-  - "ESC16"
-  - "PassTheCert"
+tags:
+  - Windows
+  - Easy
+  - SMB Enumeration
+  - BloodHound
+  - CVE-2025-24071
+  - Spoofing
+  - Hash Cracking
+  - Shadow Credentials
+  - PassTheHash
+  - AD CS
+  - ESC16
+  - PassTheCert
 categories:
   - writeup
   - hacking
@@ -23,9 +23,9 @@ toc_label: Topics
 toc_sticky: true
 sidebar: main
 seo_tittle: Fluffy - Easy (HTB)
-seo_description: 
+seo_description: Explota CVE-2025-24071 y usa técnicas de explotación como Shadow Credentials o ESC16 en AD CS para vencer Fluffy.
 excerpt: Explota CVE-2025-24071 y usa técnicas de explotación como Shadow Credentials o ESC16 en AD CS para vencer Fluffy.
-header: Explota CVE-2025-24071 y usa técnicas de explotación como Shadow Credentials o ESC16 en AD CS para vencer Fluffy.
+header:
   overlay_image: /assets/images/headers/fluffy-hackthebox.jpg
   overlay_filter: 0.7
   og_image: /assets/images/headers/fluffy-hackthebox.jpg
