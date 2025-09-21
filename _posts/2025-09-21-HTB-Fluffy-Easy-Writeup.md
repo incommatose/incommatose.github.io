@@ -24,8 +24,8 @@ toc_sticky: true
 sidebar: main
 seo_tittle: Fluffy - Easy (HTB)
 seo_description: 
-excerpt: 
-header:
+excerpt: Explota CVE-2025-24071 y usa técnicas de explotación como Shadow Credentials o ESC16 en AD CS para vencer Fluffy.
+header: Explota CVE-2025-24071 y usa técnicas de explotación como Shadow Credentials o ESC16 en AD CS para vencer Fluffy.
   overlay_image: /assets/images/headers/fluffy-hackthebox.jpg
   overlay_filter: 0.7
   og_image: /assets/images/headers/fluffy-hackthebox.jpg
