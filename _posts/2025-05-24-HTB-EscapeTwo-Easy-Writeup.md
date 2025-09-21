@@ -7,7 +7,7 @@ tags:
   - "RPC Enumeration"
   - "SMB Enumeration"
   - "xp_cmdshell"
-  - "Bloodhound"
+  - "BloodHound"
   - "ACL Rights"
   - "WriteOwner"
   - "GenericAll"

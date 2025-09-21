@@ -2,13 +2,13 @@
 title: Planning - Easy (HTB)
 permalink: /Planning-HTB-Writeup/
 tags:
-  - Linux
-  - Easy
-  - Subdomain Fuzzing
-  - Grafana
-  - CVE-2024-9264
-  - Dynamic Port Forwarding
-  - Cron Jobs
+  - "Linux"
+  - "Easy"
+  - "Subdomain Fuzzing"
+  - "Grafana"
+  - "CVE-2024-9264"
+  - "Dynamic Port Forwarding"
+  - "Cron Jobs"
 categories:
   - writeup
   - hacking
