@@ -2,6 +2,15 @@
 title: Puppy - Medium (HTB)
 permalink: /Puppy-HTB-Writeup/
 tags:
+  - "Windows"
+  - "Medium"
+  - "ACL Rights"
+  - "GenericWrite"
+  - "GenericAll"
+  - "SMB Enumeration"
+  - "KeePass"
+  - "Credentials Leakage"
+  - "DPAPI Abuse"
 categories:
   - writeup
   - hacking
