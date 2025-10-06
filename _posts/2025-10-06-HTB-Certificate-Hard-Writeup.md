@@ -175,7 +175,9 @@ Cuando iniciemos sesión, tendremos la opción de inscribir diversos cursos desd
 
 Al inscribir un curso, si navegamos al final desbloquearemos la opción de responder una encuesta, la web nos redirige a `http://certificate.htb/upload.php?s_id=42`
 
-![[Pasted image 20250927094341.png]]
+![image-center](/assets/images/posts/certificate-web-que.png)
+{: .align-center}
+
 
 ### File Upload 
 
