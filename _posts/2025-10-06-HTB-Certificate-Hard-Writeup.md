@@ -1,5 +1,5 @@
 ---
-title: Certificate - Writeup (HTB)
+title: Certificate - Hard (HTB)
 permalink: /Certificate-HTB-Writeup/
 tags:
   - Windows
@@ -8,11 +8,12 @@ categories:
   - writeup
   - hacking
   - hackthebox
+  - active directory
 toc: true
 toc_label: Topics
 toc_sticky: true
 sidebar: main
-seo_tittle: Certificate - Writeup (HTB)
+seo_tittle: Certificate - Hard (HTB)
 seo_description: Realiza bypassing en archivos ZIP, abusa de kerberos, explota plantillas en AD CS y privilegios locales de Windows para vencer Certificate
 excerpt: Realiza bypassing en archivos ZIP, abusa de kerberos, explota plantillas en AD CS y privilegios locales de Windows para vencer Certificate
 header:
